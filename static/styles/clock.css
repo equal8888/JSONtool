@@ -1,0 +1,9 @@
+.clock {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  color: #808080;
+  width: 95%;
+  position:absolute;
+  text-align:right;
+  margin: 2%;
+}

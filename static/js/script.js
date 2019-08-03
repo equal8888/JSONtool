@@ -1,5 +1,3 @@
-// -------- Clock js --------
-
 function startTime() {
   var today = new Date();
   var h = today.getHours();
@@ -10,18 +8,13 @@ function startTime() {
   var t = setTimeout(startTime, 2000 );
 }
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  if (i < 10) {i = "0" + i};
   return i;
 }
-
-// -------- json base64 to website --------
-
-
 function loadJSON(callback) {
-
    var xobj = new XMLHttpRequest();
        xobj.overrideMimeType("application/json");
-   xobj.open('GET', 'http://10.42.0.87:8888/json', true); // Replace 'my_data' with the path to your file
+   xobj.open('GET', 'http://10.42.0.87:8888/json', true);
    xobj.onreadystatechange = function () {
          if (xobj.readyState == 4 && xobj.status == "200") {
            appendData(atob(xobj.responseText));
@@ -29,7 +22,6 @@ function loadJSON(callback) {
    };
    xobj.send(null);
 }
-
 function appendData(xobj) {
     var mainContainer = document.getElementById("myData");
     for (var i = 0; i < 1; i++) {
@@ -38,12 +30,8 @@ function appendData(xobj) {
         mainContainer.appendChild(div);
     }
 }
-
-
-
 function init() {
 loadJSON(function(response) {
- // Parse JSON string into object
    var actual_JSON = JSON.parse(response);
 });
 }

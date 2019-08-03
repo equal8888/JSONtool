@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from flask import Flask, request, render_template
 from flask_basicauth import BasicAuth
 import base64

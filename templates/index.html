@@ -21,9 +21,12 @@
     <div class="fakeimg" style="height:472px;">website for testing</div>
   </div>
   <div class="main">
-    <h2>Base64 json (html as data)</h2>
-    <button onclick="init()">Pull JSON (Click Once)</button>
-    <div id="myData" style="text-align:justify; text-justify:inter-word;">
+    <h2>Base64 json (with html as data)</h2>
+    <div id="buttonGroup" class="cbuttonGroup">
+        <button onclick="init()">Pull JSON</button>
+        <button onclick="clearJSON('cart_item')">Clear JSON</button>
+    </div>
+    <div id="jsondata" style="text-align:justify; text-justify:inter-word;">
     </div>
   </div>
 </div>

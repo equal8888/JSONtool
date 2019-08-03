@@ -1,7 +1,5 @@
 # Pythonflask with a custom website for RasperryPi
 
-the entire website is loaded withing 73 - 129ms
-
 it's a good playground to try stuff 😊👌
 
 ### Installation

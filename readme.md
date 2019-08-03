@@ -4,7 +4,7 @@ it's a good playground to try stuff 😊👌
 
 ### Installation
 
-Install the dependencies
+Install flask and its basicauth module
 
 ```sh
 $ sudo pip install Flask

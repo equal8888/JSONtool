@@ -1,6 +1,6 @@
 # Pythonflask with a custom website for RasperryPi
 
-the entire website is loaded withing 73 - 129ms 
+the entire website is loaded withing 73 - 129ms
 
 it's a good playground to try stuff 😊👌
 
@@ -12,17 +12,20 @@ Install the dependencies
 $ sudo pip install Flask
 $ sudo pip install Flask-BasicAuth
 ```
+### run it
 
-and run the website....
 
 ```sh
 $ sudo python app1.py
 ```
+URL (Replace 0.0.0.0 with the RasperryPi's local IP-adress)
+```sh
+http://0.0.0.0:8888/
+```
 
-### Troubleshoot
-json button
+### Troubleshoot for json button
 From the flask server file '/static/js/script.js' on ' function loadJSON(callback) { '
-Update the ip with python flask server ip (local ip is sufficient)
+Update the ip with RasperryPi’s local IP-adress
 
 ###  set as a self running system service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

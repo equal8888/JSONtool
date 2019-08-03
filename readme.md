@@ -17,12 +17,12 @@ and run the website....
 $ sudo python app1.py
 ```
 
-### Troubleshoot 
+### Troubleshoot
 json button
 From the flask server file '/static/js/script.js' on ' function loadJSON(callback) { '
 Update the ip with python flask server ip (local ip is sufficient)
 
-###  set as a self running system service on system boot (Debian linux)
+###  set as a self running system service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file
 sudo nano /lib/systemd/system/flaskapp.service
 
@@ -56,5 +56,3 @@ sudo reboot
 
 5 checkStatus of the new process
 sudo systemctl status flaskapp.service
-
-

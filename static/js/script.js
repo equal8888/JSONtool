@@ -1,3 +1,7 @@
+window.onload = reloadP()
+function reloadP() {
+  document.getElementById("DisableB").disabled = true;
+}
 function startTime() {
   var today = new Date();
   var h = today.getHours();

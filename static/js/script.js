@@ -49,10 +49,10 @@ function clearJSON(elementID)
 {
     document.getElementById("jsondata").innerHTML = "";
 }
-function loadJSON(callback) {
+function loadJSON(method,url) {
    var xobj = new XMLHttpRequest();
        xobj.overrideMimeType("application/json");
-   xobj.open('GET', 'http://10.42.0.87:8888/json', true);
+   xobj.open(`${method}`, `http://10.42.0.87:8888/${url}`, true);
    xobj.setRequestHeader('Authorization', 'Basic [YWRtaW46YWRtaW4=]');
    xobj.onreadystatechange = function () {
          if (xobj.readyState == 4 && xobj.status == "200") {
@@ -70,7 +70,5 @@ function appendData(xobj) {
     }
 }
 function init() {
-loadJSON(function(response) {
-   var actual_JSON = JSON.parse(response);
-});
+  loadJSON('GET','json');
 }

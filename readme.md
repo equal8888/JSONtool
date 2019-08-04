@@ -1,20 +1,20 @@
 # Pythonflask with a custom website for RasperryPi
 
-It feels nice 😊👌 
+It feels nice 😊👌
 
 ### Installation
 
-Install flask and its basicauth module
+Install flask and its BasicAuth module
 
 ```sh
-$ sudo pip install Flask
-$ sudo pip install Flask-BasicAuth
+sudo pip install Flask
+sudo pip install Flask-BasicAuth
 ```
 ### run it
 
 
 ```sh
-$ sudo python app1.py
+sudo python app1.py
 ```
 URL (Replace 0.0.0.0 with the RasperryPi's local IP-adress)
 ```sh
@@ -24,7 +24,7 @@ http://0.0.0.0:8888/
 ### Troubleshoot for json button
 From the flask server file '/static/js/script.js' search
 ```sh
-' function loadJSON(callback) { '
+function loadJSON(callback) {
 ```
 and update the ip with RasperryPi’s local IP-adress
 

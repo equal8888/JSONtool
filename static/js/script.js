@@ -49,6 +49,7 @@ function loadJSON(callback) {
    var xobj = new XMLHttpRequest();
        xobj.overrideMimeType("application/json");
    xobj.open('GET', 'http://10.42.0.87:8888/json', true);
+   xobj.setRequestHeader('Authorization', 'Basic [YWRtaW46YWRtaW4=]');
    xobj.onreadystatechange = function () {
          if (xobj.readyState == 4 && xobj.status == "200") {
            appendData(atob(xobj.responseText));

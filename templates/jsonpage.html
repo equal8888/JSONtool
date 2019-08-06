@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+<title>Page Title</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style02.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="#" class="active">json tool (Work in progress)</a>
+  <a href="#" class="right" onclick="startTime()">Show Time</a>
+</div>
+<p id="txt" class="clock"></p>
+<div class="canvasbox">
+  <h1>Virgo Cluster</h1>
+  <canvas id="canvas"/>
+</div>
+<div class="row">
+  <div class="side">
+    <h2>Input</h2>
+    <section class="content">
+      <form class="content__form contact-form">
+        <div class="testing">
+        </div>
+        <div class="contact-form__input-group">
+          <label class="contact-form__label" for="name">data: </label><input class="contact-form__input contact-form__input--text" id="name" name="data" type="text" />
+          <button class="contact-form__button" type="submit">Push JSON</button>
+        </div>
+      </form>
+    </section>
+    <div class="fakeimg" style="height:472px;">
+      <h2>Format:</h2>
+      <h3>Json</h3>
+      <div class="results">
+        <pre class="results__display-wrapper"><code class="results__display"></code></pre>
+      </div>
+      <p></p>
+      <h3>base64</h3>
+    </div>
+  </div>
+  <div class="main">
+    <h2>Output <small>(currently data cannot be altered. Pull example)</small></h2>
+    <div id="buttonGroup" class="cbuttonGroup">
+        <button onclick="BGjson01()">Pull JSON</button>
+        <button id="DisableB" onclick="clearJSON('cart_item')">Clear JSON</button>
+    </div>
+    <div id="jsondata" style="text-align:justify; text-justify:inter-word;">
+    </div>
+  </div>
+</div>
+<div class="footer">
+</div>
+<script type="text/javascript" src="{{ url_for('static',filename='js/script02.js') }}"></script>
+</body>
+</html>

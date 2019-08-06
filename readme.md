@@ -41,7 +41,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /Path/To/File/app1.py
+ExecStart=/Path/To/File/app1.py
 Restart=on-failure
 
 [Install]

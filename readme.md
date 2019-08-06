@@ -1,6 +1,6 @@
 # Pythonflask with a custom website for RasperryPi
 
-It feels nice 😊👌
+Only testing stuff
 
 ### Installation
 

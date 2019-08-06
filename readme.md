@@ -51,8 +51,8 @@ WantedBy=multi-user.target
 
 2 set permissions for the new app and process
 ```sh
-sudo chown pi /share/app1.py
-sudo chmod +x /share/app1.py
+sudo chown pi /Path/To/File/app1.py
+sudo chmod +x /Path/To/File/app1.py
 sudo chmod 755 /lib/systemd/system/flaskapp.service
 ```
 

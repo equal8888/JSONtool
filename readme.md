@@ -78,7 +78,19 @@ sudo systemctl daemon-reload
 sudo reboot
 ```
 
-5 checkStatus of the new process
+5 commands for the new process
 ```sh
 sudo systemctl status flaskapp.service
+
+sudo systemctl restart flaskapp.service
+
+sudo systemctl start flaskapp.service
+
+sudo systemctl stop flaskapp.service
+
+```
+
+```sh
+sudo systemctl enable flaskapp.service
+sudo systemctl disable flaskapp.service
 ```

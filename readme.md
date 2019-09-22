@@ -34,7 +34,7 @@ From the flask server file '/static/js/script02.js' && '/static/js/script03.js' 
 ```sh
 :8888/${url}
 ```
-and update the ip with RasperryPi’s local IP-adress or hostname
+and update the ip with local IP-adress or hostname
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

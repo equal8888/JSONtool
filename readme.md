@@ -1,6 +1,11 @@
 # JSONTool... I guess 🤔
 
 GUI to POST anything and see it as a auto formatted JSON && Json+Base64 file format. Also data can be previewed/seen on live-action inside the website 😊
+<br>
+Preview data -->
+<img src="https://drive.google.com/uc?id=1SQ9Lhi74T0qONWIKMvpx3MzFcCZnwNzC" width="auto" height="200"/>
+Preview video -->
+<img src="https://drive.google.com/uc?id=1tFPw5kPryupFu2Lp5l8RdQNhjzS77-ki" width="auto" height="200"/>
 
 ### Installation
 

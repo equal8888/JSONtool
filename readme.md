@@ -16,17 +16,17 @@ sudo pip install Flask-BasicAuth
 ```sh
 sudo python app1.py
 ```
-URL (Replace 0.0.0.0 with the RasperryPi's local IP-adress)
+URL (Replace 0.0.0.0 with the RasperryPi's local IP-adress or hostname)
 ```sh
 http://0.0.0.0:8888/
 ```
 
 ### Troubleshoot for json button
-From the flask server file '/static/js/script.js' search
+From the flask server file '/static/js/script02.js' && '/static/js/script03.js' search
 ```sh
 function loadJSON(callback) {
 ```
-and update the ip with RasperryPi’s local IP-adress
+and update the ip with RasperryPi’s local IP-adress or hostname
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

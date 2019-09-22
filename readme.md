@@ -1,4 +1,4 @@
-# JSON auto formatter + Preview (RaspberryPi)
+# JSONtool
 
 Custom GUI to POST anything and see it as a auto formatted JSON && Json+Base64 file format. Also data can be previewed/seen on live-action inside the website 😊
 
@@ -24,7 +24,7 @@ http://0.0.0.0:8888/
 ### Troubleshoot for json button
 From the flask server file '/static/js/script02.js' && '/static/js/script03.js' search
 ```sh
-function loadJSON(callback) {
+:8888/${url}
 ```
 and update the ip with RasperryPi’s local IP-adress or hostname
 

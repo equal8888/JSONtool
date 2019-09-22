@@ -24,7 +24,7 @@ sudo pip install Flask-BasicAuth
 ```sh
 sudo python app1.py
 ```
-URL (Replace 0.0.0.0 with the RasperryPi's local IP-adress or hostname)
+URL (Replace 0.0.0.0 with the local IP-adress or hostname)
 ```sh
 http://0.0.0.0:8888/
 ```

@@ -49,26 +49,22 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};
   return i;
 }
-function loadJSON(method,url) {
-   var xobj = new XMLHttpRequest();
-       xobj.overrideMimeType("application/json");
-   xobj.open(`${method}`, `http://10.42.0.87:8888/${url}`, true);
-   xobj.setRequestHeader('Authorization', 'Basic [YWRtaW46YWRtaW4=]');
-   xobj.onreadystatechange = function () {
-         if (xobj.readyState == 4 && xobj.status == "200") {
-           if (`${url}`=='Gjson01') {
-             appendData(atob(xobj.responseText),'jsondata');
 
-           } else if (`${url}`=='Pjson01') {
-             console.log(`Its: ${url}`);
+function loadJSON(url,data22,method) {
+   var http = new XMLHttpRequest();
+   var url = `${url}`;
+   var params = `${data22}`;
+   http.open(`${method}`, `http://virgocluster:8888/${url}`, true);
+   http.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
 
-           } else {
-             console.log(`Unknown Value of: ${url}`);
-           }
-          }
-   };
-   xobj.send(null);
+   http.onreadystatechange = function() {
+       if(http.readyState == 4 && http.status == 200) {
+           appendData(atob(http.responseText),'jsondata');
+       }
+   }
+   http.send(params);
 }
+
 function appendData(xobj,eID) {
     var mainContainer = document.getElementById(`${eID}`);
     for (var i = 0; i < 1; i++) {
@@ -81,13 +77,12 @@ function BGjsonP01() {
   loadJSON('GET','jp01');
 }
 function BGjson01() {
-  loadJSON('GET','Gjson01');
+  loadJSON('Gjson01',`${data22}`,'POST');
 }
 function BPjson01() {
   loadJSON('POST','Pjson01');
 }
 
-//show json format currently not on server side
 
 const isValidElement = element => {
   return element.name && element.value;
@@ -130,11 +125,22 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
   return data;
 }, {});
 
+// Show raw data on page
+
 const handleFormSubmit = event => {
   event.preventDefault();
   const data = formToJSON(form.elements);
+  const base64data = btoa(JSON.stringify(data));
+
+
   const dataContainer = document.getElementsByClassName('results__display')[0];
   dataContainer.textContent = JSON.stringify(data, null, "  ");
+
+  const dataContainer2 = document.getElementsByClassName('results__display2')[0];
+  dataContainer2.textContent = base64data;
+
+  data22 = JSON.stringify(data);
+
 };
 
 const form = document.getElementsByClassName('contact-form')[0];

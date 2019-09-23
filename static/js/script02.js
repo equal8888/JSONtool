@@ -50,11 +50,13 @@ function checkTime(i) {
   return i;
 }
 
+
 function loadJSON(url,data22,method) {
    var http = new XMLHttpRequest();
+   var myhostname = location.hostname;
    var url = `${url}`;
    var params = `${data22}`;
-   http.open(`${method}`, `http://virgocluster:8888/${url}`, true);
+   http.open(`${method}`, `http://${myhostname}:8888/${url}`, true);
    http.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
 
    http.onreadystatechange = function() {

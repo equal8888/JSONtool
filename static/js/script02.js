@@ -79,6 +79,9 @@ function BGjsonP01() {
 function BGjson01() {
   loadJSON('Gjson01',`${data22}`,'POST');
 }
+function BGjson03() {
+  loadJSON('Gjson03','null','GET');
+}
 function BPjson01() {
   loadJSON('POST','Pjson01');
 }

@@ -30,7 +30,7 @@ http://0.0.0.0:8888/
 ```
 
 ### Troubleshoot for json button
-From the flask server file '/static/js/script02.js' && '/static/js/script03.js' search
+From the flask server file '/static/js/script02.js' search
 ```sh
 :8888/${url}
 ```

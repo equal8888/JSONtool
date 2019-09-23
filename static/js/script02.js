@@ -62,6 +62,7 @@ function loadJSON(url,data22,method) {
    http.onreadystatechange = function() {
        if(http.readyState == 4 && http.status == 200) {
            appendData(atob(http.responseText),'jsondata');
+           document.getElementById('jsondata').innerHTML.reload
        }
    }
    http.send(params);
@@ -75,17 +76,14 @@ function appendData(xobj,eID) {
         mainContainer.appendChild(div);
     }
 }
-function BGjsonP01() {
-  loadJSON('GET','jp01');
-}
 function BGjson01() {
   loadJSON('Gjson01',`${data22}`,'POST');
 }
 function BGjson03() {
   loadJSON('Gjson03','null','GET');
 }
-function BPjson01() {
-  loadJSON('POST','Pjson01');
+function BGjson04() {
+  location.reload(true);
 }
 
 

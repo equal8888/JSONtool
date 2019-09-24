@@ -3,13 +3,17 @@
 Again having hard time naming my projects. 😄
 
 
-GUI to POST anything and see it as a auto formatted JSON && Json+Base64 file format. Also data can be previewed/seen on live-action inside the website
+GUI to POST stuff and see it as a auto formatted JSON && Json+Base64 file format. Also data can be previewed/seen on live-action inside the website
 <br>
 <br>
 html data -->
 <img src="https://drive.google.com/uc?id=1zP2K3-BmnmlF8WXYYZGLi3EkpHGHFxcq" width="auto" height="200"/>
 video -->
 <img src="https://drive.google.com/uc?id=1tFPw5kPryupFu2Lp5l8RdQNhjzS77-ki" width="auto" height="200"/>
+<br>
+<br>
+Please dont use in production as im only experimenting stuff
+
 
 ### Installation
 

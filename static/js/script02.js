@@ -1,7 +1,10 @@
 window.onload = reloadP()
 function reloadP() {
-  document.getElementById("DisableB").disabled = true;
+  document.getElementById("DisableB01").disabled = true;
+  document.getElementById("DisableB02").disabled = true;
 }
+
+
 function initButtonGroup(parentId) {
     var buttonGroup = document.getElementById(parentId),
         i = 0,
@@ -36,6 +39,8 @@ function clearJSON(elementID)
 {
     document.getElementById("jsondata").innerHTML = "";
 }
+
+
 function startTime() {
   var today = new Date();
   var h = today.getHours();
@@ -131,6 +136,7 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 // Show raw data on page
 
 const handleFormSubmit = event => {
+  document.getElementById("DisableB01").disabled = false;
   event.preventDefault();
   const data = formToJSON(form.elements);
   const base64data = btoa(JSON.stringify(data));

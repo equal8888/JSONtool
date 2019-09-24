@@ -9,7 +9,6 @@
   <div class="navbar">
     <a href="#">MainPage</a>
     <a href="#" class="right" onclick="startTime()">Show Time</a>
-<!-- <a href="#" class="right" onclick="BGjson03()">Host power-off</a> -->
     <a href="#" class="right" onclick="BGjson04()">Reload (bypass cache)</a>
   </div>
 <p id="txt" class="clock"></p>
@@ -41,16 +40,12 @@
       <div class="results">
         <pre class="results__display-wrapper"><code class="results__display2"></code></pre>
       </div>
-      <p></p>
     </div>
   </div>
-
-
-
   <div class="main">
     <div id="buttonGroup" class="cbuttonGroup">
-        <button id="DisableB01" onclick="BGjson01()">Preview</button>
-        <button id="DisableB02" onclick="clearJSON('cart_item')">Clear Preview</button>
+        <button id="DisableB01" onclick="BPreview01()">Preview</button>
+        <button id="DisableB02" onclick="BClear01()">Clear Preview</button>
     </div>
     <div id="jsondata">
     </div>

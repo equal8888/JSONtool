@@ -4,46 +4,6 @@ function reloadP() {
   document.getElementById("DisableB02").disabled = true;
 }
 
-data22 = undefined
-
-
-
-function initButtonGroup(parentId) {
-    var buttonGroup = document.getElementById(parentId),
-        i = 0,
-        len = buttonGroup.childNodes.length,
-        button;
-        handleButtonGroupClick = initClickHandler(parentId);
-    for (; i < len; i += 1) {
-        button = buttonGroup.childNodes[i];
-        if (button.nodeName === 'BUTTON') {
-            button.addEventListener('click', handleButtonGroupClick);
-        }
-    }
-}
-function initClickHandler(parentId) {
-    return function(e) {
-        var buttonGroup = document.getElementById(parentId),
-            i = 0,
-            len = buttonGroup.childNodes.length,
-            button;
-        e.preventDefault();
-        for (; i < len; i += 1) {
-            button = buttonGroup.childNodes[i];
-            if (button.nodeName === 'BUTTON') {
-                button.disabled = false;
-            }
-        }
-        e.target.disabled = true;
-    };
-}
-initButtonGroup('buttonGroup');
-function clearJSON(elementID)
-{
-    document.getElementById("jsondata").innerHTML = "";
-}
-
-
 function startTime() {
   var today = new Date();
   var h = today.getHours();
@@ -57,7 +17,6 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};
   return i;
 }
-
 
 function loadJSON(url,data22,method) {
    var http = new XMLHttpRequest();
@@ -77,20 +36,32 @@ function loadJSON(url,data22,method) {
    http.send(params);
 }
 
-function appendData(xobj,eID) {
+function appendData(http,eID) {
     var mainContainer = document.getElementById(`${eID}`);
     for (var i = 0; i < 1; i++) {
         var div = document.createElement("div");
-        div.innerHTML = xobj
+        div.innerHTML = http
         mainContainer.appendChild(div);
     }
 }
-function BGjson01() {
-  loadJSON('Gjson01',`${data22}`,'POST');
-}
+
 function BGjson03() {
   loadJSON('Gjson03','null','GET');
 }
+function BPreview01() {
+  document.getElementById('DisableB01').disabled = true;
+  document.getElementById("DisableB02").disabled = false;
+
+  loadJSON('Gjson01',`${data22}`,'POST');
+}
+function BClear01(elementID)
+{
+    document.getElementById("DisableB01").disabled = false;
+    document.getElementById("DisableB02").disabled = true;
+
+    document.getElementById("jsondata").innerHTML = "";
+}
+
 function BGjson04() {
   location.reload(true);
 }
@@ -140,13 +111,8 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 // Show raw data on page
 
 const handleFormSubmit = event => {
-  if(data22 === undefined){
-    document.getElementById("DisableB01").disabled = false;
-  }else{
-    document.getElementById("DisableB01").disabled = true;
-  }
-
   event.preventDefault();
+
   const data = formToJSON(form.elements);
   const base64data = btoa(JSON.stringify(data));
 
@@ -158,6 +124,10 @@ const handleFormSubmit = event => {
   dataContainer2.textContent = base64data;
 
   data22 = JSON.stringify(data);
+
+  if(document.getElementById('DisableB01').disabled && document.getElementById('DisableB02').disabled){
+    document.getElementById("DisableB01").disabled = false;
+  }
 
 };
 

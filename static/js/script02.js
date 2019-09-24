@@ -4,6 +4,9 @@ function reloadP() {
   document.getElementById("DisableB02").disabled = true;
 }
 
+data22 = undefined
+
+
 
 function initButtonGroup(parentId) {
     var buttonGroup = document.getElementById(parentId),
@@ -137,7 +140,12 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 // Show raw data on page
 
 const handleFormSubmit = event => {
-  document.getElementById("DisableB01").disabled = false;
+  if(data22 === undefined){
+    document.getElementById("DisableB01").disabled = false;
+  }else{
+    document.getElementById("DisableB01").disabled = true;
+  }
+
   event.preventDefault();
   const data = formToJSON(form.elements);
   const base64data = btoa(JSON.stringify(data));

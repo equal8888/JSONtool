@@ -12,7 +12,7 @@ video -->
 <img src="https://drive.google.com/uc?id=1tFPw5kPryupFu2Lp5l8RdQNhjzS77-ki" width="auto" height="200"/>
 <br>
 <br>
-Please dont use in production. Im only experimenting
+do not use in production.
 
 
 ### Installation

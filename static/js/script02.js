@@ -63,6 +63,7 @@ function loadJSON(url,data22,method) {
    var params = `${data22}`;
    http.open(`${method}`, `http://${myhostname}:8888/${url}`, true);
    http.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+   http.setRequestHeader('Authorization', 'Basic [YWRtaW46YWRtaW4=]');
 
    http.onreadystatechange = function() {
        if(http.readyState == 4 && http.status == 200) {

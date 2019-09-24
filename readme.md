@@ -23,7 +23,7 @@ sudo pip install Flask-BasicAuth
 
 
 ```sh
-sudo python app1.py
+sudo ./app1.py
 ```
 URL (Replace 0.0.0.0 with the local IP-adress or hostname)
 ```sh

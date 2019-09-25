@@ -2,7 +2,6 @@
 from flask import Flask, request, render_template
 from flask_basicauth import BasicAuth
 import base64
-import requests
 
 app = Flask(__name__)
 basic_auth = BasicAuth(app)

@@ -1,7 +1,10 @@
 window.onload = reloadP()
 function reloadP() {
-  document.getElementById("DisableB01").disabled = true;
-  document.getElementById("DisableB02").disabled = true;
+  document.getElementById('DisableB01').disabled = true;
+  document.getElementById('DisableB02').disabled = true;
+  checkboxStatus = "CheckOff"
+  console.log(checkboxStatus);
+
 }
 
 function startTime() {
@@ -10,11 +13,11 @@ function startTime() {
   var m = today.getMinutes();
   m = checkTime(m);
   document.getElementById('txt').innerHTML =
-  h + ":" + m;
+  h + ':' + m;
   var t = setTimeout(startTime, 2000 );
 }
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};
+  if (i < 10) {i = '0' + i};
   return i;
 }
 
@@ -39,7 +42,7 @@ function loadJSON(url,data22,method) {
 function appendData(http,eID) {
     var mainContainer = document.getElementById(`${eID}`);
     for (var i = 0; i < 1; i++) {
-        var div = document.createElement("div");
+        var div = document.createElement('div');
         div.innerHTML = http
         mainContainer.appendChild(div);
     }
@@ -50,16 +53,16 @@ function BGjson03() {
 }
 function BPreview01() {
   document.getElementById('DisableB01').disabled = true;
-  document.getElementById("DisableB02").disabled = false;
+  document.getElementById('DisableB02').disabled = false;
 
   loadJSON('Gjson01',`${data22}`,'POST');
 }
 function BClear01(elementID)
 {
-    document.getElementById("DisableB01").disabled = false;
-    document.getElementById("DisableB02").disabled = true;
+    document.getElementById('DisableB01').disabled = false;
+    document.getElementById('DisableB02').disabled = true;
 
-    document.getElementById("jsondata").innerHTML = "";
+    document.getElementById('jsondata').innerHTML = '';
 }
 
 function BGjson04() {
@@ -114,22 +117,46 @@ const handleFormSubmit = event => {
   event.preventDefault();
 
   const data = formToJSON(form.elements);
+
   const base64data = btoa(JSON.stringify(data));
 
-
   const dataContainer = document.getElementsByClassName('results__display')[0];
-  dataContainer.textContent = JSON.stringify(data, null, "  ");
+  dataContainer.textContent = JSON.stringify(data, null, "  ").replace(/"/g, '"');
 
   const dataContainer2 = document.getElementsByClassName('results__display2')[0];
   dataContainer2.textContent = base64data;
 
   data22 = JSON.stringify(data);
 
+
+  if (checkboxStatus == "CheckOn") {
+    BClear01()
+    BPreview01()
+   } else {
+     console.log(checkboxStatus);
+  }
+
   if(document.getElementById('DisableB01').disabled && document.getElementById('DisableB02').disabled){
-    document.getElementById("DisableB01").disabled = false;
+    document.getElementById('DisableB01').disabled = false;
   }
 
 };
 
+
 const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);
+
+// AutoPreview
+function AutoPreview01() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    checkboxStatus = "CheckOn"
+    console.log(checkboxStatus);
+
+  } else {
+    checkboxStatus = "CheckOff"
+    console.log(checkboxStatus);
+
+  }
+}

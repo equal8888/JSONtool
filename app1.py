@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 from flask_basicauth import BasicAuth
 import base64
 
@@ -24,7 +24,7 @@ def Gjson01():
     return EncodeBase64
 
 
-# --- Memo --- 
+# --- Memo ---
 
 # --- From BASE+json / JSON
 #    req_data = request.data

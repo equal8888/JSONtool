@@ -19,34 +19,47 @@
 <div class='row'>
   <div class='side'>
     <h2>Input</h2>
+
     <section class='content'>
       <form class='content__form contact-form'>
+
         <div class='contact-form__input-group'>
-          <p type='code' id='displayjsondata01'></p>
-          <label class='contact-form__label' for='name'>data1: </label><input class='contact-form__input contact-form__input--text' id='name' name='data1' type='code' value='<iframe width="100%" height="415" src="https://www.youtube.com/embed/pBuZEGYXA6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'/>
-          <button class='contact-form__button' type='submit'>Apply</button>
+          <label>jdata1</label>
+          <input class='contact-form__input contact-form__input--code' id='jdata1' name='jdata1' type='code' value='<iframe width="100%" height="415" src="https://www.youtube.com/embed/pBuZEGYXA6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'/>
+          <br>
+          <label>secret</label>
+          <input class='contact-form__input contact-form__input--code' id='secret' name='secret' type='code' value='MTIzLTEyMw=='/>
+
         </div>
+
+        <button class='contact-form__button' type='submit'>Apply</button>
       </form>
     </section>
-
     <div class='fakeimg' style='height:472px;'>
-      <h2>Format:</h2>
-        <p>Incomplete, unreliable</p>
-      <h3>Json</h3>
-        <pre class='results'><code class='results__display'></code></pre>
-      <h3>Json+Base64</h3>
-        <pre class='results'><code class='results__display2'></code></pre>
-      </div>
+    <p>Incomplete, unreliable.</p>
+      <h2> Json</h2>
+    <div class='results'>
+      <pre class='results__display-wrapper'><code class='results__display'></code></pre>
+    </div>
+      <h2>Json+Base64</h2>
+    <div class='results'>
+      <pre class='results__display-wrapper'><code class='results__display2'></code></pre>
     </div>
 
+    </div>
+
+  </div>
+
   <div class='main'>
+
     <div id='buttonGroup' class='cbuttonGroup'>
         <button id='DisableB01' onclick='BPreview01()'>Preview</button>
         <button id='DisableB02' onclick='BClear01()'>Clear Preview</button>
     </div>
     <div id='jsondata'>
-    </div>
+
   </div>
+
 </div>
 <div class='footer'>
 </div>

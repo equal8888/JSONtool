@@ -10,17 +10,18 @@ basic_auth = BasicAuth(app)
 def static1():
     return render_template('jsonpagestatic.html')
 
+
 @app.route('/Gjson01', methods=['POST'])
 @basic_auth.required
 def Gjson01():
     req_data = request.get_json()
-    BytestoString = req_data['data1'].encode('utf-8')
+    BytestoString = req_data['jdata1'].encode('utf-8')
     EncodeBase64 = base64.b64encode(BytestoString)
     return EncodeBase64
 
 # --- Memo ---
 
-# --- From Base64 to Json
+# --- From Json+Base64 to Json
 #    req_data = request.data
 #    DecodedtoBytes = base64.b64decode(req_data)
 #    BytestoString = DecodedtoBytes.decode("UTF-8")
@@ -28,7 +29,7 @@ def Gjson01():
 #    return BytestoString
 
 
-# --- From Json to Base64
+# --- From Json to Json+Base64
 #    req_data = request.get_json()
 #    BytestoString = req_data['data1'].encode('utf-8')
 #    EncodeBase64 = base64.b64encode(BytestoString)

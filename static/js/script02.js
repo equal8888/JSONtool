@@ -2,8 +2,7 @@ window.onload = reloadP()
 function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
-  checkboxStatus = "CheckOff"
-  console.log(checkboxStatus);
+  checkboxStatus = "CheckOn"
 
 }
 
@@ -121,7 +120,7 @@ const handleFormSubmit = event => {
   const base64data = btoa(JSON.stringify(data));
 
   const dataContainer = document.getElementsByClassName('results__display')[0];
-  dataContainer.textContent = JSON.stringify(data, null, "  ").replace(/"/g, '"');
+  dataContainer.textContent = JSON.stringify(data, null, "  ");
 
   const dataContainer2 = document.getElementsByClassName('results__display2')[0];
   dataContainer2.textContent = base64data;
@@ -146,8 +145,8 @@ const handleFormSubmit = event => {
 const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);
 
-// AutoPreview
-function AutoPreview01() {
+// Press Enter to Preview
+function EntertoPreview01() {
   var checkBox = document.getElementById("myCheck");
   var text = document.getElementById("text");
   if (checkBox.checked == true){

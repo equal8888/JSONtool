@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 from flask_basicauth import BasicAuth
 import base64
 
@@ -10,6 +10,9 @@ basic_auth = BasicAuth(app)
 def static1():
     return render_template('jsonpagestatic.html')
 
+@app.route('/test')
+def test():
+    return render_template('test.html')
 
 @app.route('/Gjson01', methods=['POST'])
 @basic_auth.required
@@ -17,24 +20,43 @@ def Gjson01():
     req_data = request.get_json()
     BytestoString = req_data['jdata1'].encode('utf-8')
     EncodeBase64 = base64.b64encode(BytestoString)
+
     return EncodeBase64
 
-# --- Memo ---
 
-# --- From Json+Base64 to Json
+# --- Memo --- 
+
+# --- From BASE+json / JSON
 #    req_data = request.data
 #    DecodedtoBytes = base64.b64decode(req_data)
-#    BytestoString = DecodedtoBytes.decode("UTF-8")
+#    BytestoString = DecodedtoBytes.decode('utf-8')
 
 #    return BytestoString
+# ---------------------------
 
-
-# --- From Json to Json+Base64
+# --- From JSON / BASE+json
 #    req_data = request.get_json()
-#    BytestoString = req_data['data1'].encode('utf-8')
+#    BytestoString = req_data['jdata1'].encode('utf-8')
 #    EncodeBase64 = base64.b64encode(BytestoString)
-#    return EncodeBase64
 
+#    return EncodeBase64
+# ---------------------------
+
+# -- From BASE+json / JSON / BASE+json
+#    req_data = request.data
+#    DecodedtoBytes = base64.b64decode(req_data).decode('utf-8')
+
+#    BytestoString = DecodedtoBytes.encode('utf-8')
+#    EncodeBase64 = base64.b64encode(BytestoString)
+
+#    return EncodeBase64
+# ---------------------------
+
+# --- Send back incoming data
+#    req_data = request.data
+
+#    return req_data
+# ---------------------------
 
 # --- Cheat Sheet
 
@@ -62,8 +84,7 @@ def Gjson01():
 # Decoding the bytes to string
 #s2 = d.decode("UTF-8")
 #print(s2)
-
-# --- End
+# ---------------------------
 
 
 if __name__ == '__main__':

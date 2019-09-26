@@ -1,58 +1,55 @@
-<html lang="en">
+<html lang='en'>
 <head>
 <title>Virgo Cluster</title>
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style02.css') }}">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel= 'stylesheet' type= 'text/css' href= '{{ url_for('static',filename='styles/style02.css') }}'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-  <div class="navbar">
-    <a href="#">MainPage</a>
-    <a href="#" class="right" onclick="startTime()">Show Time</a>
-    <a href="#" class="right" onclick="BGjson04()">Reload</a>
+  <div class='navbar'>
+    <a href='#'>MainPage</a>
+    <a href='#' class='right' onclick='startTime()'>Show Time</a>
+    <a href='#' class='right' onclick='BGjson04()'>Reload</a>
   </div>
-<p id="txt" class="clock"></p>
-<div class="canvasbox">
+<p id='txt' class='clock'></p>
+<div class='canvasbox'>
   <h1>Virgo Cluster</h1>
-  <canvas id="canvas"/>
+  <canvas id='canvas'/>
 </div>
-<div class="row">
-  <div class="side">
+<div class='row'>
+  <div class='side'>
     <h2>Input</h2>
-    <section class="content">
-      <form class="content__form contact-form">
-        <div class="testing">
-        </div>
-        <div class="contact-form__input-group">
-          <label class="contact-form__label" for="name">data1: </label><input class="contact-form__input contact-form__input--text" id="name" name="data1" type="text" value='<iframe width="100%" height="415" src="https://www.youtube.com/embed/pBuZEGYXA6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'/>
-          <button class="contact-form__button" type="submit">Apply</button>
+    <section class='content'>
+      <form class='content__form contact-form'>
+        <div class='contact-form__input-group'>
+          <p type='code' id='displayjsondata01'></p>
+          <label class='contact-form__label' for='name'>data1: </label><input class='contact-form__input contact-form__input--text' id='name' name='data1' type='code' value='<iframe width="100%" height="415" src="https://www.youtube.com/embed/pBuZEGYXA6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'/>
+          <button class='contact-form__button' type='submit'>Apply</button>
         </div>
       </form>
     </section>
-    <div class="fakeimg" style="height:472px;">
+
+    <div class='fakeimg' style='height:472px;'>
       <h2>Format:</h2>
+        <p>Incomplete, unreliable</p>
       <h3>Json</h3>
-      <div class="results">
-        <pre class="results__display-wrapper"><code class="results__display"></code></pre>
-      </div>
-      <p></p>
+        <pre class='results'><code class='results__display'></code></pre>
       <h3>Json+Base64</h3>
-      <div class="results">
-        <pre class="results__display-wrapper"><code class="results__display2"></code></pre>
+        <pre class='results'><code class='results__display2'></code></pre>
       </div>
     </div>
-  </div>
-  <div class="main">
-    <div id="buttonGroup" class="cbuttonGroup">
-        <button id="DisableB01" onclick="BPreview01()">Preview</button>
-        <button id="DisableB02" onclick="BClear01()">Clear Preview</button>
+
+  <div class='main'>
+    <div id='buttonGroup' class='cbuttonGroup'>
+        <button id='DisableB01' onclick='BPreview01()'>Preview</button>
+        <button id='DisableB02' onclick='BClear01()'>Clear Preview</button>
     </div>
-    <div id="jsondata">
+    <div id='jsondata'>
     </div>
   </div>
 </div>
-<div class="footer">
+<div class='footer'>
 </div>
-<script type="text/javascript" src="{{ url_for('static',filename='js/script02.js') }}"></script>
+<script type='text/javascript' src='{{ url_for('static',filename='js/script02.js') }}'></script>
 </body>
 </html>

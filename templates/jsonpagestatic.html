@@ -1,33 +1,45 @@
-<html lang='en'>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 <title>Json Tool</title>
-<link rel= 'stylesheet' type= 'text/css' href= '{{ url_for('static',filename='styles/style02.css') }}'>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+<link rel= 'stylesheet' type= 'text/css' href= '{{ url_for('static',filename='styles/style02.css') }}'>
+
 </head>
+
+
 <body>
+
   <div class='navbar'>
     <a href='#'>MainPage</a>
     <a href='#' class='right' onclick='startTime()'>Show Time</a>
     <a href='#' class='right' onclick='BGjson04()'>Reload</a>
   </div>
+
 <p id='txt' class='clock'></p>
+
 <div class='canvasbox'>
   <h3 style='color:white; padding-left: 20px;'>Json Tool</h3>
   <p  style='color:white;  padding-left: 20px;' id="ShowMyHost">Loading...</p>
 </div>
 
-<div class='Sticktogether'>
 
 <div class='row'>
   <div class='side'>
 
     <section class='content'>
       <h1 class='content__heading'>Input</h1>
+
       <form class='content__form contact-form'>
-        <div class='testing'>
           <p><code>Known issues: Do not input " or \</code></p>
-        </div>
 
         <div class='contact-form__input-group'>
           <label class='contact-form__label contact-form__label--text' for='jdata1'>jdata1</label>
@@ -40,11 +52,11 @@
         </div>
 
         <button class='contact-form__button' type='submit'>Apply</button>
-        Auto Preview:<input type='checkbox' id='myCheck' onclick='EntertoPreview01()'checked>
+        <input type="checkbox" id='myCheck' onclick='EntertoPreview01()'> Auto Preview
       </form>
     </section>
 
-    <div class='fakeimg' style='height:472px;'>
+  <div class='fakeimg' style='height:472px;'>
       <h2> Json</h2>
 
     <div class='results'>
@@ -57,22 +69,27 @@
       <pre class='results__display-wrapper'><code class='results__display2'></code></pre>
     </div>
 
-    </div>
-  </div>
-
-  <div class='main'>
-
-    <div id='buttonGroup' class='cbuttonGroup'>
-        <button id='DisableB01' onclick='BPreview01()'>Preview</button>
-        <button id='DisableB02' onclick='BClear01()'>Clear Preview</button>
-    </div>
-    <div id='jsondata'>
-
   </div>
 </div>
+
+<div class='main'>
+
+  <div id='buttonGroup' class='cbuttonGroup'>
+    <button id='DisableB01' onclick='BPreview01()'>Preview</button>
+    <button id='DisableB02' onclick='BClear01()'>Clear Preview</button>
+  </div>
+
+  <div id='jsondata'>
+  </div>
+
 </div>
+</div>
+
 <div class='footer'>
 </div>
-<script type='text/javascript' src='{{ url_for('static',filename='js/script02.js') }}'></script>
+
+<script src='{{ url_for('static',filename='js/script02.js') }}'>
+</script>
+
 </body>
 </html>

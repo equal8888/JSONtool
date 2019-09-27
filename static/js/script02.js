@@ -4,6 +4,9 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = "CheckOn"
 
+  var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
+  document.getElementById("ShowMyHost").innerHTML = pageurl;
+
 }
 
 function startTime() {

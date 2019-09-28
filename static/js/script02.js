@@ -4,7 +4,7 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
 
-  var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
+  var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${location.hostname}:8888`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 
 }
@@ -38,11 +38,13 @@ function loadJSON(url,data22,method) {
        if(http.readyState == 4 && http.status == 200) {
            appendData(atob(http.responseText),'jsondata');
            document.getElementById('jsondata').innerHTML.reload;
+           var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
+           document.getElementById('ShowMyHost').innerHTML = pageurl;
        };
    };
    http.ontimeout = function (e) {
-   var pageurl = `Status: <span style='color:red; font-weight: bold;'>off</span> <br> Host: n/a`;
-   document.getElementById('ShowMyHost').innerHTML = pageurl;
+     var pageurl = `Status: <span style='color:red; font-weight: bold;'>fail</span> <br> Host: ${location.hostname}:8888`;
+     document.getElementById('ShowMyHost').innerHTML = pageurl;
    };
    http.send(params);
 };

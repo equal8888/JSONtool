@@ -14,7 +14,6 @@ video -->
 <br>
 do not use in production
 
-I think this is as far as I go because I dont want to be remembered as a hacker... it would be such a waste 😔
 
 ### Installation
 

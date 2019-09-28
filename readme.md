@@ -3,7 +3,7 @@
 Again having hard time naming my projects. 😄
 
 
-GUI to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website
+Website to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask.
 <br>
 <br>
 html data-->

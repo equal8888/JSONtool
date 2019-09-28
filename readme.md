@@ -21,8 +21,8 @@ I think this is as far as I go because I dont want to be remembered as a hacker.
 Install flask and its BasicAuth module
 
 ```sh
-sudo pip install Flask
-sudo pip install Flask-BasicAuth
+pip install Flask
+pip install Flask-BasicAuth
 ```
 ### run it
 

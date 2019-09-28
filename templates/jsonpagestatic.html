@@ -22,6 +22,7 @@
   <p  style='color:white;  padding-left: 20px;' id='ShowMyHost'>Loading...</p>
 </div>
 
+
 <div class='row'>
   <div class='side'>
 
@@ -31,15 +32,17 @@
 
           <p><code>Known issues: Do not input " or \</code></p>
 
-        <div class='contact-form__input-group'>
-          <label class='contact-form__label contact-form__label--text' for='jdata1'>jdata1</label>
-          <input class='contact-form__input contact-form__input--text' id='jdata1' name='jdata1' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/pBuZEGYXA6E' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
-        </div>
+          <div class='inputbox'>
+            jdata1
+            <br>
+            <input name='jdata1' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/pBuZEGYXA6E' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
+            <br>
+            secret
+            <br>
+             <input name='secret' type='text' value=''/>
 
-        <div class='contact-form__input-group'>
-          <label class='contact-form__label contact-form__label--text' for='secret'>secret</label>
-          <input class='contact-form__input contact-form__input--text' id='secret' name='secret' type='text' value=''/>
-        </div>
+          </div>
+
 
         <button class='contact-form__button' type='submit'>Apply</button>
         <input type='checkbox' id='myCheck' onclick='EntertoPreview01()' checked='checked'> Auto Preview

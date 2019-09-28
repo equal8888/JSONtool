@@ -100,6 +100,10 @@
   overflow: hidden;
   background-color: black;
 }
+.inputbox {
+  max-width: auto;
+  overflow-x: scroll;
+}
 .results {
   margin: auto;
   max-width: 205px;

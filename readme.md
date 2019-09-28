@@ -12,7 +12,11 @@ video -->
 <img src="https://drive.google.com/uc?id=1KeBkKpMKadvgnH7YJ8WLnykYr3kkbX8v" width="auto" height="200"/>
 <br>
 <br>
-do not use in production.
+do not use in production... 
+
+Why did I use python flask ?
+<br>
+Because it would be quite stupid to use flask in production anyway... it can only handle 1 request at a time 😏
 
 
 ### Installation

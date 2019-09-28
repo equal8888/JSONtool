@@ -3,7 +3,7 @@
 Again having hard time naming my projects. 😄
 
 
-Website to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask. I think this is as far as I go because I dont want to be remembered as a hacker 😔
+Website to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask. I think this is as far as I go because I dont want to be remembered as a hacker... it would be such a waste of talent 😔
 <br>
 <br>
 html data-->

@@ -40,10 +40,14 @@ function loadJSON(url,data22,method) {
            document.getElementById('jsondata').innerHTML.reload;
            var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
            document.getElementById('ShowMyHost').innerHTML = pageurl;
+       }
+       else if (http.readyState == 4 && http.status != 200) {
+           var pageurl = `Status: <span style='color:red; font-weight: bold;'>${http.status}</span> <br> Host: ${location.hostname}:8888`;
+           document.getElementById('ShowMyHost').innerHTML = pageurl;
        };
    };
    http.ontimeout = function (e) {
-     var pageurl = `Status: <span style='color:red; font-weight: bold;'>fail</span> <br> Host: ${location.hostname}:8888`;
+     var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${location.hostname}:8888`;
      document.getElementById('ShowMyHost').innerHTML = pageurl;
    };
    http.send(params);

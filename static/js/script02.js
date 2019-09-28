@@ -2,10 +2,10 @@ window.onload = reloadP()
 function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
-  checkboxStatus = "CheckOn"
+  checkboxStatus = 'CheckOn'
 
   var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
-  document.getElementById("ShowMyHost").innerHTML = pageurl;
+  document.getElementById('ShowMyHost').innerHTML = pageurl;
 
 }
 
@@ -123,7 +123,7 @@ const handleFormSubmit = event => {
   const base64data = btoa(JSON.stringify(data));
 
   const dataContainer = document.getElementsByClassName('results__display')[0];
-  dataContainer.textContent = JSON.stringify(data, null, "  ");
+  dataContainer.textContent = JSON.stringify(data, null, '  ');
 
   const dataContainer2 = document.getElementsByClassName('results__display2')[0];
   dataContainer2.textContent = base64data;
@@ -131,11 +131,10 @@ const handleFormSubmit = event => {
   data22 = JSON.stringify(data);
 
 
-  if (checkboxStatus == "CheckOn") {
+  if (checkboxStatus == 'CheckOn') {
     BClear01()
     BPreview01()
    } else {
-     console.log(checkboxStatus);
   }
 
   if(document.getElementById('DisableB01').disabled && document.getElementById('DisableB02').disabled){
@@ -150,15 +149,12 @@ form.addEventListener('submit', handleFormSubmit);
 
 // Press Enter to Preview
 function EntertoPreview01() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
+  var checkBox = document.getElementById('myCheck');
   if (checkBox.checked == true){
-    checkboxStatus = "CheckOn"
-    console.log(checkboxStatus);
+    checkboxStatus = 'CheckOn'
 
   } else {
-    checkboxStatus = "CheckOff"
-    console.log(checkboxStatus);
+    checkboxStatus = 'CheckOff'
 
   }
 }

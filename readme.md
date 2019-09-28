@@ -16,7 +16,7 @@ do not use in production...
 
 Why did I use python flask ?
 <br>
-Because it would be quite stupid to use flask in production anyway... it can only handle 1 request at a time 😏
+it can only handle 1 request at a time 😏
 
 
 ### Installation

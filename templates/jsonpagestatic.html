@@ -12,7 +12,7 @@
   <div class='navbar'>
     <a href='#'>MainPage</a>
     <a href='#' class='right' onclick='startTime()'>Show Time</a>
-    <a href='#' class='right' onclick='BGjson04()'>Reload</a>
+    <a href='#' class='right' onclick='ReloadPage()'>Reload</a>
   </div>
 
 <p id='txt' class='clock'></p>
@@ -26,6 +26,8 @@
 <div class='row'>
   <div class='side'>
 
+    <div class='boxx' style='height:auto;'>
+
     <section class='content'>
       <h1 class='content__heading'>Input</h1>
       <form class='content__form contact-form'>
@@ -35,7 +37,7 @@
           <div class='inputbox'>
             jdata1
             <br>
-            <input name='jdata1' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/pBuZEGYXA6E' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
+            <input name='jdata1' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/8S0FDjFBj8o' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
             <br>
             secret
             <br>
@@ -45,12 +47,16 @@
 
 
         <button class='contact-form__button' type='submit'>Apply</button>
-        <input type='checkbox' id='myCheck' onclick='EntertoPreview01()' checked='checked'> Auto Preview
+        <br>
+        <input type='checkbox' id='myCheck' onclick='EntertoPreview01()' checked='checked'>Vpreview with Enter
 
       </form>
     </section>
 
-  <div class='fakeimg' style='height:472px;'>
+  </div>
+
+
+  <div class='boxx' style='height:472px;'>
 
     <p><b>Json</b></p>
 
@@ -70,12 +76,16 @@
 <div class='main'>
 
   <div id='buttonGroup' class='cbuttonGroup'>
+    <p><b>Vpreview</b></p>
     <button id='DisableB01' onclick='BPreview01()'>Preview</button>
     <button id='DisableB02' onclick='BClear01()'>Clear Preview</button>
   </div>
 
+  <div class='visualjdata'>
   <div id='jsondata'>
   </div>
+  </div>
+
 
 </div>
 </div>

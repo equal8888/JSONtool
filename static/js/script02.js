@@ -75,7 +75,7 @@ function BClear01(elementID)
     document.getElementById('jsondata').innerHTML = '';
 }
 
-function BGjson04() {
+function ReloadPage() {
   location.reload(true);
 }
 

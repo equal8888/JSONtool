@@ -12,7 +12,7 @@ video -->
 <img src="https://drive.google.com/uc?id=1KeBkKpMKadvgnH7YJ8WLnykYr3kkbX8v" width="auto" height="200"/>
 <br>
 <br>
-do not use in production.
+do not use in production (flask can only handle one request at a time anyways 😄 😄 😄 )
 
 
 

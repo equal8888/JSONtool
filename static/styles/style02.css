@@ -86,10 +86,14 @@
 .cbuttonGroup {
   margin-bottom: 10px;
 }
-.fakeimg {
+.boxx {
   background-color: #aaa;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
+}
+.visualjdata {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
 }
 .footer {
   width:100%;

@@ -14,7 +14,7 @@ def static1():
 @basic_auth.required
 def Gjson01():
     req_data = request.get_json()
-    BytestoString = req_data['jdata1'].encode('utf-8')
+    BytestoString = req_data['jdata'].encode('utf-8')
     EncodeBase64 = base64.b64encode(BytestoString)
 
     return EncodeBase64

@@ -6,98 +6,68 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <link rel= 'stylesheet' type= 'text/css' href= '/static/styles/style02.css'>
 </head>
-
 <body>
-
   <div class='navbar'>
     <a href='#'>MainPage</a>
     <a href='#' class='right' onclick='startTime()'>Show Time</a>
     <a href='#' class='right' onclick='ReloadPage()'>Reload</a>
   </div>
-
 <p id='txt' class='clock'></p>
-
 <div class='canvasbox'>
   <h3 style='color:white; padding-left: 20px;'>Json Tool</h3>
   <p  style='color:white;  padding-left: 20px;' id='ShowMyHost'>Loading...</p>
 </div>
-
-
 <div class='row'>
   <div class='side'>
-
     <div class='boxx' style='height:auto;'>
-
     <section class='content'>
       <h1 class='content__heading'>Input</h1>
       <form class='content__form contact-form'>
-
           <p><code>JSON.stringify & btoa</code></p>
-
           <div class='inputbox'>
             jdata1
             <br>
             <input name='jdata1' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/IP-rGJKSZ3s' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
             <br>
-            secret
+            id
             <br>
-            <input name='secret' type='text' value=''/>
+            <input name='id' type='text' value=''/>
           </div>
-
-
         <button class='contact-form__button' type='submit'>Apply</button>
       </form>
     </section>
-
   </div>
-
-
   <div class='boxx' style='height:472px;'>
     <p><b>Conversion</b> (front-end)</p>
-
     <p><b>Json</b></p>
-
     <div class='results'>
       <pre class='results__display-wrapper'><code class='results__display'></code></pre>
     </div>
-
     <p><b>Json+Base64</b></p>
-
     <div class='results'>
       <pre class='results__display-wrapper'><code class='results__display2'></code></pre>
     </div>
-
   </div>
 </div>
-
 <div class='main'>
-
   <div id='buttonGroup' class='cbuttonGroup'>
     <p><b>Visual preview</b> (backend)</p>
-
   <div class='Controls'>
     <p>Controls</p>
     <button id='DisableB01' onclick='BPreview01()'>Preview</button>
     <button id='DisableB02' onclick='BClear01()'>Clear Preview</button>
     <input type='checkbox' id='myCheck' onclick='EntertoPreview01()' checked='checked'>Auto preview
   </div>
-
   </div>
-
   <div class='visualjdata'>
   <div id='jsondata'>
   </div>
   </div>
-
-
 </div>
 </div>
-
 <div class='footer'>
 </div>
-
 <script src='/static/js/script02.js'>
 </script>
-
 </body>
 </html>

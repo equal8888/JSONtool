@@ -6,9 +6,9 @@ Again having hard time naming my projects. 😄
 what you can do is to type stuff and see it as a auto formatted JSON && Json+Base64 file format (But i'm not sure how good/bad the autoformat is). Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
 <br>
 <br>
-Posted html -->
+html -->
 <img src="https://drive.google.com/uc?id=1ItYCaQdHqfrqPeEN9-0cHpXtSsKFW0cL" width="auto" height="200"/>
-Posted embed video -->
+embed video -->
 <img src="https://drive.google.com/uc?id=1KeBkKpMKadvgnH7YJ8WLnykYr3kkbX8v" width="auto" height="200"/>
 <br>
 <br>

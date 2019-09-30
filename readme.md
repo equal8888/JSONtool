@@ -40,8 +40,6 @@ only datatype string "text" seems to work
 
 json is made for data interchange between computers. not to transfer html
 
-If id have to give this some version number it would be Pre-alpha 0.01
-
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

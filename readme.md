@@ -38,7 +38,7 @@ http://0.0.0.0:8888/
 
 json is made for data interchange between computers. not to transfer html
 <br>
-the autoformatted json preview might not be reliable
+the autoformatted json and json+base64 preview might not be reliable
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

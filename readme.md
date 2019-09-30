@@ -33,7 +33,7 @@ http://0.0.0.0:8888/
 ```
 
 ### Known issues
-json is made for primary for data interchange between computers. not to transfer html
+json is made for data interchange between computers. not to transfer html
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

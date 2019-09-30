@@ -1,14 +1,13 @@
+// set up stuff on page load
 window.onload = reloadP()
 function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
-
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${location.hostname}:8888`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
-
-}
-
+};
+// Show Time
 function startTime() {
   var today = new Date();
   var h = today.getHours();
@@ -17,12 +16,11 @@ function startTime() {
   document.getElementById('txt').innerHTML =
   h + ':' + m;
   var t = setTimeout(startTime, 2000 );
-}
+};
 function checkTime(i) {
   if (i < 10) {i = '0' + i};
   return i;
-}
-
+};
 // no need to edit. hostname is obtained automatically...
 // you can confirm that its the right one from the website under Host:
 function loadJSON(url,data22,method) {
@@ -52,7 +50,6 @@ function loadJSON(url,data22,method) {
    };
    http.send(params);
 };
-
 function appendData(http,eID) {
     var mainContainer = document.getElementById(`${eID}`);
     for (var i = 0; i < 1; i++) {
@@ -60,58 +57,48 @@ function appendData(http,eID) {
         div.innerHTML = http
         mainContainer.appendChild(div);
     }
-}
-
-function BGjson03() {
-  loadJSON('Gjson03','null','GET');
-}
+};
+// Buttons
 function BPreview01() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = false;
 
   loadJSON('Gjson01',`${data22}`,'POST');
-}
+};
 function BClear01(elementID)
 {
     document.getElementById('DisableB01').disabled = false;
     document.getElementById('DisableB02').disabled = true;
 
     document.getElementById('jsondata').innerHTML = '';
-}
-
+};
 function ReloadPage() {
   location.reload(true);
-}
+};
 
-
+// ---
 const isValidElement = element => {
   return element.name && element.value;
 };
-
 const isValidValue = element => {
   return (!['checkbox', 'radio'].includes(element.type) || element.checked);
 };
-
-
 const isCheckbox = element => element.type === 'checkbox';
 const isMultiSelect = element => element.options && element.multiple;
 const getSelectValues = options => [].reduce.call(options, (values, option) => {
   return option.selected ? values.concat(option.value) : values;
 }, []);
-
 const formToJSON_deconstructed = elements => {
   const reducerFunction = (data, element) => {
     data[element.name] = element.value;
     console.log(JSON.stringify(data));
     return data;
   };
-
   const reducerInitialValue = {};
   console.log('Initial `data` value:', JSON.stringify(reducerInitialValue));
   const formData = [].reduce.call(elements, reducerFunction, reducerInitialValue);
   return formData;
 };
-
 const formToJSON = elements => [].reduce.call(elements, (data, element) => {
   if (isValidElement(element) && isValidValue(element)) {
     if (isCheckbox(element)) {
@@ -121,52 +108,37 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
     } else {
       data[element.name] = element.value;
     }
-  }
+  };
   return data;
 }, {});
-
 // Show raw data on page
-
 const handleFormSubmit = event => {
   event.preventDefault();
-
   const data = formToJSON(form.elements);
-
   const base64data = btoa(JSON.stringify(data));
-
   const dataContainer = document.getElementsByClassName('results__display')[0];
   dataContainer.textContent = JSON.stringify(data, null, '  ');
-
   const dataContainer2 = document.getElementsByClassName('results__display2')[0];
   dataContainer2.textContent = base64data;
-
   data22 = JSON.stringify(data);
-
-
   if (checkboxStatus == 'CheckOn') {
     BClear01()
     BPreview01()
    } else {
-  }
-
+  };
   if(document.getElementById('DisableB01').disabled && document.getElementById('DisableB02').disabled){
     document.getElementById('DisableB01').disabled = false;
-  }
-
+  };
 };
-
-
+// ---
 const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);
-
 // Press Enter to Preview
 function EntertoPreview01() {
   var checkBox = document.getElementById('myCheck');
   if (checkBox.checked == true){
     checkboxStatus = 'CheckOn'
-
   } else {
     checkboxStatus = 'CheckOff'
-
-  }
-}
+  };
+};

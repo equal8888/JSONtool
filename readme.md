@@ -3,7 +3,7 @@
 Again having hard time naming my projects. 😄
 
 
-what you can do is to type stuff and see it as a auto formatted JSON && Json+Base64 file format (But i'm not sure how good/bad the autoformat is). Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
+what you can do is to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
 <br>
 <br>
 html -->
@@ -37,7 +37,7 @@ http://0.0.0.0:8888/
 ### Known issues
 
 json is made for data interchange between computers. not to transfer html
-
+the autoformatted json preview is not reliable
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

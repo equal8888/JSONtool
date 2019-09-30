@@ -40,6 +40,17 @@ json is made for data interchange between computers. not to transfer html
 <br>
 the autoformatted json and json+base64 preview might not be reliable
 
+The following characters are reserved in JSON and must be properly escaped to be used in strings:
+```sh
+* Backspace is replaced with \b.
+* Form feed is replaced with \f.
+* Newline is replaced with \n.
+* Carriage return is replaced with \r.
+* Tab is replaced with \t.
+* Double quote is replaced with \"
+* Backslash is replaced with \\
+```
+
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file
 ```sh

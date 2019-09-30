@@ -3,7 +3,7 @@
 Again having hard time naming my projects. 😄
 
 
-what it does is to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST method it is not idempotent
+what it does is to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
 <br>
 <br>
 <img src="https://drive.google.com/uc?id=1ItYCaQdHqfrqPeEN9-0cHpXtSsKFW0cL" width="auto" height="200"/>
@@ -32,6 +32,8 @@ URL (Replace 0.0.0.0 with the local IP-adress or hostname)
 http://0.0.0.0:8888/
 ```
 
+### Known issues
+json is made for primary for data interchange between computers. not to transfer html
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

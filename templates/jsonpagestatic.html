@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-<title>Json Tool</title>
+<title>Json Tool to test simple html</title>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <link rel= 'stylesheet' type= 'text/css' href= '/static/styles/style02.css'>
@@ -14,7 +14,7 @@
   </div>
 <p id='txt' class='clock'></p>
 <div class='canvasbox'>
-  <h3 style='color:white; padding-left: 20px;'>Json Tool</h3>
+  <h3 style='color:white; padding-left: 20px;'>Json Tool to test simple html</h3>
   <p  style='color:white;  padding-left: 20px;' id='ShowMyHost'>Loading...</p>
 </div>
 <div class='row'>
@@ -22,38 +22,13 @@
     <div class='boxx' style='height:auto;'>
     <section class='content'>
       <h1 class='content__heading'>Input</h1>
-
-      <div class='classSpawnBoxes'>
-        <p>Select amount of data boxes</p>
-      <select id='spawnboxesamount'>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        <option value='5'>5</option>
-        <option value='6'>6</option>
-        <option value='7'>7</option>
-        <option value='8'>8</option>
-        <option value='9'>9</option>
-        <option value='10'>10</option>
-      </select>
-      <button type='submit' onclick='SpawnBoxes()'>Ok</button>
-      </div>
-      <br>
-      <br>
-
-
       <form class='content__form contact-form'>
           <div class='inputbox'>
-            data 00
+            Simple html
             <br>
-            <input name='data00' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/IP-rGJKSZ3s' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
+            <input name='data00' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/pBuZEGYXA6E' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
             <br>
             <div id='spawnboxeshere'> </div>
-            <br>
-            secret
-            <br>
-            <input name='secret' type='text' value=''/>
             <br>
           </div>
         <button class='contact-form__button' type='submit'>Apply / Enter</button>
@@ -63,6 +38,7 @@
   <div class='boxx' style='height:472px;'>
     <p><b>Conversion</b> (client-side)</p>
     <p><code>JSON.stringify & btoa</code></p>
+    <p>Results here might not be trustworthy</p>
     <p><b>Json</b></p>
     <div class='results'>
       <pre class='results__display-wrapper'><code class='results__display'></code></pre>
@@ -75,7 +51,7 @@
 </div>
 <div class='main'>
   <div id='buttonGroup' class='cbuttonGroup'>
-    <p><b>Visual preview</b> (data00)</p>
+    <p><b>Visual preview</b></p>
   <div class='Controls'>
     <p>Controls</p>
     <button id='DisableB01' onclick='BPreview01()'>Preview</button>

@@ -132,24 +132,6 @@ const handleFormSubmit = event => {
 // ---
 const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);
-// Spawn Inputbox
-
-function SpawnBoxes(){
-    var number = document.getElementById('spawnboxesamount').value; // Button
-    var container = document.getElementById('spawnboxeshere');
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
-    };
-    for (i=1;i<number;i++){
-        container.appendChild(document.createTextNode('data 0' + (i))); // Box Name
-        var input = document.createElement('input');
-        input.type = 'text';
-        input.name = 'data0' + i;
-        container.appendChild(input);
-        container.appendChild(document.createElement('br'));
-    };
-};
-
 // Press Enter to Preview
 function EntertoPreview01() {
   var checkBox = document.getElementById('myCheck');

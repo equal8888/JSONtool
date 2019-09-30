@@ -7,20 +7,6 @@ function reloadP() {
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${location.hostname}:8888`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 };
-// Show Time
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  m = checkTime(m);
-  document.getElementById('txt').innerHTML =
-  h + ':' + m;
-  var t = setTimeout(startTime, 2000 );
-};
-function checkTime(i) {
-  if (i < 10) {i = '0' + i};
-  return i;
-};
 // no need to edit. hostname is obtained automatically...
 // you can confirm that its the right one from the website under Host:
 function loadJSON(url,data22,method) {

@@ -1,9 +1,9 @@
 # JSONTool... I guess 🤔
 
-Again having hard time naming my projects. 😄
+Again having hard time naming my projects. 😄 This app is bullshit
 
 
-what it does is to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
+what you can do is to type stuff and see it as a auto formatted JSON && Json+Base64 file format (only data type string) Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
 <br>
 <br>
 <img src="https://drive.google.com/uc?id=1ItYCaQdHqfrqPeEN9-0cHpXtSsKFW0cL" width="auto" height="200"/>
@@ -33,7 +33,11 @@ http://0.0.0.0:8888/
 ```
 
 ### Known issues
+
+only datatype string "text" seems to work
+
 json is made for data interchange between computers. not to transfer html
+
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file

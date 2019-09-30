@@ -11,7 +11,7 @@ basic_auth = BasicAuth(app)
 def static1():
     return render_template('jsonpagestatic.html')
 
-# Received json data is only converted to base64 and send back to sender
+# Received jdata is converted to base64 and send back to sender
 @app.route('/Gjson01', methods=['POST'])
 @basic_auth.required
 def Gjson01():

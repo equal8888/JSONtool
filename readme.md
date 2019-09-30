@@ -1,4 +1,4 @@
-# JSONTool... I guess 🤔 It's not a real Website or tool 😔
+# JSONTool... I guess 🤔 but It's not a tool 😔
 
 Again having hard time naming my projects. 😄
 

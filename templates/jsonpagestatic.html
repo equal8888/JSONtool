@@ -22,14 +22,35 @@
     <div class='boxx' style='height:auto;'>
     <section class='content'>
       <h1 class='content__heading'>Input</h1>
+
+      <div class='SpawnBoxes'>
+        <p>Select amount of data boxes</p>
+      <select id="spawntxt">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <button type="submit" onclick="addFields()">Ok</button>
+      </div>
+
       <form class='content__form contact-form'>
           <div class='inputbox'>
-            jdata
             <br>
-            <input name='jdata' type='text' value="<iframe width='100%' height='415' src='https://www.youtube.com/embed/IP-rGJKSZ3s' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"/>
+            <div id="container"> </div>
+            <br>
+            secret
+            <br>
+            <input name='secret' type='text' value=''/>
             <br>
           </div>
-        <button class='contact-form__button' type='submit'>Apply</button>
+        <button class='contact-form__button' type='submit'>Apply / Enter</button>
       </form>
     </section>
   </div>
@@ -48,7 +69,7 @@
 </div>
 <div class='main'>
   <div id='buttonGroup' class='cbuttonGroup'>
-    <p><b>Visual preview</b></p>
+    <p><b>Visual preview</b> (data00)</p>
   <div class='Controls'>
     <p>Controls</p>
     <button id='DisableB01' onclick='BPreview01()'>Preview</button>

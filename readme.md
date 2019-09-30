@@ -3,7 +3,7 @@
 Again having hard time naming my projects. 😄
 
 
-what it does is to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask.
+what it does is to type stuff and see it as a auto formatted JSON && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST method it is not idempotent
 <br>
 <br>
 <img src="https://drive.google.com/uc?id=1ItYCaQdHqfrqPeEN9-0cHpXtSsKFW0cL" width="auto" height="200"/>

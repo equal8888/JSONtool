@@ -115,8 +115,6 @@ const handleFormSubmit = event => {
   const base64data = btoa(JSON.stringify(data));
   const dataContainer = document.getElementsByClassName('results__display')[0];
   dataContainer.textContent = JSON.stringify(data, null, '  ');
-  const dataContainer2 = document.getElementsByClassName('results__display2')[0];
-  dataContainer2.textContent = base64data;
   data22 = JSON.stringify(data);
   if (checkboxStatus == 'CheckOn') {
     BClear01()

@@ -42,7 +42,7 @@ function loadJSON(url,data22,method) {
        else if (http.readyState == 4 && http.status != 200) {
            var pageurl = `Status: <span style='color:red; font-weight: bold;'>${http.status}</span> <br> Host: ${location.hostname}:8888`;
            document.getElementById('ShowMyHost').innerHTML = pageurl;
-       };
+       }
    };
    http.ontimeout = function (e) {
      var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${location.hostname}:8888`;
@@ -65,12 +65,10 @@ function BPreview01() {
 
   loadJSON('Gjson01',`${data22}`,'POST');
 };
-function BClear01(elementID)
-{
-    document.getElementById('DisableB01').disabled = false;
-    document.getElementById('DisableB02').disabled = true;
-
-    document.getElementById('jsondata').innerHTML = '';
+function BClear01(elementID) {
+  document.getElementById('DisableB01').disabled = false;
+  document.getElementById('DisableB02').disabled = true;
+  document.getElementById('jsondata').innerHTML = '';
 };
 function ReloadPage() {
   location.reload(true);
@@ -106,8 +104,8 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
       data[element.name] = getSelectValues(element);
     } else {
       data[element.name] = element.value;
-    }
-  };
+    };
+  }
   return data;
 }, {});
 // Show raw data on page
@@ -123,7 +121,6 @@ const handleFormSubmit = event => {
   if (checkboxStatus == 'CheckOn') {
     BClear01()
     BPreview01()
-   } else {
   };
   if(document.getElementById('DisableB01').disabled && document.getElementById('DisableB02').disabled){
     document.getElementById('DisableB01').disabled = false;

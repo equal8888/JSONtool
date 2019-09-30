@@ -134,25 +134,21 @@ const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);
 // Spawn Inputbox
 
-function addFields(){
-    var number = document.getElementById('spawntxt').value; // Butotn
-    var container = document.getElementById('container');
+function SpawnBoxes(){
+    var number = document.getElementById('spawnboxesamount').value; // Button
+    var container = document.getElementById('spawnboxeshere');
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
-    }
-    for (i=0;i<number;i++){
+    };
+    for (i=1;i<number;i++){
         container.appendChild(document.createTextNode('data 0' + (i))); // Box Name
         var input = document.createElement('input');
         input.type = 'text';
         input.name = 'data0' + i;
         container.appendChild(input);
         container.appendChild(document.createElement('br'));
-        if (input.name == 'data00') {
-          input.value = "<iframe width='100%' height='415' src='https://www.youtube.com/embed/IP-rGJKSZ3s' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
-        }
-
-    }
-}
+    };
+};
 
 // Press Enter to Preview
 function EntertoPreview01() {

@@ -25,6 +25,9 @@
   font-size: 40px;
 
 }
+.clock {
+  position:absolute;
+}
 .navbar {
   overflow: hidden;
   background-color: #333;

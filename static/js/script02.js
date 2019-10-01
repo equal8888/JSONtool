@@ -10,45 +10,44 @@ function reloadP() {
 // no need to edit. hostname is obtained automatically...
 // you can confirm that its the right one from the website under Host:
 function loadJSON(url,data22,method) {
-   var http = new XMLHttpRequest();
-   var myhostname = location.hostname;
-   var url = `${url}`;
-   var params = `${data22}`;
-   http.open(`${method}`, `http://${myhostname}:8888/${url}`, true);
-   http.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
-   http.setRequestHeader('Authorization', 'Basic [YWRtaW46YWRtaW4=]');
-   http.onreadystatechange = function() {
-       http.timeout = 2000;
-       if(http.readyState == 4 && http.status == 200) {
-           appendData(atob(http.responseText),'jsondata');
-           document.getElementById('jsondata').innerHTML.reload;
-           var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
-           document.getElementById('ShowMyHost').innerHTML = pageurl;
-       }
-       else if (http.readyState == 4 && http.status != 200) {
-           var pageurl = `Status: <span style='color:red; font-weight: bold;'>${http.status}</span> <br> Host: ${location.hostname}:8888`;
-           document.getElementById('ShowMyHost').innerHTML = pageurl;
-       }
-   };
-   http.ontimeout = function (e) {
-     var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${location.hostname}:8888`;
-     document.getElementById('ShowMyHost').innerHTML = pageurl;
-   };
-   http.send(params);
+  var http = new XMLHttpRequest();
+  var myhostname = location.hostname;
+  var url = `${url}`;
+  var params = `${data22}`;
+  http.open(`${method}`, `http://${myhostname}:8888/${url}`, true);
+  http.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+  http.setRequestHeader('Authorization', 'Basic [YWRtaW46YWRtaW4=]');
+  http.onreadystatechange = function() {
+  http.timeout = 2000;
+  if(http.readyState == 4 && http.status == 200) {
+    appendData(atob(http.responseText),'jsondata');
+    document.getElementById('jsondata').innerHTML.reload;
+    var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
+    document.getElementById('ShowMyHost').innerHTML = pageurl;
+  }
+  else if (http.readyState == 4 && http.status != 200) {
+    var pageurl = `Status: <span style='color:red; font-weight: bold;'>${http.status}</span> <br> Host: ${location.hostname}:8888`;
+    document.getElementById('ShowMyHost').innerHTML = pageurl;
+  }
+};
+http.ontimeout = function (e) {
+  var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${location.hostname}:8888`;
+  document.getElementById('ShowMyHost').innerHTML = pageurl;
+};
+http.send(params);
 };
 function appendData(http,eID) {
-    var mainContainer = document.getElementById(`${eID}`);
-    for (var i = 0; i < 1; i++) {
-        var div = document.createElement('div');
-        div.innerHTML = http
-        mainContainer.appendChild(div);
-    }
+  var mainContainer = document.getElementById(`${eID}`);
+  for (var i = 0; i < 1; i++) {
+    var div = document.createElement('div');
+    div.innerHTML = http
+    mainContainer.appendChild(div);
+  }
 };
 // Buttons
 function BPreview01() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = false;
-
   loadJSON('Gjson01',`${data22}`,'POST');
 };
 function BClear01(elementID) {

@@ -70,7 +70,6 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 const handleFormSubmit = event => {
   event.preventDefault();
   const data = formToJSON(form.elements);
-  const base64data = btoa(JSON.stringify(data));
   const dataContainer = document.getElementsByClassName('results__display')[0];
   dataContainer.textContent = JSON.stringify(data, null, '  ');
   data22 = JSON.stringify(data);

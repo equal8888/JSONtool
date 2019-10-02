@@ -1,11 +1,12 @@
 // set up stuff on page loadb
-window.addEventListener('load', function () {
+window.onload = reloadP()
+function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${location.hostname}:8888`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
-}, false);
+};
 // no need to edit. hostname is obtained automatically...
 // you can confirm that its the right one from the website under Host:
 function loadJSON(url,data22,method) {

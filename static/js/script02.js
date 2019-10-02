@@ -1,6 +1,5 @@
 // set up stuff on page load
-window.onload = reloadP()
-function reloadP() {
+function initialconf() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'

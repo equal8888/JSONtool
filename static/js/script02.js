@@ -71,9 +71,15 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 const handleFormSubmit = event => {
   event.preventDefault();
   const data = formToJSON(form.elements);
+
   const dataContainer = document.getElementsByClassName('results__display')[0];
   dataContainer.textContent = JSON.stringify(data, null, '  ');
   data22 = JSON.stringify(data);
+  
+  const base64data = btoa(JSON.stringify(data));
+  const dataContainer2 = document.getElementsByClassName('results__display2')[0];
+  dataContainer2.textContent = base64data;
+
   if (checkboxStatus == 'CheckOn') {
     BClear01()
     BPreview01()

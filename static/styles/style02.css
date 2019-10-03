@@ -30,7 +30,6 @@
 }
 .header h1 {
   font-size: 40px;
-
 }
 .clock {
   position:absolute;
@@ -110,8 +109,7 @@
   margin: auto;
   max-width: 205px;
   overflow-x: scroll;
-  }
-
+}
 @media screen and (max-width: 700px) {
   .row {
     flex-direction: column;

@@ -3,7 +3,7 @@
 Again having hard time naming my projects. 😄
 
 
-what you can do is to type simple html and see it as a auto formatted JSON file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
+what you can do is to type stuff and see it as a auto formatted json && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.
 <br>
 <br>
 html -->

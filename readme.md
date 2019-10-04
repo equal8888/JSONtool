@@ -34,10 +34,6 @@ URL (Replace 0.0.0.0 with the local IP-adress or hostname)
 http://0.0.0.0:8888/
 ```
 
-### Known issues
-
-Converted results might not be trustworthy
-
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
 1 create new file
 ```sh

@@ -20,7 +20,7 @@ function loadJSON(url,data22,method) {
   http.onreadystatechange = function() {
   http.timeout = 2000;
   if(http.readyState == 4 && http.status == 200) {
-    appendData(atob(http.responseText),'jsondata');
+    appendData((http.responseText),'jsondata');
     document.getElementById('jsondata').innerHTML.reload;
     var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${location.hostname}:8888`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;

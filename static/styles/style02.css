@@ -79,7 +79,7 @@
   background-color: gray;
   padding: 20px;
   border-radius: 0px 20px 20px 0px;
-  overflow-x: scroll;
+  overflow: auto;
 }
 .cbuttonGroup {
   margin-bottom: 10px;
@@ -102,6 +102,11 @@
 .results {
   margin: auto;
   max-width: 205px;
+  overflow-x: scroll;
+}
+.results2 {
+  margin: auto;
+  max-width: 100%;
   overflow-x: scroll;
 }
 @media screen and (max-width: 700px) {

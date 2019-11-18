@@ -1,4 +1,4 @@
-# JSON Autoformatter... I guess 🤔
+# JSON formatter... I guess 🤔
 
 
 

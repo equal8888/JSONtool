@@ -1,4 +1,4 @@
-# JSONTool... I guess 🤔
+# JSON Autoformatter... I guess 🤔
 
 
 

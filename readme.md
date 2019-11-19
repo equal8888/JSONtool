@@ -1,5 +1,4 @@
-# JSON formatter... I guess 🤔
-
+# TEXT TO JSON tool... I guess 🤔
 
 
 what you can do is to type stuff and see it as a auto formatted json && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask (Post method). please remember that POST is NOT idempotent method.

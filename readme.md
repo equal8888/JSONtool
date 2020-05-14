@@ -33,6 +33,12 @@ http://0.0.0.0:8888/
 ```
 
 ###  set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
+
+install to sd (replace "of=/dev/sdX" to proper location of sd)
+```sh
+dd bs=8M if=2015-09-24-raspbian-jessie.img of=/dev/sdX status=progress
+```
+
 1 create new file
 ```sh
 sudo nano /lib/systemd/system/flaskapp.service
@@ -64,7 +70,7 @@ sudo chmod 755 /lib/systemd/system/flaskapp.service
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl enable flaskapp.service
-sudo systemctl daemon-reload
+sudo systemctl start flaskapp.service
 ```
 
 

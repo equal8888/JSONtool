@@ -40,7 +40,8 @@ function appendData(http,eID) {
   var mainContainer = document.getElementById(`${eID}`);
   for (var i = 0; i < 1; i++) {
     var div = document.createElement('div');
-    div.innerHTML = http
+    obj = JSON.parse(http);
+    div.innerHTML = obj.data00;
     mainContainer.appendChild(div);
   }
 };
@@ -75,7 +76,7 @@ const handleFormSubmit = event => {
   const dataContainer = document.getElementsByClassName('results__display')[0];
   dataContainer.textContent = JSON.stringify(data, null, '  ');
   data22 = JSON.stringify(data);
-  
+
   const base64data = btoa(JSON.stringify(data));
   const dataContainer2 = document.getElementsByClassName('results__display2')[0];
   dataContainer2.textContent = base64data;

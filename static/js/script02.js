@@ -7,7 +7,7 @@ function reloadP() {
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 
-  var defhost1 = `${location.hostname}:8888/json01`;
+  var defhost1 = `http://${location.hostname}:8888/json01`;
   document.getElementById('urlEntry').value = defhost1
 };
 // no need to edit. hostname is obtained automatically...
@@ -17,7 +17,7 @@ function loadJSON(data22,method,pageurl,newauth) {
   var host  = (`${pageurl}`);
   var newauth = (`${newauth}`);
 
-  http.open(`${method}`, `http://${host}`, true);
+  http.open(`${method}`, `${host}`, true);
   http.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
   http.setRequestHeader('Authorization', `${newauth}`);
   http.onreadystatechange = function() {

@@ -12,11 +12,20 @@ def static1():
     return render_template('jsonpagestatic.html')
 
 # Received json value is send back to "visual preview"
-@app.route('/Gjson01', methods=['POST'])
+@app.route('/json01', methods=['GET','PUT','POST'])
 @basic_auth.required
-def Gjson01():
-    req_data = request.get_json()
-    return req_data
+def json01():
+    if request.method == 'GET':
+        return '{"a": "Hi, Get method"}'
+
+    if request.method == 'PUT':
+        req_data = request.get_json()
+        return req_data
+
+    if request.method == 'POST':
+        req_data = request.get_json()
+        return req_data
+
 
 if __name__ == '__main__':
     app.config['BASIC_AUTH_USERNAME'] = 'admin'

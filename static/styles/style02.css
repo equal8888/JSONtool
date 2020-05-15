@@ -99,14 +99,21 @@
   overflow: hidden;
   background-color: black;
 }
+
+.jsonrules {
+  width:60%;
+}
+.jsonvalue {
+  width:100%;
+}
 .results {
   margin: auto;
-  max-width: 205px;
+  width:100%;
   overflow-x: scroll;
 }
 .results2 {
   margin: auto;
-  max-width: 100%;
+  width:100%;
   overflow-x: scroll;
 }
 @media screen and (max-width: 700px) {

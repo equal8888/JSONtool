@@ -12,39 +12,41 @@ function reloadP() {
 };
 // no need to edit. hostname is obtained automatically...
 function loadJSON(data22,method,pageurl,newauth) {
-  var http = new XMLHttpRequest();
+
+  const xhr = new XMLHttpRequest();
+
   var params = `${data22}`;
   var host  = (`${pageurl}`);
   var newauth = (`${newauth}`);
 
-  http.open(`${method}`, `${host}`, true);
-  http.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
-  http.setRequestHeader('Authorization', `${newauth}`);
-  http.onreadystatechange = function() {
-  http.timeout = 2000;
-  if(http.readyState == 4 && http.status == 200) {
-    appendData((http.responseText),'jsondata');
+  xhr.open(`${method}`, `${host}`, true);
+  xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+  xhr.setRequestHeader('Authorization', `${newauth}`);
+  xhr.onreadystatechange = function() {
+  xhr.timeout = 2000;
+  if(xhr.readyState == 4 && xhr.status == 200) {
+    appendData((xhr.responseText),'jsondata');
     var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
   }
-  else if (http.readyState == 4 && http.status != 200) {
-    var pageurl = `Status: <span style='color:red; font-weight: bold;'>${http.status}</span> <br> Host: ${location.hostname}`;
+  else if (xhr.readyState == 4 && xhr.status != 200) {
+    var pageurl = `Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${location.hostname}`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
   }
 };
-http.ontimeout = function (e) {
+xhr.ontimeout = function (e) {
   var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${location.hostname}`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 };
-http.send(params);
+xhr.send(params);
 };
-function appendData(http,eID,nameElement02) {
+function appendData(xhr,eID,nameElement02) {
   var mainContainer = document.getElementById(`${eID}`);
   var nameElement02 = document.getElementById("valueEntry");
 
   for (var i = 0; i < 1; i++) {
 
-    obj = JSON.parse(http);
+    obj = JSON.parse(xhr);
     newname1 = nameElement02.value;
 
     var div = document.createElement('div');

@@ -11,7 +11,6 @@ basic_auth = BasicAuth(app)
 def static1():
     return render_template('jsonpagestatic.html')
 
-# Received json value is send back to "visual preview"
 @app.route('/json01', methods=['GET','PUT','POST'])
 @basic_auth.required
 def json01():
@@ -25,7 +24,6 @@ def json01():
     if request.method == 'POST':
         req_data = request.get_json()
         return req_data
-
 
 if __name__ == '__main__':
     app.config['BASIC_AUTH_USERNAME'] = 'admin'

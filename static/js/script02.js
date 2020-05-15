@@ -8,11 +8,7 @@ function reloadP() {
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 
   var defhost1 = `${location.hostname}:8888/json01`;
-  document.getElementById('urlEntry').value = defhost1;
-
-//  var valuename = document.getElementById("valueId").name = newname;
-
-
+  document.getElementById('urlEntry').value = defhost1
 };
 // no need to edit. hostname is obtained automatically...
 function loadJSON(data22,method,pageurl,newauth) {
@@ -59,47 +55,36 @@ function appendData(http,eID,nameElement02) {
   }
 };
 // Buttons
-
 function jSettings04() {
   var nameElement04 = document.getElementById("methodEntry");
   var newmethod = nameElement04.value;
 };
-
-function jSettings02() {
+function BPreview01() {
+  document.getElementById('DisableB01').disabled = true;
+  document.getElementById('DisableB02').disabled = false;
 // HOST
   var name02 = document.getElementById("urlEntry");
   var jhost = name02.value;
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${jhost}`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
-
-
 // DATA
   var name02 = document.getElementById("valueEntry");
   var newname = name02.value;
-
   var valuename = document.getElementById("valueId").name = newname;
-};
-
-
-function BPreview01() {
-  document.getElementById('DisableB01').disabled = true;
-  document.getElementById('DisableB02').disabled = false;
-
-  // URL
+// URL
   var name00 = document.getElementById("urlEntry");
   var jhost = name00.value;
-
-
-  // METHOD
+// METHOD
   var nameElement04 = document.getElementById("methodEntry");
   var method = nameElement04.value;
-
- // AUTH
+// AUTH
   var name03 = document.getElementById("authEntry");
   var newauth = name03.value;
 
-  loadJSON(`${data22}`,`${method}`,`${jhost}`,`${newauth}`);
+    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${newauth}`);
 };
+
+
 function BClear01(elementID) {
   document.getElementById('DisableB01').disabled = false;
   document.getElementById('DisableB02').disabled = true;

@@ -19,7 +19,7 @@ function reloadP() {
   // VALUE
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
-  // HeaderEntry01data
+  // HeaderEntry data
   var headerlist = `
             <option value="">---</option>
             <option value="Accept">Accept</option>
@@ -68,7 +68,7 @@ function reloadP() {
             <option value="Width">Width</option>
             `;
 
-            // HeaderEntry02 value
+            // HeaderEntry value
 
             document.getElementById('HeaderEntry01').innerHTML = headerlist
             document.getElementById('HeaderEntry02').innerHTML = headerlist
@@ -97,10 +97,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02) {
   xhr.open(`${method}`, `${host}`);
   xhr.setRequestHeader(`${he01}`, `${heval01}`);
   xhr.setRequestHeader(`${he02}`, `${heval02}`);
+
+
   xhr.onreadystatechange = function() {
   xhr.timeout = 2000;
 
   if(xhr.readyState == 4 && xhr.status == 200) {
+
     appendData((xhr.responseText),'jsondata');
     var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
@@ -120,6 +123,8 @@ function appendData(xhr,eID,nameElement02) {
   var mainContainer = document.getElementById(`${eID}`);
   var nameElement02 = document.getElementById("valueEntry");
 
+
+
   for (var i = 0; i < 1; i++) {
 
     obj = JSON.parse(xhr);
@@ -128,6 +133,9 @@ function appendData(xhr,eID,nameElement02) {
     var div = document.createElement('div');
 
     div.innerHTML = obj[`${newname1}`];
+
+    document.getElementById("jsondata").value = `${xhr}`;
+    document.getElementById("IncomingJson").value = `${xhr}`;
 
     mainContainer.appendChild(div);
   }
@@ -255,6 +263,8 @@ const handleFormSubmit = event => {
     document.getElementById('DisableB01').disabled = false;
   };
 };
+
+
 // EventListener('submit'
 const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);

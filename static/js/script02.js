@@ -124,6 +124,8 @@ function ReloadPage() {
 
 
 function reset() {
+  // Host
+  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
   // HeaderEntry
   document.getElementById('HeaderEntry').value = 'Authorization';
   // Auth

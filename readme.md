@@ -5,7 +5,7 @@ what you can do is to type stuff and see it as a auto formatted json && Json+Bas
 <br>
 <br>
 embed video -->
-<img src="https://drive.google.com/uc?id=1u00AdDVHdVTvY16yD3shIubKlUGb_s8s" width="auto" height="200"/>
+<img src="https://drive.google.com/uc?id=1u00AdDVHdVTvY16yD3shIubKlUGb_s8s" width="auto"
 <br>
 <br>
 do not use in production

@@ -11,15 +11,11 @@ basic_auth = BasicAuth(app)
 def static1():
     return render_template('jsonpagestatic.html')
 
-@app.route('/json01', methods=['GET','PUT','POST'])
+@app.route('/json01', methods=['GET','POST'])
 @basic_auth.required
 def json01():
     if request.method == 'GET':
-        return '{"a": "Hi, Get method"}'
-
-    if request.method == 'PUT':
-        req_data = request.get_json()
-        return req_data
+        return '{"a": "Hi, Get method. Feel free to try POST Method"}'
 
     if request.method == 'POST':
         req_data = request.get_json()

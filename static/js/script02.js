@@ -120,9 +120,6 @@ function ReloadPage() {
 
 
 function reset() {
-// HOST
-  document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
-  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
   // HeaderEntry
   document.getElementById('HeaderEntry').value = 'Authorization';
   // Auth
@@ -133,7 +130,6 @@ function reset() {
   document.getElementById("valueEntry").value = 'a';
   // VALUE
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-
 };
 
 

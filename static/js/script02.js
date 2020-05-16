@@ -9,6 +9,8 @@ function reloadP() {
 
   var defhost1 = `http://${location.hostname}:8888/json01`;
   document.getElementById('urlEntry').value = defhost1;
+
+
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 };
@@ -112,6 +114,41 @@ function ReloadPage() {
 };
 
 
+function reset() {
+  document.getElementById('DisableB01').disabled = true;
+  document.getElementById('DisableB02').disabled = true;
+  checkboxStatus = 'CheckOn'
+
+// HOST
+  document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
+  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
+
+  // HeaderEntry
+  document.getElementById('HeaderEntry').value = 'Authorization';
+
+  // Auth
+  document.getElementById('authEntry').value = 'Basic [YWRtaW46YWRtaW4=]';
+
+  // Method
+  document.getElementById('methodEntry').value = 'GET';
+
+  // DATA
+  document.getElementById("valueEntry").value = 'a';
+
+  // VALUE
+  document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+};
+
+
+function reload(){
+    var container = document.getElementById("content__heading");
+    var content = container.innerHTML;
+    container.innerHTML= content;
+
+   //this line is to watch the result in console , you can remove it later
+    console.log("Refreshed");
+}
 
 
 // Conversion (client-side) JSON.stringify(data)

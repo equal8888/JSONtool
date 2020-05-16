@@ -22,7 +22,6 @@
 .a {
   height: auto;
 }
-
 .header h1 {
   font-size: 40px;
 }
@@ -98,7 +97,11 @@
 .inputstyle {
   width:100%;
 }
+.resetbutton {
+  width:20%;
+  float: right;
 
+}
 .label {
   text-align: left;
 }

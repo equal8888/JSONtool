@@ -19,13 +19,15 @@
   <div class='side'>
     <div class='a'>
     <section class='content'>
-      <h1 class='content__heading'>Input</h1>
+      <h1 class='content__heading'>Input
+        <button class='resetbutton' onclick='reset()'>reset</button>
+      </h1>
       <form class='content__form contact-form'>
         <label for="urlEntry">host</label>
         <input id="urlEntry" class='inputstyle' type="text" value=''>
         <br>
         <label for="HeaderEntry">header</label>
-        <select id="HeaderEntry" class='inputstyle' value='Authorization'>
+        <select id="HeaderEntry" value='Authorization'>
           <option value="Authorization">Authorization</option>
           <option value="">---</option>
           <option value="Accept">Accept</option>

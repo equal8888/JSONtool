@@ -8,29 +8,38 @@ function reloadP() {
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 
   var defhost1 = `http://${location.hostname}:8888/json01`;
-  document.getElementById('urlEntry').value = defhost1
+  document.getElementById('urlEntry').value = defhost1;
+
 };
 // no need to edit. hostname is obtained automatically...
-function loadJSON(data22,method,pageurl,newauth) {
+
+
+//
+//   crossOrigin: true,
+//  dataType: "jsonp",
+
+function loadJSON(data22,method,pageurl,newheadr,newauth) {
 
   const xhr = new XMLHttpRequest();
 
   var params = `${data22}`;
   var host  = (`${pageurl}`);
+  var newheadr = `${newheadr}`;
   var newauth = (`${newauth}`);
 
-  xhr.open(`${method}`, `${host}`, true);
+  xhr.open(`${method}`, `${host}`);
   xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
-  xhr.setRequestHeader('Authorization', `${newauth}`);
+  xhr.setRequestHeader(`${newheadr}`, `${newauth}`);
   xhr.onreadystatechange = function() {
   xhr.timeout = 2000;
+
   if(xhr.readyState == 4 && xhr.status == 200) {
     appendData((xhr.responseText),'jsondata');
     var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
   }
   else if (xhr.readyState == 4 && xhr.status != 200) {
-    var pageurl = `Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${location.hostname}`;
+    var pageurl = `Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
   }
 };
@@ -79,11 +88,15 @@ function BPreview01() {
 // METHOD
   var nameElement04 = document.getElementById("methodEntry");
   var method = nameElement04.value;
+// HEADERS
+  var name05 = document.getElementById("HeaderEntry");
+  var newheadr = name05.value;
+
 // AUTH
   var name03 = document.getElementById("authEntry");
   var newauth = name03.value;
 
-    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${newauth}`);
+    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${newheadr}`,`${newauth}`);
 };
 
 

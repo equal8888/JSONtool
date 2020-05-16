@@ -4,10 +4,8 @@
 what you can do is to type stuff and see it as a auto formatted json && Json+Base64 file format. Also can be previewed/seen on live-action inside the website with the help of pythonflask
 <br>
 <br>
-html -->
-<img src="https://drive.google.com/uc?id=1ItYCaQdHqfrqPeEN9-0cHpXtSsKFW0cL" width="auto" height="200"/>
 embed video -->
-<img src="https://drive.google.com/uc?id=1KeBkKpMKadvgnH7YJ8WLnykYr3kkbX8v" width="auto" height="200"/>
+<img src="https://drive.google.com/uc?id=1u00AdDVHdVTvY16yD3shIubKlUGb_s8s" width="auto" height="200"/>
 <br>
 <br>
 do not use in production

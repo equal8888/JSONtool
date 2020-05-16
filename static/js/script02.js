@@ -12,10 +12,8 @@ function reloadP() {
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 };
-// no need to edit. hostname is obtained automatically...
 
-
-//
+// memo
 //   crossOrigin: true,
 //  dataType: "jsonp",
 
@@ -71,6 +69,9 @@ function jSettings04() {
   var nameElement04 = document.getElementById("methodEntry");
   var newmethod = nameElement04.value;
 };
+
+// Apply
+
 function BPreview01() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = false;

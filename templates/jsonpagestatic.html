@@ -21,13 +21,11 @@
     <section class='content'>
       <h1 class='content__heading'>Input</h1>
       <form class='content__form contact-form'>
-        host
-        <input id="urlEntry" class='jsonrules' type="text" value=''>
+        <label for="urlEntry">host</label>
+        <input id="urlEntry" class='inputstyle' type="text" value=''>
         <br>
-
-
-        <label for="HeaderEntry">Header</label>
-        <select id="HeaderEntry" value='Authorization'>
+        <label for="HeaderEntry">header</label>
+        <select id="HeaderEntry" class='inputstyle' value='Authorization'>
           <option value="Authorization">Authorization</option>
           <option value="">---</option>
           <option value="Accept">Accept</option>
@@ -74,9 +72,7 @@
           <option value="Warning">Warning</option>
           <option value="Width">Width</option>
         </select>
-
-
-        <input id="authEntry" class='jsonrules' type="text" value='Basic [YWRtaW46YWRtaW4=]'>
+        <input id="authEntry" class='jsonvalue' type="text" value='Basic [YWRtaW46YWRtaW4=]'>
         <br>
         <label for="methodEntry">method</label>
         <select id="methodEntry" value='GET'>
@@ -98,6 +94,7 @@
             <br>
           </div>
         <button class='contact-form__button' type='submit'>Apply / Enter</button>
+      </p>
       </form>
     </section>
   </div>

@@ -9,6 +9,7 @@ function reloadP() {
 
   var defhost1 = `http://${location.hostname}:8888/json01`;
   document.getElementById('urlEntry').value = defhost1;
+  document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 };
 // no need to edit. hostname is obtained automatically...
@@ -44,7 +45,7 @@ function loadJSON(data22,method,pageurl,newheadr,newauth) {
   }
 };
 xhr.ontimeout = function (e) {
-  var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${location.hostname}`;
+  var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${host}`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 };
 xhr.send(params);

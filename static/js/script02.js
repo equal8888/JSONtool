@@ -87,10 +87,7 @@ function BPreview01() {
   var jhost = name02.value;
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${jhost}`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
-// DATA
-  var name02 = document.getElementById("valueEntry");
-  var newname = name02.value;
-  var valuename = document.getElementById("valueId").name = newname;
+
 // URL
   var name00 = document.getElementById("urlEntry");
   var jhost = name00.value;
@@ -104,6 +101,13 @@ function BPreview01() {
 // AUTH
   var name03 = document.getElementById("authEntry");
   var newauth = name03.value;
+
+// DATA
+  var name02 = document.getElementById("valueEntry");
+  var newname = name02.value;
+
+// VALUE
+  var valuename = document.getElementById("valueId").name = newname;
 
     loadJSON(`${data22}`,`${method}`,`${jhost}`,`${newheadr}`,`${newauth}`);
 };

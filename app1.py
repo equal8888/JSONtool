@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from flask import Flask, request, render_template
 from flask_basicauth import BasicAuth
+import json
 import base64
 
 app = Flask(__name__)
@@ -15,11 +16,15 @@ def static1():
 @basic_auth.required
 def json01():
     if request.method == 'GET':
-        return '{"a": "Hi, Get method. Feel free to try POST Method"}'
+       with open('data.txt', 'r') as json_file:
+           req_data = json.load(json_file)
+       return req_data
 
-    if request.method == 'POST':
-        req_data = request.get_json()
-        return req_data
+    if request.method == "POST":
+       req_data = request.get_json()
+       with open('data.txt', 'w') as outfile:
+           json.dump(req_data, outfile)
+       return '{"data01": "ok"}'
 
 if __name__ == '__main__':
     app.config['BASIC_AUTH_USERNAME'] = 'admin'

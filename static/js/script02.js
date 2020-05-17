@@ -14,9 +14,9 @@ function reloadP() {
   document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   // Method
-  document.getElementById('methodEntry').value = 'GET';
+  document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('valueEntry').value = 'a';
+  document.getElementById('valueEntry').value = 'data01';
   // VALUE
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
@@ -257,9 +257,9 @@ function reset() {
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   document.getElementById('authEntry03').value = '';
   // Method
-  document.getElementById('methodEntry').value = 'GET';
+  document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('valueEntry').value = 'a';
+  document.getElementById('valueEntry').value = 'data01';
   // VALUE
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 };

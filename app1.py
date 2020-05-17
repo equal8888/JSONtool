@@ -15,12 +15,12 @@ def static1():
 @app.route('/json01', methods=['GET','POST'])
 @basic_auth.required
 def json01():
-    if request.method == 'GET':
+    if request.method == 'GET' and "application/json" in request.headers["Content-Type"]:
        with open('data.txt', 'r') as json_file:
            req_data = json.load(json_file)
        return req_data
 
-    if request.method == "POST":
+    if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
        req_data = request.get_json()
        with open('data.txt', 'w') as outfile:
            json.dump(req_data, outfile)

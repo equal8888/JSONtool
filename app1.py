@@ -12,7 +12,6 @@ def static1():
     return render_template('jsonpagestatic.html')
 
 @app.route('/json01', methods=['GET','POST'])
-@basic_auth.required
 def json01():
     if request.method == 'GET':
         return '{"a": "Hi, Get method. Feel free to try POST Method"}'

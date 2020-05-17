@@ -11,7 +11,7 @@ function reloadP() {
 
   // Auth
   document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
-  document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
+//  document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   // Method
   document.getElementById('methodEntry').value = 'GET';
   // DATA
@@ -19,66 +19,140 @@ function reloadP() {
   // VALUE
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
+
   // HeaderEntry data
-  var headerlist = `
-            <option value="">---</option>
-            <option value="Accept">Accept</option>
-            <option value="Accept-Charset">Accept-Charset</option>
-            <option value="Accept-Encoding">Accept-Encoding</option>
-            <option value="Accept-Language">Accept-Language</option>
-            <option value="Access-Control-Request-Headers">Access-Control-Request-Headers</option>
-            <option value="Access-Control-Request-Method">Access-Control-Request-Method</option>
-            <option value="Authorization">Authorization</option>
-            <option value="Cache-Control">Cache-Control</option>
-            <option value="Connection">Connection</option>
-            <option value="Content-Language">Content-Language</option>
-            <option value="Content-Type">Content-Type</option>
-            <option value="Cookie">Cookie</option>
-            <option value="Date">Date</option>
-            <option value="DNT">DNT</option>
-            <option value="DPR">DPR</option>
-            <option value="Early-Data">Early-Data</option>
-            <option value="Expect">Expect</option>
-            <option value="Forwarded">Forwarded</option>
-            <option value="From">From</option>
-            <option value="Host">Host</option>
-            <option value="If-Match">If-Match</option>
-            <option value="If-Modified-Since">If-Modified-Since</option>
-            <option value="If-None-Match">If-None-Match</option>
-            <option value="If-Range">If-Range</option>
-            <option value="If-Unmodified-Since">If-Unmodified-Since</option>
-            <option value="Keep-Alive">Keep-Alive</option>
-            <option value="Max-Forwards">Max-Forwards</option>
-            <option value="Origin">Origin</option>
-            <option value="Pragma">Pragma</option>
-            <option value="Proxy-Authorization">Proxy-Authorization</option>
-            <option value="Range">Range</option>
-            <option value="Referer">Referer</option>
-            <option value="Save-Data">Save-Data</option>
-            <option value="TE">TE</option>
-            <option value="Trailer">Trailer</option>
-            <option value="Transfer-Encoding">Transfer-Encoding</option>
-            <option value="Upgrade">Upgrade</option>
-            <option value="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests</option>
-            <option value="User-Agent">User-Agent</option>
-            <option value="Vary">Vary</option>
-            <option value="Via">OPTIONS</option>
-            <option value="Viewport-Width">Viewport-Width</option>
-            <option value="Warning">Warning</option>
-            <option value="Width">Width</option>
-            `;
+    var headerlist = `
+              <option value="">---</option>
+              <option value="Accept">Accept</option>
+              <option value="Accept-Charset">Accept-Charset</option>
+              <option value="Accept-Encoding">Accept-Encoding</option>
+              <option value="Accept-Language">Accept-Language</option>
+              <option value="Access-Control-Request-Headers">Access-Control-Request-Headers</option>
+              <option value="Access-Control-Request-Method">Access-Control-Request-Method</option>
+              <option value="Authorization">Authorization</option>
+              <option value="Cache-Control">Cache-Control</option>
+              <option value="Connection">Connection</option>
+              <option value="Content-Language">Content-Language</option>
+              <option value="Content-Type">Content-Type</option>
+              <option value="Cookie">Cookie</option>
+              <option value="Date">Date</option>
+              <option value="DNT">DNT</option>
+              <option value="DPR">DPR</option>
+              <option value="Early-Data">Early-Data</option>
+              <option value="Expect">Expect</option>
+              <option value="Forwarded">Forwarded</option>
+              <option value="From">From</option>
+              <option value="Host">Host</option>
+              <option value="If-Match">If-Match</option>
+              <option value="If-Modified-Since">If-Modified-Since</option>
+              <option value="If-None-Match">If-None-Match</option>
+              <option value="If-Range">If-Range</option>
+              <option value="If-Unmodified-Since">If-Unmodified-Since</option>
+              <option value="Keep-Alive">Keep-Alive</option>
+              <option value="Max-Forwards">Max-Forwards</option>
+              <option value="Origin">Origin</option>
+              <option value="Pragma">Pragma</option>
+              <option value="Proxy-Authorization">Proxy-Authorization</option>
+              <option value="Range">Range</option>
+              <option value="Referer">Referer</option>
+              <option value="Save-Data">Save-Data</option>
+              <option value="TE">TE</option>
+              <option value="Trailer">Trailer</option>
+              <option value="Transfer-Encoding">Transfer-Encoding</option>
+              <option value="Upgrade">Upgrade</option>
+              <option value="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests</option>
+              <option value="User-Agent">User-Agent</option>
+              <option value="Vary">Vary</option>
+              <option value="Via">OPTIONS</option>
+              <option value="Viewport-Width">Viewport-Width</option>
+              <option value="Warning">Warning</option>
+              <option value="Width">Width</option>
+              `;
 
-            // HeaderEntry value
+              // HeaderEntry value
 
-            document.getElementById('HeaderEntry01').innerHTML = headerlist
-            document.getElementById('HeaderEntry02').innerHTML = headerlist
-
-
-            document.getElementById('HeaderEntry01').value = 'Content-Type';
-            document.getElementById('HeaderEntry02').value = 'Authorization';
-
+              document.getElementById('HeaderEntry01').innerHTML = headerlist
+              document.getElementById('HeaderEntry01').value = 'Content-Type';
 
 }
+
+// dynamic header conf
+
+var counter = 1;
+var maximum = 3;
+
+function dynheadrs(divName){
+
+     if (counter == maximum)  {
+        console.log("maximum reached (just got this working)");
+     }
+
+     else {
+          var dyncontent = document.createElement('div');
+          dyncontent.innerHTML = `header `+(counter+1)+` <select id='HeaderEntry0"+(counter+1)+"' value='Authorization'
+          <option value="">---</option>
+          <option value="">---</option>
+          <option value="Accept">Accept</option>
+          <option value="Accept-Charset">Accept-Charset</option>
+          <option value="Accept-Encoding">Accept-Encoding</option>
+          <option value="Accept-Language">Accept-Language</option>
+          <option value="Access-Control-Request-Headers">Access-Control-Request-Headers</option>
+          <option value="Access-Control-Request-Method">Access-Control-Request-Method</option>
+          <option value="Authorization">Authorization</option>
+          <option value="Cache-Control">Cache-Control</option>
+          <option value="Connection">Connection</option>
+          <option value="Content-Language">Content-Language</option>
+          <option value="Content-Type">Content-Type</option>
+          <option value="Cookie">Cookie</option>
+          <option value="Date">Date</option>
+          <option value="DNT">DNT</option>
+          <option value="DPR">DPR</option>
+          <option value="Early-Data">Early-Data</option>
+          <option value="Expect">Expect</option>
+          <option value="Forwarded">Forwarded</option>
+          <option value="From">From</option>
+          <option value="Host">Host</option>
+          <option value="If-Match">If-Match</option>
+          <option value="If-Modified-Since">If-Modified-Since</option>
+          <option value="If-None-Match">If-None-Match</option>
+          <option value="If-Range">If-Range</option>
+          <option value="If-Unmodified-Since">If-Unmodified-Since</option>
+          <option value="Keep-Alive">Keep-Alive</option>
+          <option value="Max-Forwards">Max-Forwards</option>
+          <option value="Origin">Origin</option>
+          <option value="Pragma">Pragma</option>
+          <option value="Proxy-Authorization">Proxy-Authorization</option>
+          <option value="Range">Range</option>
+          <option value="Referer">Referer</option>
+          <option value="Save-Data">Save-Data</option>
+          <option value="TE">TE</option>
+          <option value="Trailer">Trailer</option>
+          <option value="Transfer-Encoding">Transfer-Encoding</option>
+          <option value="Upgrade">Upgrade</option>
+          <option value="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests</option>
+          <option value="User-Agent">User-Agent</option>
+          <option value="Vary">Vary</option>
+          <option value="Via">OPTIONS</option>
+          <option value="Viewport-Width">Viewport-Width</option>
+          <option value="Warning">Warning</option>
+          <option value="Width">Width</option>
+          >
+          " + "
+          <br><input id='authEntry0"+(counter+1)+"' class='jsonvalue' type='text' value=''>`;
+
+          console.log(divName);
+          document.getElementById(divName).appendChild(dyncontent);
+  //        document.getElementById('HeaderEntry02').value = 'HeaderEntry02';
+
+  //        document.getElementById('divName').innerHTML = (dyncontent);
+
+
+//          document.getElementById("dynamicInput").innerHTML = headerlist
+          counter++;
+     }
+}
+
+
 // memo
 //   crossOrigin: true,
 //  dataType: "jsonp",
@@ -93,6 +167,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02) {
   var heval01 = (`${heval01}`);
   var he02 = `${he02}`;
   var heval02 = (`${heval02}`);
+
+
 
   xhr.open(`${method}`, `${host}`);
   xhr.setRequestHeader(`${he01}`, `${heval01}`);
@@ -151,6 +227,7 @@ function jSettings04() {
 function BPreview01() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = false;
+
 // HOST
   var name02 = document.getElementById("urlEntry");
   var jhost = name02.value;
@@ -167,15 +244,16 @@ function BPreview01() {
   var name06 = document.getElementById("HeaderEntry01");
   var he01 = name06.value;
 
-  var name05 = document.getElementById("HeaderEntry02");
-  var he02 = name05.value;
+//  var name05 = document.getElementById("HeaderEntry02");
+//  var he02 = name05.value;
 
 // AUTH
   var name07 = document.getElementById("authEntry01");
   var heval01 = name07.value;
 
-  var name03 = document.getElementById("authEntry02");
-  var heval02 = name03.value;
+//  var name03 = document.getElementById("authEntry02");
+//  var heval02 = name03.value;
+
 
 // DATA
   var name02 = document.getElementById("valueEntry");
@@ -184,11 +262,12 @@ function BPreview01() {
 // VALUE
   var valuename = document.getElementById("valueId").name = newname;
 
-    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`);
+    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`);
 };
 
 
 function BClear01(elementID) {
+  document.getElementById("IncomingJson").value = ``;
   document.getElementById('DisableB01').disabled = false;
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
@@ -201,11 +280,13 @@ function ReloadPage() {
 function reset() {
   // Host
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
-  // HeaderEntry02
+  // HeaderEntry
   document.getElementById('HeaderEntry01').value = 'Content-Type';
+
   document.getElementById('HeaderEntry02').value = 'Authorization';
   // Auth
   document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
+
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   // Method
   document.getElementById('methodEntry').value = 'GET';

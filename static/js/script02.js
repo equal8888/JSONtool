@@ -15,13 +15,13 @@ function reloadP() {
   // Method
   document.getElementById('methodEntry').value = 'GET';
   // DATA
-  document.getElementById("valueEntry").value = 'a';
+  document.getElementById('valueEntry').value = 'a';
   // VALUE
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
   // HeaderEntry data
   var headerlist = `
-            <option value="">---</option>
+            <option value="a">---</option>
             <option value="Accept">Accept</option>
             <option value="Accept-Charset">Accept-Charset</option>
             <option value="Accept-Encoding">Accept-Encoding</option>
@@ -95,9 +95,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02) {
   var heval02 = (`${heval02}`);
 
   xhr.open(`${method}`, `${host}`);
+
   xhr.setRequestHeader(`${he01}`, `${heval01}`);
   xhr.setRequestHeader(`${he02}`, `${heval02}`);
-
 
   xhr.onreadystatechange = function() {
   xhr.timeout = 2000;
@@ -121,7 +121,7 @@ xhr.send(params);
 };
 function appendData(xhr,eID,nameElement02) {
   var mainContainer = document.getElementById(`${eID}`);
-  var nameElement02 = document.getElementById("valueEntry");
+  var nameElement02 = document.getElementById('valueEntry');
 
 
 
@@ -134,15 +134,15 @@ function appendData(xhr,eID,nameElement02) {
 
     div.innerHTML = obj[`${newname1}`];
 
-    document.getElementById("jsondata").value = `${xhr}`;
-    document.getElementById("IncomingJson").value = `${xhr}`;
+    document.getElementById('jsondata').value = `${xhr}`;
+    document.getElementById('IncomingJson').value = `${xhr}`;
 
     mainContainer.appendChild(div);
   }
 };
 // Buttons
 function jSettings04() {
-  var nameElement04 = document.getElementById("methodEntry");
+  var nameElement04 = document.getElementById('methodEntry');
   var newmethod = nameElement04.value;
 };
 
@@ -152,37 +152,60 @@ function BPreview01() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = false;
 // HOST
-  var name02 = document.getElementById("urlEntry");
+  var name02 = document.getElementById('urlEntry');
   var jhost = name02.value;
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${jhost}`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 
 // URL
-  var name00 = document.getElementById("urlEntry");
+  var name00 = document.getElementById('urlEntry');
   var jhost = name00.value;
 // METHOD
-  var nameElement04 = document.getElementById("methodEntry");
+  var nameElement04 = document.getElementById('methodEntry');
   var method = nameElement04.value;
-// HEADERS
-  var name06 = document.getElementById("HeaderEntry01");
+
+
+
+// HEADER handlers
+if (document.getElementById('HeaderEntry01').value == '---')  {
+  console.log('header1: deactivated');
+} else {
+  var name06 = document.getElementById('HeaderEntry01');
   var he01 = name06.value;
 
-  var name05 = document.getElementById("HeaderEntry02");
+  var name07 = document.getElementById('authEntry01');
+  var heval01 = name07.value;
+}
+
+
+if (document.getElementById('HeaderEntry02').value == '---')  {
+  console.log('header2: deactivated');
+} else {
+  var name05 = document.getElementById('HeaderEntry02');
   var he02 = name05.value;
 
-// AUTH
-  var name07 = document.getElementById("authEntry01");
-  var heval01 = name07.value;
-
-  var name03 = document.getElementById("authEntry02");
+  var name03 = document.getElementById('authEntry02');
   var heval02 = name03.value;
+}
+
+
+if (document.getElementById('methodEntry').value == 'GET')  {
+  console.log('GET: data=deactivated, value=deactivated');
+  var name05 = document.getElementById('HeaderEntry02');
+  var he02 = name05.value;
+
+  var name03 = document.getElementById('authEntry02');
+  var heval02 = name03.value;
+} else {
+
+}
 
 // DATA
-  var name02 = document.getElementById("valueEntry");
+  var name02 = document.getElementById('valueEntry');
   var newname = name02.value;
 
 // VALUE
-  var valuename = document.getElementById("valueId").name = newname;
+  var valuename = document.getElementById('valueId').name = newname;
 
     loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`);
 };
@@ -210,19 +233,19 @@ function reset() {
   // Method
   document.getElementById('methodEntry').value = 'GET';
   // DATA
-  document.getElementById("valueEntry").value = 'a';
+  document.getElementById('valueEntry').value = 'a';
   // VALUE
   document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 };
 
 
 function reload(){
-    var container = document.getElementById("content__heading");
+    var container = document.getElementById('content__heading');
     var content = container.innerHTML;
     container.innerHTML= content;
 
    //this line is to watch the result in console , you can remove it later
-    console.log("Refreshed");
+    console.log('Refreshed');
 }
 
 

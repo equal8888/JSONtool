@@ -7,10 +7,9 @@ function reloadP() {
 
   document.getElementById('IncomingJson').value = '';
 
-// HOST
+  // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
-
   // Auth
   document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
@@ -74,18 +73,16 @@ function reloadP() {
 
             document.getElementById('HeaderEntry01').innerHTML = headerlist
             document.getElementById('HeaderEntry02').innerHTML = headerlist
-
+            document.getElementById('HeaderEntry03').innerHTML = headerlist
 
             document.getElementById('HeaderEntry01').value = 'Content-Type';
             document.getElementById('HeaderEntry02').value = 'Authorization';
-
-
 }
 // memo
 //   crossOrigin: true,
 //  dataType: "jsonp",
 
-function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02) {
+function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03) {
 
   const xhr = new XMLHttpRequest();
 
@@ -95,11 +92,14 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02) {
   var heval01 = (`${heval01}`);
   var he02 = `${he02}`;
   var heval02 = (`${heval02}`);
+  var he03 = `${he03}`;
+  var heval03 = (`${heval03}`);
 
   xhr.open(`${method}`, `${host}`);
 
   xhr.setRequestHeader(`${he01}`, `${heval01}`);
   xhr.setRequestHeader(`${he02}`, `${heval02}`);
+  xhr.setRequestHeader(`${he03}`, `${heval03}`);
 
   xhr.onreadystatechange = function() {
   xhr.timeout = 2000;
@@ -144,12 +144,11 @@ function appendData(xhr,eID,nameElement02) {
 };
 // Buttons
 function jSettings04() {
-  var nameElement04 = document.getElementById('methodEntry');
-  var newmethod = nameElement04.value;
+  var nmet001 = document.getElementById('methodEntry');
+  var newmethod = nmet001.value;
 };
 
 // Apply
-
 function BPreview01() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = false;
@@ -160,44 +159,66 @@ function BPreview01() {
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 
 // URL
-  var name00 = document.getElementById('urlEntry');
-  var jhost = name00.value;
+  var nurl001 = document.getElementById('urlEntry');
+  var jhost = nurl001.value;
 // METHOD
-  var nameElement04 = document.getElementById('methodEntry');
-  var method = nameElement04.value;
-
-
+  var nmet001 = document.getElementById('methodEntry');
+  var method = nmet001.value;
 
 // HEADER handlers
-if (document.getElementById('HeaderEntry01').value == '---')  {
+
+//Header 1
+if (document.getElementById('HeaderEntry01').value == 'a')  {
   console.log('header1: deactivated');
 } else {
-  var name06 = document.getElementById('HeaderEntry01');
-  var he01 = name06.value;
+  var nhent01 = document.getElementById('HeaderEntry01');
+  var he01 = nhent01.value;
 
-  var name07 = document.getElementById('authEntry01');
-  var heval01 = name07.value;
+  var nhaut01 = document.getElementById('authEntry01');
+  var heval01 = nhaut01.value;
 }
 
-
-if (document.getElementById('HeaderEntry02').value == '---')  {
+//Header 2
+if (document.getElementById('HeaderEntry02').value == 'a')  {
   console.log('header2: deactivated');
 } else {
-  var name05 = document.getElementById('HeaderEntry02');
-  var he02 = name05.value;
+  var nhent02 = document.getElementById('HeaderEntry02');
+  var he02 = nhent02.value;
 
-  var name03 = document.getElementById('authEntry02');
-  var heval02 = name03.value;
+  var nhaut02 = document.getElementById('authEntry02');
+  var heval02 = nhaut02.value;
 }
 
+//Header 3
+if (document.getElementById('HeaderEntry02').value == 'a')  {
+  console.log('header2: deactivated');
+} else {
+  var nhent03 = document.getElementById('HeaderEntry02');
+  var he03 = nhent03.value;
 
+  var nhaut03 = document.getElementById('authEntry02');
+  var heval03 = nhaut03.value;
+}
+
+// Method get handler
 if (document.getElementById('methodEntry').value == 'GET')  {
   console.log('GET: data=deactivated, value=deactivated');
-  var name05 = document.getElementById('HeaderEntry02');
-  var he02 = name05.value;
+// Header 1
+  var nhent01 = document.getElementById('HeaderEntry01');
+  var he01 = nhent01.value;
+  var nhaut01 = document.getElementById('authEntry01');
+  var heval01 = nhaut01.value;
+// Header 2
+  var nhent02 = document.getElementById('HeaderEntry02');
+  var he02 = nhent02.value;
+  var nhaut02 = document.getElementById('authEntry02');
+  var heval02 = nhaut02.value;
+// Header 2
+  var nhent03 = document.getElementById('HeaderEntry03');
+  var he03 = nhent03.value;
+  var nhaut03 = document.getElementById('authEntry03');
+  var heval03 = nhaut03.value;
 
-  var name03 = document.getElementById('authEntry02');
-  var heval02 = name03.value;
 } else {
 
 }
@@ -209,7 +230,7 @@ if (document.getElementById('methodEntry').value == 'GET')  {
 // VALUE
   var valuename = document.getElementById('valueId').name = newname;
 
-    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`);
+    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
 };
 
 
@@ -230,9 +251,11 @@ function reset() {
   // HeaderEntry02
   document.getElementById('HeaderEntry01').value = 'Content-Type';
   document.getElementById('HeaderEntry02').value = 'Authorization';
+  document.getElementById('HeaderEntry03').value = 'a';
   // Auth
   document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
+  document.getElementById('authEntry03').value = '';
   // Method
   document.getElementById('methodEntry').value = 'GET';
   // DATA

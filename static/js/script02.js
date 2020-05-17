@@ -5,6 +5,8 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
 
+  document.getElementById('IncomingJson').value = '';
+
 // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
@@ -215,6 +217,7 @@ function BClear01(elementID) {
   document.getElementById('DisableB01').disabled = false;
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
+  document.getElementById('IncomingJson').value = '';
 };
 function ReloadPage() {
   location.reload(true);

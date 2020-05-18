@@ -15,9 +15,10 @@ def static1():
 @basic_auth.required
 def json01():
     if request.method == 'GET' and "application/json" in request.headers["Content-Type"]:
-       with open('data.txt', 'r') as json_file:
-           req_data = json.load(json_file)
-       return req_data
+       filehandler = open('data.txt', 'r')
+       if filehandler.mode == 'r':
+           contents = filehandler.read()
+       return contents
 
     if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
        req_data = request.get_json()

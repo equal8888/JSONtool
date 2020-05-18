@@ -151,6 +151,10 @@ function jSettings04() {
   var nmet001 = document.getElementById('methodEntry');
   var newmethod = nmet001.value;
 };
+function BShow01() {
+  document.getElementById('methodEntry').value = 'GET';
+  BPreview01()
+};
 
 // Apply
 function BPreview01() {
@@ -194,50 +198,30 @@ if (document.getElementById('HeaderEntry02').value == 'novalue')  {
 }
 
 //Header 3
-if (document.getElementById('HeaderEntry02').value == 'novalue')  {
-  console.log('header2: deactivated');
+if (document.getElementById('HeaderEntry03').value == 'novalue')  {
+  console.log('header3: deactivated');
 } else {
-  var nhent03 = document.getElementById('HeaderEntry02');
+  var nhent03 = document.getElementById('HeaderEntry03');
   var he03 = nhent03.value;
 
-  var nhaut03 = document.getElementById('authEntry02');
+  var nhaut03 = document.getElementById('authEntry03');
   var heval03 = nhaut03.value;
 }
 
 // Method get handler
 if (document.getElementById('methodEntry').value == 'GET')  {
-  console.log('GET: data=deactivated, value=deactivated');
-// Header 1
-  var nhent01 = document.getElementById('HeaderEntry01');
-  var he01 = nhent01.value;
-  var nhaut01 = document.getElementById('authEntry01');
-  var heval01 = nhaut01.value;
-// Header 2
-  var nhent02 = document.getElementById('HeaderEntry02');
-  var he02 = nhent02.value;
-  var nhaut02 = document.getElementById('authEntry02');
-  var heval02 = nhaut02.value;
-// Header 3
-  var nhent03 = document.getElementById('HeaderEntry03');
-  var he03 = nhent03.value;
-  var nhaut03 = document.getElementById('authEntry03');
-  var heval03 = nhaut03.value;
-
-// } else {
-
+  console.log('Method GET: DATA & VALUE box deactivated');
+  } else {
+    // DATA
+    var dname01 = document.getElementById('dataId01');
+    var vdataId01 = dname01.value;
+    // VALUE
+    var vname01 = document.getElementById('valueId01');
+    var vvalueId01 = vname01.value;
+    // Combine DATA + VALUE to json
+    var combine = { [`${vdataId01}`] : `${vvalueId01}` };
+    var data22 = JSON.stringify(combine);
 }
-
-// DATA
-  var dname01 = document.getElementById('dataId01');
-  var vdataId01 = dname01.value;
-
-// VALUE
-  var vname01 = document.getElementById('valueId01');
-  var vvalueId01 = vname01.value;
-
-// Combine DATA + VALUE to json
-  var combine = { [`${vdataId01}`] : `${vvalueId01}` };
-  var data22 = JSON.stringify(combine);
 
   loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
 };
@@ -249,10 +233,6 @@ function BClear01(elementID) {
   document.getElementById('jsondata').innerHTML = '';
   document.getElementById('IncomingJson').value = '';
 };
-function ReloadPage() {
-  location.reload(true);
-};
-
 
 function reset() {
   // Host

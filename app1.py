@@ -19,12 +19,7 @@ def json01():
        if filehandler.mode == 'r':
            contents = filehandler.read()
 
-       response = app.response_class(
-       response=contents,
-       mimetype='application/json'
-       )
-
-       return response
+       return contents
 
     if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
        req_data = request.get_json()

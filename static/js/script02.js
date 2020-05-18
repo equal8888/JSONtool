@@ -5,13 +5,13 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
 
-  document.getElementById('IncomingJson').value = '';
+//  document.getElementById('IncomingJson').value = '';
 
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
   // Auth
-  document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
+  document.getElementById('authEntry01').value = 'application/json;';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   // Method
   document.getElementById('methodEntry').value = 'POST';
@@ -22,7 +22,7 @@ function reloadP() {
 
   // HeaderEntry data
   var headerlist = `
-            <option value="a">---</option>
+            <option value="novalue">---</option>
             <option value="Accept">Accept</option>
             <option value="Accept-Charset">Accept-Charset</option>
             <option value="Accept-Encoding">Accept-Encoding</option>
@@ -168,7 +168,7 @@ function BPreview01() {
 // HEADER handlers
 
 //Header 1
-if (document.getElementById('HeaderEntry01').value == 'a')  {
+if (document.getElementById('HeaderEntry01').value == 'novalue')  {
   console.log('header1: deactivated');
 } else {
   var nhent01 = document.getElementById('HeaderEntry01');
@@ -179,7 +179,7 @@ if (document.getElementById('HeaderEntry01').value == 'a')  {
 }
 
 //Header 2
-if (document.getElementById('HeaderEntry02').value == 'a')  {
+if (document.getElementById('HeaderEntry02').value == 'novalue')  {
   console.log('header2: deactivated');
 } else {
   var nhent02 = document.getElementById('HeaderEntry02');
@@ -190,7 +190,7 @@ if (document.getElementById('HeaderEntry02').value == 'a')  {
 }
 
 //Header 3
-if (document.getElementById('HeaderEntry02').value == 'a')  {
+if (document.getElementById('HeaderEntry02').value == 'novalue')  {
   console.log('header2: deactivated');
 } else {
   var nhent03 = document.getElementById('HeaderEntry02');
@@ -213,13 +213,13 @@ if (document.getElementById('methodEntry').value == 'GET')  {
   var he02 = nhent02.value;
   var nhaut02 = document.getElementById('authEntry02');
   var heval02 = nhaut02.value;
-// Header 2
+// Header 3
   var nhent03 = document.getElementById('HeaderEntry03');
   var he03 = nhent03.value;
   var nhaut03 = document.getElementById('authEntry03');
   var heval03 = nhaut03.value;
 
-} else {
+// } else {
 
 }
 
@@ -251,7 +251,7 @@ function reset() {
   // HeaderEntry02
   document.getElementById('HeaderEntry01').value = 'Content-Type';
   document.getElementById('HeaderEntry02').value = 'Authorization';
-  document.getElementById('HeaderEntry03').value = 'a';
+  document.getElementById('HeaderEntry03').value = 'novalue';
   // Auth
   document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
@@ -263,14 +263,7 @@ function reset() {
 };
 
 
-function reload(){
-    var container = document.getElementById('content__heading');
-    var content = container.innerHTML;
-    container.innerHTML= content;
 
-   //this line is to watch the result in console , you can remove it later
-    console.log('Refreshed');
-}
 
 
 // Conversion (client-side) JSON.stringify(data)

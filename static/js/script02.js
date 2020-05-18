@@ -152,8 +152,10 @@ function jSettings04() {
   var newmethod = nmet001.value;
 };
 function BShow01() {
+  strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
   BPreview01()
+  document.getElementById('methodEntry').value = strcv01;
 };
 
 // Apply

@@ -16,9 +16,9 @@ function reloadP() {
   // Method
   document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('valueEntry').value = 'data01';
+  document.getElementById('dataId01').value = 'data01';
   // VALUE
-  document.getElementById('valueId').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  document.getElementById('valueId01').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
   // HeaderEntry data
   var headerlist = `
@@ -123,7 +123,7 @@ xhr.send(params);
 };
 function appendData(xhr,eID,nameElement02) {
   var mainContainer = document.getElementById(`${eID}`);
-  var nameElement02 = document.getElementById('valueEntry');
+  var nameElement02 = document.getElementById('dataId01');
 
 
 
@@ -224,13 +224,18 @@ if (document.getElementById('methodEntry').value == 'GET')  {
 }
 
 // DATA
-  var name02 = document.getElementById('valueEntry');
-  var newname = name02.value;
+  var dname01 = document.getElementById('dataId01');
+  var vdataId01 = dname01.value;
 
 // VALUE
-  var valuename = document.getElementById('valueId').name = newname;
+  var vname01 = document.getElementById('valueId01');
+  var vvalueId01 = vname01.value;
 
-    loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
+// Combine DATA + VALUE to json
+  var combine = { [`${vdataId01}`] : `${vvalueId01}` };
+  var data22 = JSON.stringify(combine);
+
+  loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
 };
 
 
@@ -253,7 +258,7 @@ function reset() {
   document.getElementById('HeaderEntry02').value = 'Authorization';
   document.getElementById('HeaderEntry03').value = 'novalue';
   // Auth
-  document.getElementById('authEntry01').value = 'application/json;charset=UTF-8';
+  document.getElementById('authEntry01').value = 'application/json';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   document.getElementById('authEntry03').value = '';
   // Method
@@ -286,15 +291,31 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 
 const handleFormSubmit = event => {
   event.preventDefault();
-  const data = formToJSON(form.elements);
 
-  const dataContainer = document.getElementsByClassName('results__display')[0];
-  dataContainer.textContent = JSON.stringify(data, null, '  ');
-  data22 = JSON.stringify(data);
+  if (document.getElementById('methodEntry').value != 'GET')  {
 
-  const base64data = btoa(JSON.stringify(data));
-  const dataContainer2 = document.getElementsByClassName('results__display2')[0];
-  dataContainer2.textContent = base64data;
+    // DATA
+      var dname011 = document.getElementById('dataId01');
+      var vdataId011 = dname011.value;
+
+    // VALUE
+      var vname011 = document.getElementById('valueId01');
+      var vvalueId011 = vname011.value;
+
+    // Combine DATA + VALUE to json
+      var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
+      var data = JSON.stringify(combine1);
+
+    // show in page
+
+      const dataContainer = document.getElementsByClassName('results__display')[0];
+      dataContainer.textContent = data;
+
+      var base64data = btoa(data);
+      const dataContainer2 = document.getElementsByClassName('results__display2')[0];
+      dataContainer2.textContent = base64data;
+
+  };
 
   if (checkboxStatus == 'CheckOn') {
     BPreview01()

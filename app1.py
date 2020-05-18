@@ -6,6 +6,7 @@ import json
 app = Flask(__name__)
 basic_auth = BasicAuth(app)
 
+
 # Main page
 @app.route('/')
 def static1():
@@ -18,6 +19,7 @@ def json01():
        filehandler = open('data.txt', 'r')
        if filehandler.mode == 'r':
            contents = filehandler.read()
+       filehandler.close()
 
        return contents
 

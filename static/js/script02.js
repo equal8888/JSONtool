@@ -269,25 +269,7 @@ function reset() {
 
 
 
-
-
-// Conversion (client-side) JSON.stringify(data)
-// Defines what can be data
-
-// IDS
-//  urlEntry
-//  valueEntry
-
-const isValidElement = element => {
-  return element.name && element.value;
-};
-const formToJSON = elements => [].reduce.call(elements, (data, element) => {
-  if (isValidElement(element)) {
-    data[element.name] = element.value;
-  }
-  return data;
-}, {});
-
+// show data on page
 
 const handleFormSubmit = event => {
   event.preventDefault();

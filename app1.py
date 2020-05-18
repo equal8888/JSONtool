@@ -18,13 +18,25 @@ def json01():
        filehandler = open('data.txt', 'r')
        if filehandler.mode == 'r':
            contents = filehandler.read()
-       return contents
+
+       response = app.response_class(
+       response=contents,
+       mimetype='application/json'
+       )
+
+       return response
 
     if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
        req_data = request.get_json()
-       with open('data.txt', 'w') as outfile:
-           json.dump(req_data, outfile)
-       return '{"data01": "ok"}'
+       with open('data.txt', 'w') as blah:
+           json.dump(req_data, blah)
+
+       response = app.response_class(
+       response='{"data01": "ok"}',
+       mimetype='application/json'
+       )
+
+       return response
 
 if __name__ == '__main__':
     app.config['BASIC_AUTH_USERNAME'] = 'admin'

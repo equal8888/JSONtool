@@ -264,7 +264,10 @@ function reset() {
   // Method
   document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('valueEntry').value = 'data01';
+  document.getElementById('dataId01').value = 'data01';
+  // encoder data
+  document.getElementById('showJson01').value = ' ';
+  document.getElementById('showJsonbase01').value = ' ';
 };
 
 
@@ -284,19 +287,17 @@ const handleFormSubmit = event => {
       var vname011 = document.getElementById('valueId01');
       var vvalueId011 = vname011.value;
 
-    // Combine DATA + VALUE to json
+    // Combine DATA + VALUE
       var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
-      var data = JSON.stringify(combine1);
+
+    // Json VALUE
+      var dataj01 = JSON.stringify(combine1);
+    // base64 + VALUE
+      var databjdata = btoa(dataj01);
 
     // show in page
-
-      const dataContainer = document.getElementsByClassName('results__display')[0];
-      dataContainer.textContent = data;
-
-      var base64data = btoa(data);
-      const dataContainer2 = document.getElementsByClassName('results__display2')[0];
-      dataContainer2.textContent = base64data;
-
+      document.getElementById('showJson01').value = dataj01;
+      document.getElementById('showJsonbase01').value = databjdata;
   };
 
   if (checkboxStatus == 'CheckOn') {

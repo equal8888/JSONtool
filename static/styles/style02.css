@@ -116,10 +116,11 @@
   min-width:100%;
   min-height: 80px;
 }
-.results {
-  margin: auto;
+.result01 {
   width:100%;
-  overflow-x: scroll;
+  max-width:100%;
+  min-width:100%;
+  min-height: 50px;
 }
 .results2 {
   margin: auto;

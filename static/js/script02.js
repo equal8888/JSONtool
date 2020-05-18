@@ -228,7 +228,7 @@ if (document.getElementById('methodEntry').value == 'GET')  {
   var newname = name02.value;
 
 // VALUE
-  var valuename = document.getElementById('valueId').name == newname;
+  var valuename = document.getElementById('valueId').name = newname;
 
     loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
 };
@@ -272,6 +272,7 @@ function reset() {
 // IDS
 //  urlEntry
 //  valueEntry
+
 
 
 const isValidElement = element => {

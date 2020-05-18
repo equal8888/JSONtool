@@ -77,6 +77,10 @@ function reloadP() {
 
             document.getElementById('HeaderEntry01').value = 'Content-Type';
             document.getElementById('HeaderEntry02').value = 'Authorization';
+
+            // encoder data
+            document.getElementById('showJson01').readOnly = true;
+            document.getElementById('showJsonbase01').readOnly = true;
 }
 // memo
 //   crossOrigin: true,

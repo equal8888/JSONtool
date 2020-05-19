@@ -5,8 +5,6 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
 
-//  document.getElementById('IncomingJson').value = '';
-
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
@@ -70,7 +68,6 @@ function reloadP() {
             `;
 
             // HeaderEntry value
-
             document.getElementById('HeaderEntry01').innerHTML = headerlist
             document.getElementById('HeaderEntry02').innerHTML = headerlist
             document.getElementById('HeaderEntry03').innerHTML = headerlist
@@ -78,17 +75,16 @@ function reloadP() {
             document.getElementById('HeaderEntry01').value = 'Content-Type';
             document.getElementById('HeaderEntry02').value = 'Authorization';
 
-            // encoder data
+            // encoder data IncomingJson
             document.getElementById('showJson01').readOnly = true;
             document.getElementById('showJsonbase01').readOnly = true;
+            document.getElementById('IncomingJson').readOnly = true;
+
 }
-// memo
-//   crossOrigin: true,
-//  dataType: "jsonp",
 
 function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03) {
 
-  const xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
   var params = `${data22}`;
   var host  = (`${pageurl}`);
@@ -99,14 +95,15 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03) 
   var he03 = `${he03}`;
   var heval03 = (`${heval03}`);
 
-  xhr.open(`${method}`, `${host}`);
+  xhr.open(`${method}`, `${host}`, true);
 
+  xhr.setRequestHeader(`${he01}`, `${heval01}`);
   xhr.setRequestHeader(`${he01}`, `${heval01}`);
   xhr.setRequestHeader(`${he02}`, `${heval02}`);
   xhr.setRequestHeader(`${he03}`, `${heval03}`);
 
   xhr.onreadystatechange = function() {
-  xhr.timeout = 2000;
+  xhr.timeout = 5000;
 
   if(xhr.readyState == 4 && xhr.status == 200) {
 
@@ -147,15 +144,37 @@ function appendData(xhr,eID,nameElement02) {
   }
 };
 // Buttons
-function jSettings04() {
-  var nmet001 = document.getElementById('methodEntry');
-  var newmethod = nmet001.value;
-};
 function BShow01() {
   strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
   BPreview01()
   document.getElementById('methodEntry').value = strcv01;
+};
+
+function BClear01(elementID) {
+  document.getElementById('DisableB01').disabled = false;
+  document.getElementById('DisableB02').disabled = true;
+  document.getElementById('jsondata').innerHTML = '';
+  document.getElementById('IncomingJson').value = '';
+};
+function reset() {
+  // Host
+  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
+  // HeaderEntry02
+  document.getElementById('HeaderEntry01').value = 'Content-Type';
+  document.getElementById('HeaderEntry02').value = 'Authorization';
+  document.getElementById('HeaderEntry03').value = 'novalue';
+  // Auth
+  document.getElementById('authEntry01').value = 'application/json';
+  document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
+  document.getElementById('authEntry03').value = '';
+  // Method
+  document.getElementById('methodEntry').value = 'POST';
+  // DATA
+  document.getElementById('dataId01').value = 'data01';
+  // encoder data
+  document.getElementById('showJson01').value = ' ';
+  document.getElementById('showJsonbase01').value = ' ';
 };
 
 // Apply
@@ -228,38 +247,7 @@ if (document.getElementById('methodEntry').value == 'GET')  {
   loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
 };
 
-
-function BClear01(elementID) {
-  document.getElementById('DisableB01').disabled = false;
-  document.getElementById('DisableB02').disabled = true;
-  document.getElementById('jsondata').innerHTML = '';
-  document.getElementById('IncomingJson').value = '';
-};
-
-function reset() {
-  // Host
-  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
-  // HeaderEntry02
-  document.getElementById('HeaderEntry01').value = 'Content-Type';
-  document.getElementById('HeaderEntry02').value = 'Authorization';
-  document.getElementById('HeaderEntry03').value = 'novalue';
-  // Auth
-  document.getElementById('authEntry01').value = 'application/json';
-  document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
-  document.getElementById('authEntry03').value = '';
-  // Method
-  document.getElementById('methodEntry').value = 'POST';
-  // DATA
-  document.getElementById('dataId01').value = 'data01';
-  // encoder data
-  document.getElementById('showJson01').value = ' ';
-  document.getElementById('showJsonbase01').value = ' ';
-};
-
-
-
 // show data on page
-
 const handleFormSubmit = event => {
   event.preventDefault();
 

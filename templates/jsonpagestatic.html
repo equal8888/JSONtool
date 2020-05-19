@@ -4,7 +4,7 @@
 <title>json tool</title>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<link rel= 'stylesheet' type= 'text/css' href= '/static/styles/style02.css'/>
+<link rel= 'stylesheet' type= 'text/css' href= '/static/styles/style02.css' />
 </head>
 <body>
   <div class='navbar'>
@@ -19,10 +19,12 @@
     <div class='a'>
     <section class='content'>
       <h1 class='content__heading'>Input
+
         <button class='resetbutton' onclick='reset()'>reset</button>
+
       </h1>
       <form class='content__form contact-form'>
-        <label for="urlEntry">host</label>
+        <label for="urlEntry">host</label> <p>http://ip.jsontest.com/</p>
         <input id="urlEntry" class='inputstyle' type="text" value=''>
         <br>
         <label for="HeaderEntry01">header 1</label>
@@ -83,7 +85,7 @@
       <input type='checkbox' id='myCheck' onclick='EntertoPreview01()' checked='checked'>Auto preview
     </div>
   </div>
-  <input id="IncomingJson" class='inputstyle' type="text" value=''>
+  <textarea id="IncomingJson" class='result01' type='text' ></textarea>
   <p></p>
   <div class='results2'>
     <div id='jsondata'>

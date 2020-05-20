@@ -1,6 +1,8 @@
 // set up stuff on page loadb
 window.onload = reloadP()
 function reloadP() {
+  checkboxStatus = 'CheckOn';
+  myCheck.checked = true;
 
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
@@ -29,7 +31,6 @@ function reloadP() {
 
   if (myCheck.checked == false) {
     myCheck.checked = true;
-    checkboxStatus = 'CheckOn';
   }
 
 }
@@ -419,7 +420,7 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = `
-      select object to render
+      select object to render (currently cannot render object inside an object thus giving you the "[object Object]")
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 

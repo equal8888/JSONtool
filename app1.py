@@ -36,41 +36,6 @@ def json01():
 
        return response
 
-@app.route('/json02', methods=['GET'])
-@basic_auth.required
-def json02():
-    if request.method == "GET" and "application/json" in request.headers["Content-Type"]:
-
-       response = app.response_class(
-       response='{"data01": "ok"}',
-       mimetype='Access-Control-Allow-Origin: *'
-       )
-
-       return response
-
-@app.route('/json03', methods=['GET'])
-def json03():
-    if request.method == 'GET':
-       filehandler = open('data.txt', 'r')
-       if filehandler.mode == 'r':
-           contents = filehandler.read()
-       filehandler.close()
-
-       return contents
-
-#    if request.method == "POST":
-#       req_data = request.get_json()
-#       with open('data.txt', 'w') as blah:
-#           json.dump(req_data, blah)
-
-#       response = app.response_class(
-#       response='{"data01": "ok"}',
-#       mimetype='application/json',
-#       mimetype='Access-Control-Allow-Origin: *'
-#       )
-
-#       return response
-
 if __name__ == '__main__':
     app.config['BASIC_AUTH_USERNAME'] = 'admin'
     app.config['BASIC_AUTH_PASSWORD'] = 'admin'

@@ -3,7 +3,6 @@ window.onload = reloadP()
 function reloadP() {
 
   document.getElementById('DisableB01').disabled = true;
-  document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
@@ -23,6 +22,8 @@ function reloadP() {
 
   window.addEventListener('DOMContentLoaded', (event) => {
       document.getElementById("resetbtn01").click();
+      document.getElementById('DisableB02').disabled = true;
+
   });
 
 }
@@ -84,6 +85,13 @@ xhr.send(params);
 function appendData(xhr,eID,nameElement02) {
   var mainContainer = document.getElementById(`${eID}`);
   var nameElement02 = document.getElementById('dataId01');
+
+  if(xhr.readyState == 4 && xhr.status == 200) {
+
+    appendData((xhr.responseText),'jsondata');
+    var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
+    document.getElementById('ShowMyHost').innerHTML = pageurl;
+  }
 
   for (var i = 0; i < 1; i++) {
 
@@ -291,7 +299,7 @@ if (document.getElementById("chbox02").checked == false){
       var dname01 = document.getElementById('valueId02');
       var vdataId01 = dname01.value;
       // DATA to json
-      var data22 = JSON.stringify(vdataId01);
+      var data22 = vdataId01;
   }
 };
 
@@ -401,15 +409,17 @@ function jsonbst01() {
     console.log('on');
 
     document.getElementById('jsonbstyle01').innerHTML = `
-
       <div class='inputbox'>
         enter json
         <textarea id="valueId02" class='inputbox01' type='text' ></textarea>
         <br>
       </div>
-
     `;
 
+    document.getElementById('advrend01').innerHTML = `
+      select parameter to render
+      <input id="dataId01" class='jsonvalue' type="text" value='data01'>
+    `
 
 
   } if (document.getElementById("chbox02").checked == false) {

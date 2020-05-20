@@ -2,8 +2,6 @@
 window.onload = reloadP()
 function reloadP() {
 
-  document.getElementById('DisableB01').disabled = true;
-  checkboxStatus = 'CheckOn'
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
@@ -26,7 +24,12 @@ function reloadP() {
 
 
   if (chbox02.checked == true) {
-    chbox02.checked = false
+    chbox02.checked = false;
+  }
+
+  if (myCheck.checked == false) {
+    myCheck.checked = true;
+    checkboxStatus = 'CheckOn';
   }
 
 }

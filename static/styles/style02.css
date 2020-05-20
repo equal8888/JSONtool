@@ -108,11 +108,25 @@
 
 .jsonvalue {
   width:100%;
+  max-width:100%;
 }
-.results {
-  margin: auto;
+.inputbox01 {
   width:100%;
-  overflow-x: scroll;
+  max-width:100%;
+  min-width:100%;
+  min-height: 80px;
+}
+.result01 {
+  width:100%;
+  max-width:100%;
+  min-width:100%;
+  min-height: 50px;
+}
+.incomingjson {
+  width:100%;
+  max-width:100%;
+  min-width:100%;
+  min-height: 20px;
 }
 .results2 {
   margin: auto;

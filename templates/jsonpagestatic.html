@@ -19,24 +19,30 @@
     <div class='a'>
     <section class='content'>
       <h1 class='content__heading'>Input
-        <button class='resetbutton' onclick='reset()'>reset</button>
-      </h1>
-      <form method="POST" class='content__form contact-form'>
 
-        <label for="urlEntry">host</label>
+        <button id='button' onclick="loadheaders01()">add header</button>
+        <button class='resetbutton' onclick='reset()'>reset</button>
+
+      </h1>
+      <form class='content__form contact-form'>
         <input id="urlEntry" class='inputstyle' type="text" value=''>
         <br>
 
         <label for="HeaderEntry01">header 1</label>
-        <select id="HeaderEntry01" value='Authorization'></select>
+        <select id="HeaderEntry01" value='Authorization'>
+        </select>
         <input id="authEntry01" class='jsonvalue' type="text" value='application/json;charset=UTF-8'>
+        <label for="HeaderEntry02">header 2</label>
+        <select id="HeaderEntry02" value='Authorization'>
+        </select>
+        <input id="authEntry02" class='jsonvalue' type="text" value='Basic [YWRtaW46YWRtaW4=]'>
 
-             <div id="dynamicInput">
-             </div>
-             <input type="button" value="add header" onClick="dynheadrs('dynamicInput');">
+        <div id="headerlist01">
+        </div>
+
         <br>
         <label for="methodEntry">method</label>
-        <select id="methodEntry" value='GET'>
+        <select id="methodEntry" value=''>
           <option value="DELETE">DELETE</option>
           <option value="GET">GET</option>
           <option value="PATCH">PATCH</option>
@@ -48,13 +54,13 @@
         <br>
         <br>
         data
-        <input id="valueEntry" class='jsonvalue' type="text" value='a'>
+        <input id="dataId01" class='jsonvalue' type="text" value='data01'>
           <div class='inputbox'>
             value
-            <textarea id="valueId" class='jsonvalue' type='text' name='a'></textarea>
+            <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
             <br>
           </div>
-        <button class='contact-form__button' type='submit'>Apply / Enter</button>
+        <button id='apply' class='contact-form__button' type='submit'>Apply / Enter</button>
       </p>
       </form>
     </section>
@@ -63,29 +69,24 @@
     <p><b>Encoder</b></p>
     <p><b>Json</b></p>
     <div class='results'>
-      <pre><code class='results__display'></code></pre>
+      <textarea id="showJson01" class='result01' type='text' ></textarea>
     </div>
     <p><b>Json+Base64</b></p>
     <div class='results'>
-      <pre><code class='results__display2'></code></pre>
+      <textarea id="showJsonbase01" class='result01' type='text' ></textarea>
     </div>
   </div>
 </div>
 <div class='main'>
   <div id='buttonGroup' class='cbuttonGroup'>
     <p><b>Visual preview</b></p>
-
-
-
-
-
     <div class='Controls'>
-      <button id='DisableB01' onclick='BPreview01()'>Show</button>
+      <button id='DisableB01' onclick='BShow01()'>GET</button>
       <button id='DisableB02' onclick='BClear01()'>Clear</button>
       <input type='checkbox' id='myCheck' onclick='EntertoPreview01()' checked='checked'>Auto preview
     </div>
   </div>
-  <input id="IncomingJson" class='inputstyle' type="text" value=''>
+  <textarea id="IncomingJson" class='result01' type='text' ></textarea>
   <p></p>
   <div class='results2'>
     <div id='jsondata'>
@@ -95,7 +96,7 @@
 </div>
 <div class='footer'>
 </div>
-<script src='/static/js/script02.js' />
+<script src='/static/js/script02.js'/>
 </script>
 </body>
 </html>

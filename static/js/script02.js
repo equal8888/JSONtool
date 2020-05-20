@@ -131,6 +131,9 @@ function BClear01(elementID) {
 };
 function reset() {
 
+  document.getElementById('headerlist01').innerHTML = '';
+  counter = 0
+
   if (  counter <= 1 )  {
     loadheaders01()
     loadheaders01()

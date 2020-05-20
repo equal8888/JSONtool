@@ -420,7 +420,7 @@ function jsonbst01() {
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 
-    document.getElementById('advrend02').innerHTML = '<button id="button" onclick="loadheaders01()">add header</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="resetbutton" onclick="reset()">reset</button> <button id="button" class="resetbutton" onclick="loadheaders01()">add hdr</button>'
 
 
   } if (chbox02.checked == false) {
@@ -436,14 +436,11 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = ''
-    document.getElementById('advrend02').innerHTML = ''
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="resetbutton" onclick="reset()">reset</button>'
 
   }
 
 };
-
-
-
 
 // EventListener('submit'
 const form = document.getElementsByClassName('contact-form')[0];

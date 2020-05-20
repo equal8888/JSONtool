@@ -1,6 +1,7 @@
 // set up stuff on page loadb
 window.onload = reloadP()
 function reloadP() {
+
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
   checkboxStatus = 'CheckOn'
@@ -266,50 +267,51 @@ function BPreview01() {
     }
   }
 
-// Method get handler
-if (document.getElementById('methodEntry').value == 'GET')  {
-  console.log('Method GET: DATA & VALUE box deactivated');
-  } else {
-    // DATA
-    var dname01 = document.getElementById('dataId01');
-    var vdataId01 = dname01.value;
-    // VALUE
-    var vname01 = document.getElementById('valueId01');
-    var vvalueId01 = vname01.value;
-    // Combine DATA + VALUE to json
-    var combine = { [`${vdataId01}`] : `${vvalueId01}` };
-    var data22 = JSON.stringify(combine);
-}
+// handler for data
+
+if (document.getElementById("chbox02").checked == false){
+  if (document.getElementById('methodEntry').value == 'GET')  {
+    console.log('Method GET: DATA & VALUE box deactivated');
+    } else {
+      // DATA
+      var dname01 = document.getElementById('dataId01');
+      var vdataId01 = dname01.value;
+      // VALUE
+      var vname01 = document.getElementById('valueId01');
+      var vvalueId01 = vname01.value;
+      // Combine DATA + VALUE to json
+      var combine = { [`${vdataId01}`] : `${vvalueId01}` };
+      var data22 = JSON.stringify(combine);
+  }
+} else {
+  if (document.getElementById('methodEntry').value == 'GET')  {
+    console.log('Method GET: DATA & VALUE box deactivated');
+    } else {
+      // DATA
+      var dname01 = document.getElementById('valueId02');
+      var vdataId01 = dname01.value;
+      // DATA to json
+      var data22 = JSON.stringify(vdataId01);
+  }
+};
+
+  // show on page
+  if (document.getElementById('methodEntry').value != 'GET')  {
+    document.getElementById('showJson01').value = data22;
+    // json + base64
+    var jbass = btoa(data22);
+    document.getElementById('showJsonbase01').value = jbass;
+  }
+
+
 
   loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
+
 };
 
 // show data on page
 const handleFormSubmit = event => {
   event.preventDefault();
-
-  if (document.getElementById('methodEntry').value != 'GET')  {
-
-    // DATA
-      var dname011 = document.getElementById('dataId01');
-      var vdataId011 = dname011.value;
-
-    // VALUE
-      var vname011 = document.getElementById('valueId01');
-      var vvalueId011 = vname011.value;
-
-    // Combine DATA + VALUE
-      var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
-
-    // Json VALUE
-      var dataj01 = JSON.stringify(combine1);
-    // base64 + VALUE
-      var databjdata = btoa(dataj01);
-
-    // show in page
-      document.getElementById('showJson01').value = dataj01;
-      document.getElementById('showJsonbase01').value = databjdata;
-  };
 
   if (checkboxStatus == 'CheckOn') {
     BPreview01()
@@ -392,6 +394,40 @@ function loadheaders01() {
   }
 
 }
+
+
+function jsonbst01() {
+  if (document.getElementById("chbox02").checked == true) {
+    console.log('on');
+
+    document.getElementById('jsonbstyle01').innerHTML = `
+
+      <div class='inputbox'>
+        enter json
+        <textarea id="valueId02" class='inputbox01' type='text' ></textarea>
+        <br>
+      </div>
+
+    `;
+
+
+
+  } if (document.getElementById("chbox02").checked == false) {
+    console.log('off');
+
+    document.getElementById('jsonbstyle01').innerHTML = `
+    data
+    <input id="dataId01" class='jsonvalue' type="text" value='data01'>
+      <div class='inputbox'>
+        value
+        <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
+        <br>
+      </div>
+    `;
+
+  }
+
+};
 
 
 

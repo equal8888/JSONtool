@@ -6,7 +6,7 @@ function reloadP() {
   checkboxStatus = 'CheckOn'
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
-  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
+  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json03`;
   // Method
   document.getElementById('methodEntry').value = 'POST';
   // DATA
@@ -19,60 +19,13 @@ function reloadP() {
   document.getElementById('showJsonbase01').readOnly = true;
   document.getElementById('IncomingJson').readOnly = true;
 
-  var headerlist = `
-            <option value="novalue">---</option>
-            <option value="Accept">Accept</option>
-            <option value="Accept-Charset">Accept-Charset</option>
-            <option value="Accept-Encoding">Accept-Encoding</option>
-            <option value="Accept-Language">Accept-Language</option>
-            <option value="Access-Control-Request-Headers">Access-Control-Request-Headers</option>
-            <option value="Access-Control-Request-Method">Access-Control-Request-Method</option>
-            <option value="Authorization">Authorization</option>
-            <option value="Cache-Control">Cache-Control</option>
-            <option value="Connection">Connection</option>
-            <option value="Content-Language">Content-Language</option>
-            <option value="Content-Type">Content-Type</option>
-            <option value="Cookie">Cookie</option>
-            <option value="Date">Date</option>
-            <option value="DNT">DNT</option>
-            <option value="DPR">DPR</option>
-            <option value="Early-Data">Early-Data</option>
-            <option value="Expect">Expect</option>
-            <option value="Forwarded">Forwarded</option>
-            <option value="From">From</option>
-            <option value="Host">Host</option>
-            <option value="If-Match">If-Match</option>
-            <option value="If-Modified-Since">If-Modified-Since</option>
-            <option value="If-None-Match">If-None-Match</option>
-            <option value="If-Range">If-Range</option>
-            <option value="If-Unmodified-Since">If-Unmodified-Since</option>
-            <option value="Keep-Alive">Keep-Alive</option>
-            <option value="Max-Forwards">Max-Forwards</option>
-            <option value="Origin">Origin</option>
-            <option value="Pragma">Pragma</option>
-            <option value="Proxy-Authorization">Proxy-Authorization</option>
-            <option value="Range">Range</option>
-            <option value="Referer">Referer</option>
-            <option value="Save-Data">Save-Data</option>
-            <option value="TE">TE</option>
-            <option value="Trailer">Trailer</option>
-            <option value="Transfer-Encoding">Transfer-Encoding</option>
-            <option value="Upgrade">Upgrade</option>
-            <option value="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests</option>
-            <option value="User-Agent">User-Agent</option>
-            <option value="Vary">Vary</option>
-            <option value="Via">OPTIONS</option>
-            <option value="Viewport-Width">Viewport-Width</option>
-            <option value="Warning">Warning</option>
-            <option value="Width">Width</option>
-            `;
-
-            // HeaderEntry value
-            document.getElementById('HeaderEntry01').innerHTML = headerlist
-            document.getElementById('HeaderEntry02').innerHTML = headerlist
-
-            document.getElementById('HeaderEntry01').value = 'Content-Type';
-            document.getElementById('HeaderEntry02').value = 'Authorization';
+  // button config
+  document.getElementById("button").disabled = true;
+  document.getElementById("urlEntry").disabled = true;
+  document.getElementById("methodEntry").disabled = true;
+  document.getElementById("apply").disabled = true;
+  document.getElementById("dataId01").disabled = true;
+  document.getElementById("valueId01").disabled = true;
 
 }
 
@@ -165,6 +118,22 @@ function BClear01(elementID) {
 };
 function reset() {
 
+  if (  counter <= 1 )  {
+    loadheaders01()
+    loadheaders01()
+
+    // button config
+    document.getElementById("button").disabled = false;
+    document.getElementById("urlEntry").disabled = false;
+    document.getElementById("methodEntry").disabled = false;
+    document.getElementById("apply").disabled = false;
+    document.getElementById("dataId01").disabled = false;
+    document.getElementById("valueId01").disabled = false;
+
+  } else {
+
+  }
+
   // Host
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
   // HeaderEntry02
@@ -199,8 +168,35 @@ function BPreview01() {
   var nmet001 = document.getElementById('methodEntry');
   var method = nmet001.value;
 
-  //Header 1
+// HEADER handlers
+/*
 
+function testing01() {
+  if (  counter >= 1 )  {
+  run1();
+  } else {
+
+  }
+  if (  counter >= 2 )  {
+  run2();
+  } else {
+
+  }
+}
+
+function run2() {
+  var rwa002 = document.getElementById('HeaderEntry02');
+  var valueinput002 = rwa002.value;
+
+  var rwa02 = document.getElementById('authEntry02');
+  var valueinput02 = rwa02.value;
+
+}
+
+*/
+
+  //Header 1
+  if (counter >= 1)  {
     if (document.getElementById('HeaderEntry01').value == 'novalue')  {
       console.log('header1: deactivated');
     } else {
@@ -211,10 +207,10 @@ function BPreview01() {
       var nhaut01 = document.getElementById('authEntry01');
       var heval01 = nhaut01.value;
     }
-
+  }
 
   //Header 2
-
+  if (counter >= 2)  {
     if (document.getElementById('HeaderEntry02').value == 'novalue')  {
       console.log('header2: deactivated');
     } else {
@@ -225,7 +221,7 @@ function BPreview01() {
       var nhaut02 = document.getElementById('authEntry02');
       var heval02 = nhaut02.value;
     }
-
+  }
 
   //Header 3
   if (counter >= 3)  {
@@ -364,7 +360,7 @@ const handleFormSubmit = event => {
   };
 };
 
-var counter = 2;
+var counter = 0;
 var maximum = 8;
 
 function loadheaders01() {

@@ -421,6 +421,8 @@ function jsonbst01() {
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 
+    document.getElementById('advrend02').innerHTML = '<button id="button" onclick="loadheaders01()">add header</button>'
+
 
   } if (document.getElementById("chbox02").checked == false) {
     console.log('off');
@@ -434,6 +436,9 @@ function jsonbst01() {
         <br>
       </div>
     `;
+
+    document.getElementById('advrend01').innerHTML = ''
+    document.getElementById('advrend02').innerHTML = ''
 
   }
 

@@ -451,7 +451,7 @@ function jsonbst01() {
     document.getElementById('jsonbstyle01').innerHTML = `
       <div class='inputbox'>
         enter json
-        <textarea id="valueId02" class='inputbox01' type='text' ></textarea>
+        <textarea id="valueId02" class='inputboxx01' type='text' ></textarea>
         <br>
       </div>
     `;

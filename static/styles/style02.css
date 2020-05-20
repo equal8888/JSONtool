@@ -122,6 +122,12 @@ float: right;
   min-width:100%;
   min-height: 80px;
 }
+.inputboxx01 {
+  width:100%;
+  max-width:100%;
+  min-width:100%;
+  min-height: 130px;
+}
 .result01 {
   width:100%;
   max-width:100%;

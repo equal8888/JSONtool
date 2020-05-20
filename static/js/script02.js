@@ -457,7 +457,7 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = `
-      select object to render (currently cannot render object inside an object thus giving you the "[object Object]")
+      select object to render (currently cannot render object inside an object)
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 

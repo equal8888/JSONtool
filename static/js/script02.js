@@ -19,13 +19,10 @@ function reloadP() {
   document.getElementById('showJsonbase01').readOnly = true;
   document.getElementById('IncomingJson').readOnly = true;
 
-  // button config
-  document.getElementById("button").disabled = true;
-  document.getElementById("urlEntry").disabled = true;
-  document.getElementById("methodEntry").disabled = true;
-  document.getElementById("apply").disabled = true;
-  document.getElementById("dataId01").disabled = true;
-  document.getElementById("valueId01").disabled = true;
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById("resetbtn01").click();
+  });
 
 }
 
@@ -121,17 +118,6 @@ function reset() {
   if (  counter <= 1 )  {
     loadheaders01()
     loadheaders01()
-
-    // button config
-    document.getElementById("button").disabled = false;
-    document.getElementById("urlEntry").disabled = false;
-    document.getElementById("methodEntry").disabled = false;
-    document.getElementById("apply").disabled = false;
-    document.getElementById("dataId01").disabled = false;
-    document.getElementById("valueId01").disabled = false;
-
-  } else {
-
   }
 
   // Host
@@ -167,33 +153,6 @@ function BPreview01() {
 // METHOD
   var nmet001 = document.getElementById('methodEntry');
   var method = nmet001.value;
-
-// HEADER handlers
-/*
-
-function testing01() {
-  if (  counter >= 1 )  {
-  run1();
-  } else {
-
-  }
-  if (  counter >= 2 )  {
-  run2();
-  } else {
-
-  }
-}
-
-function run2() {
-  var rwa002 = document.getElementById('HeaderEntry02');
-  var valueinput002 = rwa002.value;
-
-  var rwa02 = document.getElementById('authEntry02');
-  var valueinput02 = rwa02.value;
-
-}
-
-*/
 
   //Header 1
   if (counter >= 1)  {

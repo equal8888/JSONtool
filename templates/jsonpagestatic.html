@@ -18,26 +18,22 @@
   <div class='side'>
     <div class='a'>
     <section class='content'>
+
       <h1 class='content__heading'>Input
 
-        <button class='resetbutton' onclick='reset()'>reset</button>
+        <div id="advrend02">
+          <button id='resetbtn01' class='resetbutton' onclick='reset()'>reset</button>
+        </div>
+
 
       </h1>
       <form class='content__form contact-form'>
         <input id="urlEntry" class='inputstyle' type="text" value=''>
         <br>
-        <label for="HeaderEntry01">header 1</label>
-        <select id="HeaderEntry01" value='Authorization'>
-        </select>
-        <input id="authEntry01" class='jsonvalue' type="text" value='application/json;charset=UTF-8'>
-        <label for="HeaderEntry02">header 2</label>
-        <select id="HeaderEntry02" value='Authorization'>
-        </select>
-        <input id="authEntry02" class='jsonvalue' type="text" value='Basic [YWRtaW46YWRtaW4=]'>
-        <label for="HeaderEntry03">header 3</label>
-        <select id="HeaderEntry03" value='Authorization'>
-        </select>
-        <input id="authEntry03" class='jsonvalue' type="text" value=''>
+
+        <div id="headerlist01">
+        </div>
+
         <br>
         <label for="methodEntry">method</label>
         <select id="methodEntry" value=''>
@@ -51,14 +47,23 @@
         </select>
         <br>
         <br>
-        data
-        <input id="dataId01" class='jsonvalue' type="text" value='data01'>
-          <div class='inputbox'>
-            value
-            <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
-            <br>
-          </div>
-        <button class='contact-form__button' type='submit'>Apply / Enter</button>
+
+        <input type='checkbox' id='chbox02' class='chbstylebtn01' onclick='jsonbst01()'>
+        <span class="chbstyletxt01" for="chbox02">Advanced</span>
+
+        <div id="jsonbstyle01">
+
+          data
+          <input id="dataId01" class='jsonvalue' type="text" value='data01'>
+            <div class='inputbox'>
+              value
+              <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
+              <br>
+            </div>
+
+        </div>
+
+        <button id='apply' class='contact-form__button' type='submit'>Apply / Enter</button>
       </p>
       </form>
     </section>
@@ -81,8 +86,12 @@
     <div class='Controls'>
       <button id='DisableB01' onclick='BShow01()'>GET</button>
       <button id='DisableB02' onclick='BClear01()'>Clear</button>
-      <input type='checkbox' id='myCheck' onclick='EntertoPreview01()' checked='checked'>Auto preview
+      <input type='checkbox' id='myCheck' onclick='EntertoPreview01()'>Auto preview
     </div>
+
+    <div id="advrend01">
+    </div>
+
   </div>
   <textarea id="IncomingJson" class='result01' type='text' ></textarea>
   <p></p>

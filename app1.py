@@ -30,7 +30,8 @@ def json01():
 
        response = app.response_class(
        response='{"data01": "ok"}',
-       mimetype='application/json'
+       mimetype='application/json',
+#       mimetype='Access-Control-Allow-Origin: *'
        )
 
        return response

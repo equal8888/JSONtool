@@ -22,7 +22,6 @@ function reloadP() {
 
   window.addEventListener('DOMContentLoaded', (event) => {
       document.getElementById("resetbtn01").click();
-      document.getElementById('DisableB02').disabled = true;
 
   });
 
@@ -278,23 +277,19 @@ function BPreview01() {
 // handler for data
 
 if (document.getElementById("chbox02").checked == false){
-  if (document.getElementById('methodEntry').value == 'GET')  {
-    console.log('Method GET: DATA & VALUE box deactivated');
-    } else {
-      // DATA
-      var dname01 = document.getElementById('dataId01');
-      var vdataId01 = dname01.value;
-      // VALUE
-      var vname01 = document.getElementById('valueId01');
-      var vvalueId01 = vname01.value;
-      // Combine DATA + VALUE to json
-      var combine = { [`${vdataId01}`] : `${vvalueId01}` };
-      var data22 = JSON.stringify(combine);
+  if (document.getElementById('methodEntry').value != 'GET')  {
+    // DATA
+    var dname01 = document.getElementById('dataId01');
+    var vdataId01 = dname01.value;
+    // VALUE
+    var vname01 = document.getElementById('valueId01');
+    var vvalueId01 = vname01.value;
+    // Combine DATA + VALUE to json
+    var combine = { [`${vdataId01}`] : `${vvalueId01}` };
+    var data22 = JSON.stringify(combine);
   }
 } else {
-  if (document.getElementById('methodEntry').value == 'GET')  {
-    console.log('Method GET: DATA & VALUE box deactivated');
-    } else {
+  if (document.getElementById('methodEntry').value != 'GET')  {
       // DATA
       var dname01 = document.getElementById('valueId02');
       var vdataId01 = dname01.value;
@@ -417,7 +412,7 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = `
-      select parameter to render
+      select object to render
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 
@@ -425,7 +420,6 @@ function jsonbst01() {
 
 
   } if (document.getElementById("chbox02").checked == false) {
-    console.log('off');
 
     document.getElementById('jsonbstyle01').innerHTML = `
     data

@@ -22,8 +22,12 @@ function reloadP() {
 
   window.addEventListener('DOMContentLoaded', (event) => {
       document.getElementById("resetbtn01").click();
-
   });
+
+
+  if (chbox02.checked == true) {
+    chbox02.checked = false
+  }
 
 }
 
@@ -400,8 +404,8 @@ function loadheaders01() {
 
 
 function jsonbst01() {
-  if (document.getElementById("chbox02").checked == true) {
-    console.log('on');
+  if (chbox02.checked == true) {
+    chbox02.checked = true
 
     document.getElementById('jsonbstyle01').innerHTML = `
       <div class='inputbox'>
@@ -419,8 +423,8 @@ function jsonbst01() {
     document.getElementById('advrend02').innerHTML = '<button id="button" onclick="loadheaders01()">add header</button>'
 
 
-  } if (document.getElementById("chbox02").checked == false) {
-
+  } if (chbox02.checked == false) {
+    chbox02.checked = false
     document.getElementById('jsonbstyle01').innerHTML = `
     data
     <input id="dataId01" class='jsonvalue' type="text" value='data01'>

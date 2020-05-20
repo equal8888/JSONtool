@@ -317,29 +317,48 @@ if (document.getElementById("chbox02").checked == false){
 const handleFormSubmit = event => {
   event.preventDefault();
 
-  // show on page
-  if (document.getElementById('methodEntry').value != 'GET')  {
 
-    // DATA
-      var dname011 = document.getElementById('dataId01');
-      var vdataId011 = dname011.value;
+    // show on page
+    if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
 
-    // VALUE
-      var vname011 = document.getElementById('valueId01');
-      var vvalueId011 = vname011.value;
+      // DATA
+        var dname011 = document.getElementById('dataId01');
+        var vdataId011 = dname011.value;
 
-    // Combine DATA + VALUE
-      var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
+      // VALUE
+        var vname011 = document.getElementById('valueId01');
+        var vvalueId011 = vname011.value;
 
-    // Json VALUE
-      var dataj01 = JSON.stringify(combine1);
-    // base64 + VALUE
-      var databjdata = btoa(dataj01);
+      // Combine DATA + VALUE
+        var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
 
-    // show in page
-      document.getElementById('showJson01').value = dataj01;
-      document.getElementById('showJsonbase01').value = databjdata;
-  }
+      // Json VALUE
+        var dataj01 = JSON.stringify(combine1);
+      // base64 + VALUE
+        var databjdata = btoa(dataj01);
+
+      // show in page
+        document.getElementById('showJson01').value = dataj01;
+        document.getElementById('showJsonbase01').value = databjdata;
+    }
+
+    // show on page
+    if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
+
+      // DATA
+        var dname011 = document.getElementById('valueId02');
+
+      // Json VALUE
+        var dataj01 = dname011.value;
+
+      // base64 + VALUE
+        var databjdata = btoa(dataj01);
+
+      // show in page
+        document.getElementById('showJson01').value = dataj01;
+        document.getElementById('showJsonbase01').value = databjdata;
+    }
+
 
 
   if (checkboxStatus == 'CheckOn') {

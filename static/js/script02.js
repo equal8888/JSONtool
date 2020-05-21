@@ -9,11 +9,14 @@ function reloadP() {
 
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
-  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
+  document.getElementById('urlEntry').value = '';
   // Method
-  document.getElementById('methodEntry').value = 'POST';
+  document.getElementById('methodEntry').value = 'GET';
   // DATA
-  document.getElementById('dataId01').value = 'data01';
+  document.getElementById('dataId01').value = '';
+
+  // VALUE
+  document.getElementById('valueId01').value = '';
 
   // encoder data IncomingJson
   document.getElementById('showJson01').readOnly = true;
@@ -22,7 +25,7 @@ function reloadP() {
 
 
   window.addEventListener('DOMContentLoaded', (event) => {
-      document.getElementById("resetbtn01").click();
+    start01()
   });
 
 
@@ -120,6 +123,19 @@ function appendData(xhr,eID,nameElement02) {
   }
 };
 // Buttons
+
+function start01() {
+
+  document.getElementById('headerlist01').innerHTML = '';
+  counter = 0
+
+  if (  counter <= 1 )  {
+    loadheaders01()
+    loadheaders01()
+  }
+
+};
+
 function BShow01() {
   strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
@@ -132,6 +148,13 @@ function BClear01(elementID) {
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
   document.getElementById('IncomingJson').value = '';
+};
+
+function testv() {
+  // Method
+  document.getElementById('methodEntry').value = 'POST';
+  // VALUE
+  document.getElementById('valueId01').value = '<iframe width="100%" height="500" src="https://www.youtube.com/embed/P1ww1IXRfTA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 };
 function reset() {
 
@@ -152,7 +175,7 @@ function reset() {
   document.getElementById('authEntry01').value = 'application/json';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   // Method
-  document.getElementById('methodEntry').value = 'POST';
+  document.getElementById('methodEntry').value = 'GET';
   // DATA
   document.getElementById('dataId01').value = 'data01';
   // encoder data
@@ -478,7 +501,7 @@ function jsonbst01() {
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="resetbutton" onclick="reset()">reset</button> <button id="button" class="resetbutton" onclick="loadheaders01()">add hdr</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset + def parameters</button> <button id="button" class="resetbutton" onclick="loadheaders01()">add hdr</button>'
 
 
   } if (chbox02.checked == false) {
@@ -494,7 +517,7 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = ''
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="resetbutton" onclick="reset()">reset</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">def parameters</button> <button id="button" class="testvb" onclick="testv()">test value</button>'
 
   }
 

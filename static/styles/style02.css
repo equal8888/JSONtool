@@ -111,7 +111,9 @@ float: right;
 .label {
   text-align: left;
 }
-
+.testvb {
+  float: right;
+}
 .jsonvalue {
   width:100%;
   max-width:100%;

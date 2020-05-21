@@ -147,7 +147,8 @@ function testdata02(elementID) {
   // Method
   document.getElementById('methodEntry').value = 'GET';
   // DATA
-  document.getElementById('dataId01').value = '';
+  document.getElementById('dataId01').value = 'data01';
+
 };
 
 function reset() {

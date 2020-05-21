@@ -41,6 +41,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   var xhr = new XMLHttpRequest();
 
   var params = `${data22}`;
+  var method  = (`${method}`);
   var host  = (`${pageurl}`);
   var he01 = `${he01}`;
   var heval01 = (`${heval01}`);

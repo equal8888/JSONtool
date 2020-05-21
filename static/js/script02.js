@@ -36,7 +36,7 @@ function reloadP() {
 
 }
 
-function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,he04,heval04,he05,heval05,he06,heval06,he07,heval07,he08,heval08) {
+function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,he04,heval04,he05,heval05,he06,heval06,he07,heval07,he08,heval08,he09,heval09) {
 
   var xhr = new XMLHttpRequest();
 
@@ -58,6 +58,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   var heval07 = (`${heval07}`);
   var he08 = `${he08}`;
   var heval08 = (`${heval08}`);
+  var he08 = `${he09}`;
+  var heval08 = (`${heval09}`);
 
   xhr.open(`${method}`, `${host}`, true);
 
@@ -69,6 +71,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   xhr.setRequestHeader(`${he06}`, `${heval06}`);
   xhr.setRequestHeader(`${he07}`, `${heval07}`);
   xhr.setRequestHeader(`${he08}`, `${heval08}`);
+  xhr.setRequestHeader(`${he09}`, `${heval09}`);
 
   xhr.onreadystatechange = function() {
   xhr.timeout = 5000;
@@ -286,6 +289,19 @@ function BPreview01() {
     }
   }
 
+  //Header 9
+  if (counter >= 9)  {
+    if (document.getElementById('HeaderEntry09').value == 'novalue')  {
+      console.log('header9: deactivated');
+    } else {
+      console.log('header9: Active');
+      var nhent09 = document.getElementById('HeaderEntry09');
+      var he09 = nhent09.value;
+
+      var nhaut09 = document.getElementById('authEntry09');
+      var heval09 = nhaut09.value;
+    }
+  }
 // handler for data
 
 if (document.getElementById("chbox02").checked == false){
@@ -310,7 +326,7 @@ if (document.getElementById("chbox02").checked == false){
   }
 };
 
-  loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`);
+  loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`,`${he04}`,`${heval04}`,`${he05}`,`${heval05}`,`${he06}`,`${heval06}`,`${he07}`,`${heval07}`,`${he08}`,`${heval08}`,`${he09}`,`${heval09}`);
 
 };
 
@@ -371,7 +387,7 @@ const handleFormSubmit = event => {
 };
 
 var counter = 0;
-var maximum = 8;
+var maximum = 9;
 
 function loadheaders01() {
 

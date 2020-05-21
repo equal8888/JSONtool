@@ -1,6 +1,9 @@
 // set up stuff on page loadb
 window.onload = reloadP()
 function reloadP() {
+  document.getElementById('DisableB01').disabled = false;
+  document.getElementById('DisableB02').disabled = true;
+
   checkboxStatus = 'CheckOn';
   myCheck.checked = true;
 
@@ -11,8 +14,6 @@ function reloadP() {
   document.getElementById('methodEntry').value = 'POST';
   // DATA
   document.getElementById('dataId01').value = 'data01';
-  // VALUE
-  document.getElementById('valueId01').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
   // encoder data IncomingJson
   document.getElementById('showJson01').readOnly = true;

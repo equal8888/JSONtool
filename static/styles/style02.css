@@ -128,6 +128,9 @@ float: right;
   min-width:100%;
   min-height: 130px;
 }
+.examplev {
+  float: right;
+}
 .result01 {
   width:100%;
   max-width:100%;

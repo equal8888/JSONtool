@@ -141,9 +141,6 @@ function testdata01(elementID) {
   document.getElementById('methodEntry').value = 'POST';
   // DATA
   document.getElementById('dataId01').value = 'data01';
-  // encoder data
-  document.getElementById('showJson01').value = ' ';
-  document.getElementById('showJsonbase01').value = ' ';
   // json data
   document.getElementById('valueId01').value = '<iframe width="100%" height="500" src="https://www.youtube.com/embed/YMRqF1UMPhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 };
@@ -153,6 +150,10 @@ function reset() {
   document.getElementById('urlEntry').value = ` `;
 
   document.getElementById('headerlist01').innerHTML = '';
+  // encoder data
+  document.getElementById('showJson01').value = ' ';
+  document.getElementById('showJsonbase01').value = ' ';
+
   counter = 0
 
   if (  counter <= 1 )  {

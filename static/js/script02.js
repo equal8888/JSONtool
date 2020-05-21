@@ -9,9 +9,11 @@ function reloadP() {
 
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
+  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
   // Method
   document.getElementById('methodEntry').value = 'POST';
-
+  // DATA
+  document.getElementById('dataId01').value = 'data01';
 
   // encoder data IncomingJson
   document.getElementById('showJson01').readOnly = true;
@@ -128,14 +130,16 @@ function BClear01(elementID) {
   document.getElementById('jsondata').innerHTML = '';
   document.getElementById('IncomingJson').value = '';
 };
-function testdata01(elementID) {
-  document.getElementById('methodEntry').value = 'POST';
-  // json
-  document.getElementById('dataId01').value = 'data01';
-  document.getElementById('valueId01').value = '<iframe width="100%" height="500" src="https://www.youtube.com/embed/YMRqF1UMPhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-};
+function reset() {
 
-function testdata02(elementID) {
+  document.getElementById('headerlist01').innerHTML = '';
+  counter = 0
+
+  if (  counter <= 1 )  {
+    loadheaders01()
+    loadheaders01()
+  }
+
   // Host
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
   // HeaderEntry02
@@ -145,33 +149,12 @@ function testdata02(elementID) {
   document.getElementById('authEntry01').value = 'application/json';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   // Method
-  document.getElementById('methodEntry').value = 'GET';
+  document.getElementById('methodEntry').value = 'POST';
   // DATA
   document.getElementById('dataId01').value = 'data01';
-
-};
-
-function reset() {
-
-  document.getElementById('urlEntry').value = ` `;
-
-  document.getElementById('headerlist01').innerHTML = '';
   // encoder data
   document.getElementById('showJson01').value = ' ';
   document.getElementById('showJsonbase01').value = ' ';
-  // json data
-  document.getElementById('dataId01').value = ' ';
-  document.getElementById('valueId01').value = ' ';
-
-
-
-  counter = 0
-
-  if (  counter <= 1 )  {
-    loadheaders01()
-    loadheaders01()
-  }
-
 };
 
 // Apply
@@ -480,7 +463,6 @@ function jsonbst01() {
     `
 
     document.getElementById('advrend02').innerHTML = '<button id="button" class="resetbutton" onclick="reset()">reset</button> <button id="button" class="resetbutton" onclick="loadheaders01()">add hdr</button>'
-    document.getElementById('sampledata').innerHTML = ''
 
 
   } if (chbox02.checked == false) {
@@ -497,7 +479,6 @@ function jsonbst01() {
 
     document.getElementById('advrend01').innerHTML = ''
     document.getElementById('advrend02').innerHTML = '<button id="button" class="resetbutton" onclick="reset()">reset</button>'
-    document.getElementById('sampledata').innerHTML = '<button id="button" class="examplev" onclick="testdata02()">default settings</button> <button id="button" class="examplev" onclick="testdata01()">test json</button>'
 
   }
 

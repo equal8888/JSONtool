@@ -113,7 +113,6 @@ function appendData(xhr,eID,nameElement02) {
 
     div.innerHTML = obj[`${newname1}`];
 
-    document.getElementById('jsondata').value = `${xhr}`;
     document.getElementById('IncomingJson').value = `${xhr}`;
 
     mainContainer.appendChild(div);

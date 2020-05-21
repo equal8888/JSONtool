@@ -58,8 +58,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   var heval07 = (`${heval07}`);
   var he08 = `${he08}`;
   var heval08 = (`${heval08}`);
-  var he08 = `${he09}`;
-  var heval08 = (`${heval09}`);
+  var he09 = `${he09}`;
+  var heval09 = (`${heval09}`);
 
   xhr.open(`${method}`, `${host}`, true);
 

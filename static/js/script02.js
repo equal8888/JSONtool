@@ -129,6 +129,13 @@ function BClear01(elementID) {
   document.getElementById('IncomingJson').value = '';
 };
 function testdata01(elementID) {
+  document.getElementById('methodEntry').value = 'POST';
+  // json
+  document.getElementById('dataId01').value = 'data01';
+  document.getElementById('valueId01').value = '<iframe width="100%" height="500" src="https://www.youtube.com/embed/YMRqF1UMPhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+};
+
+function testdata02(elementID) {
   // Host
   document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
   // HeaderEntry02
@@ -138,11 +145,9 @@ function testdata01(elementID) {
   document.getElementById('authEntry01').value = 'application/json';
   document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
   // Method
-  document.getElementById('methodEntry').value = 'POST';
+  document.getElementById('methodEntry').value = 'GET';
   // DATA
-  document.getElementById('dataId01').value = 'data01';
-  // json data
-  document.getElementById('valueId01').value = '<iframe width="100%" height="500" src="https://www.youtube.com/embed/YMRqF1UMPhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  document.getElementById('dataId01').value = '';
 };
 
 function reset() {
@@ -153,6 +158,11 @@ function reset() {
   // encoder data
   document.getElementById('showJson01').value = ' ';
   document.getElementById('showJsonbase01').value = ' ';
+  // json data
+  document.getElementById('dataId01').value = ' ';
+  document.getElementById('valueId01').value = ' ';
+
+
 
   counter = 0
 
@@ -486,7 +496,7 @@ function jsonbst01() {
 
     document.getElementById('advrend01').innerHTML = ''
     document.getElementById('advrend02').innerHTML = '<button id="button" class="resetbutton" onclick="reset()">reset</button>'
-    document.getElementById('sampledata').innerHTML = '<button id="button" class="examplev" onclick="testdata01()">test value</button>'
+    document.getElementById('sampledata').innerHTML = '<button id="button" class="examplev" onclick="testdata02()">default settings</button> <button id="button" class="examplev" onclick="testdata01()">test json</button>'
 
   }
 

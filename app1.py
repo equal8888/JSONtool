@@ -6,7 +6,6 @@ import json
 app = Flask(__name__)
 basic_auth = BasicAuth(app)
 
-
 # Main page
 @app.route('/')
 def static1():
@@ -16,20 +15,36 @@ def static1():
 @basic_auth.required
 def json01():
     if request.method == 'GET' and "application/json" in request.headers["Content-Type"]:
-       filehandler = open('data.txt', 'r')
-       if filehandler.mode == 'r':
-           contents = filehandler.read()
-       filehandler.close()
+       filehandlerR = open('data.txt', 'r+')
 
-       return contents
+       if filehandlerR.mode == 'r+':
+           contents = filehandlerR.readlines()
+           convertstr01 = ''.join(contents)
+           filehandlerR.close()
+
+       return convertstr01
+
 
     if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
-       req_data = request.get_json()
-       with open('data.txt', 'w') as blah:
-           json.dump(req_data, blah)
+
+# test str
+#       req_data = '{"data01": "Hi there !"}'
+
+# ----------------- not sure about this -----------------
+       req_data = request.get_json()                    #
+       jsonstr = json.dumps(req_data)                   #
+# -------------------------------------------------------
+
+       filehandlerW = open('data.txt', 'w+')
+
+       if filehandlerW.mode == 'w+':
+           filehandlerW.write(jsonstr)
+       filehandlerW.close()
+
+# ----------------- generate random  -----------------
 
        response = app.response_class(
-       response='{"data01": "ok"}',
+       response='{"data01": "flask: ok"}',
        mimetype='application/json',
        )
 

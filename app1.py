@@ -41,7 +41,7 @@ def json01():
            filehandlerW.write(jsonstr)
        filehandlerW.close()
 
-# ----------------- generate random  -----------------
+# ----------------- generate response  -----------------
 
        response = app.response_class(
        response='{"data01": "flask: ok"}',

@@ -39,7 +39,7 @@ def json01():
 
        if filehandlerW.mode == 'w+':
            filehandlerW.write(jsonstr)
-       filehandlerW.close()
+           filehandlerW.close()
 
 # ----------------- generate response  -----------------
 

@@ -21,8 +21,15 @@ def json01():
            contents = filehandlerR.readlines()
            convertstr01 = ''.join(contents)
            filehandlerR.close()
+# ----------------- generate response  -----------------
 
-       return convertstr01
+       response01 = app.response_class(
+       response= convertstr01,
+       mimetype='application/json',
+       )
+
+       return response01
+
 
 
     if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
@@ -43,12 +50,12 @@ def json01():
 
 # ----------------- generate response  -----------------
 
-       response = app.response_class(
+       response02 = app.response_class(
        response='{"data01": "flask: ok"}',
        mimetype='application/json',
        )
 
-       return response
+       return response02
 
 if __name__ == '__main__':
     app.config['BASIC_AUTH_USERNAME'] = 'admin'

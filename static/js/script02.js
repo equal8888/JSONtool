@@ -419,11 +419,8 @@ function loadheaders01() {
 
   var dyncontent = document.createElement('div');
   dyncontent.innerHTML = `
-
           header `+(counter+1)+`
-
           <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue">
-
           <option value="novalue">---</option>
           <option value="Accept">Accept</option>
           <option value="Accept-Charset">Accept-Charset</option>
@@ -478,9 +475,7 @@ function loadheaders01() {
 	} else {
  	  node.appendChild(dyncontent);
  	  document.getElementById("headerlist01").appendChild(node);
-
  	  counter++;
-
   }
 
 }

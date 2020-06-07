@@ -5,7 +5,7 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
 
   checkboxStatus = 'CheckOn';
-  myCheck.checked = true;
+  showjsonchk.checked = true;
 
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
@@ -31,10 +31,6 @@ function reloadP() {
 
   if (chbox02.checked == true) {
     chbox02.checked = false;
-  }
-
-  if (myCheck.checked == false) {
-    myCheck.checked = true;
   }
 
 }
@@ -103,23 +99,28 @@ function appendData(xhr,eID,nameElement02) {
 
   if(xhr.readyState == 4 && xhr.status == 200) {
 
-    appendData((xhr.responseText),'jsondata');
-    var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
-    document.getElementById('ShowMyHost').innerHTML = pageurl;
-  }
+      appendData((xhr.responseText),'jsondata');
+      var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
+      document.getElementById('ShowMyHost').innerHTML = pageurl;
+
+}
 
   for (var i = 0; i < 1; i++) {
 
     obj = JSON.parse(xhr);
     newname1 = nameElement02.value;
-
     var div = document.createElement('div');
 
-    div.innerHTML = obj[`${newname1}`];
-
-    document.getElementById('IncomingJson').value = `${xhr}`;
-
-    mainContainer.appendChild(div);
+    if (showjsonchk.checked == true && document.getElementById('methodEntry').value != 'GET') {
+      div.innerHTML = obj[`${newname1}`];
+      document.getElementById('IncomingJson').value = `${xhr}`;
+      mainContainer.appendChild(div);
+    }
+    if (document.getElementById('methodEntry').value == 'GET') {
+      div.innerHTML = obj[`${newname1}`];
+      document.getElementById('IncomingJson').value = `${xhr}`;
+      mainContainer.appendChild(div);
+    }
   }
 };
 // Buttons
@@ -139,6 +140,7 @@ function start01() {
 function BShow01() {
   strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
+
   BPreview01()
   document.getElementById('methodEntry').value = strcv01;
 };

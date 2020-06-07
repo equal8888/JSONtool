@@ -1,7 +1,7 @@
 // set up stuff on page loadb
 window.onload = reloadP()
 function reloadP() {
-  document.getElementById('DisableB01').disabled = false;
+  document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
 
   checkboxStatus = 'CheckOn';
@@ -144,7 +144,6 @@ function BShow01() {
 };
 
 function BClear01(elementID) {
-  document.getElementById('DisableB01').disabled = false;
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
   document.getElementById('IncomingJson').value = '';
@@ -157,6 +156,9 @@ function testv() {
   document.getElementById('valueId01').value = '<iframe width="100%" height="500" src="https://www.youtube.com/embed/eMDQfSrpLlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 };
 function reset() {
+
+  // enable get button
+  document.getElementById('DisableB01').disabled = false;
 
   document.getElementById('headerlist01').innerHTML = '';
   counter = 0
@@ -185,7 +187,6 @@ function reset() {
 
 // Apply
 function BPreview01() {
-  document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = false;
 // HOST
   var name02 = document.getElementById('urlEntry');

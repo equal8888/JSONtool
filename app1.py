@@ -21,6 +21,7 @@ def json01():
            contents = filehandlerR.readlines()
            convertstr01 = ''.join(contents)
            filehandlerR.close()
+
 # ----------------- generate response  -----------------
 
        response01 = app.response_class(
@@ -30,12 +31,7 @@ def json01():
 
        return response01
 
-
-
     if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
-
-# test str
-#       req_data = '{"data01": "Hi there !"}'
 
 # ----------------- not sure about this -----------------
        req_data = request.get_json()                    #

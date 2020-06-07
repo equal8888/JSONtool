@@ -107,8 +107,6 @@ function appendData(xhr,eID,nameElement02) {
 
   for (var i = 0; i < 1; i++) {
 
-
-
     if (showjsonchk.checked == true) {
       obj = JSON.parse(xhr);
       newname1 = nameElement02.value;
@@ -117,10 +115,10 @@ function appendData(xhr,eID,nameElement02) {
       div.innerHTML = obj[`${newname1}`];
       document.getElementById('IncomingJson').value = `${xhr}`;
       mainContainer.appendChild(div);
-    }
-    if (showjsonchk.checked == false) {
+    } else {
 
     }
+
   }
 };
 // Buttons

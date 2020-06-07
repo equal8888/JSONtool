@@ -168,21 +168,24 @@ function reset() {
     loadheaders01()
   }
 
-  // Host
-  document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
-  // HeaderEntry02
-  document.getElementById('HeaderEntry01').value = 'Content-Type';
-  document.getElementById('HeaderEntry02').value = 'Authorization';
-  // Auth
-  document.getElementById('authEntry01').value = 'application/json';
-  document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
-  // Method
-  document.getElementById('methodEntry').value = 'GET';
-  // DATA
-  document.getElementById('dataId01').value = 'data01';
-  // encoder data
-  document.getElementById('showJson01').value = ' ';
-  document.getElementById('showJsonbase01').value = ' ';
+  if (  counter == 2 )  {
+    // Host
+    document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
+    // HeaderEntry02
+    document.getElementById('HeaderEntry01').value = 'Content-Type';
+    document.getElementById('HeaderEntry02').value = 'Authorization';
+    // Auth
+    document.getElementById('authEntry01').value = 'application/json';
+    document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
+    // Method
+    document.getElementById('methodEntry').value = 'GET';
+    // DATA
+    document.getElementById('dataId01').value = 'data01';
+    // encoder data
+    document.getElementById('showJson01').value = ' ';
+    document.getElementById('showJsonbase01').value = ' ';
+  }
+
 };
 
 // Apply

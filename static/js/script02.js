@@ -527,12 +527,3 @@ function jsonbst01() {
 // EventListener('submit'
 const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);
-// Press Enter to Preview
-function EntertoPreview01() {
-  var checkBox = document.getElementById('myCheck');
-  if (checkBox.checked == true){
-    checkboxStatus = 'CheckOn'
-  } else {
-    checkboxStatus = 'CheckOff'
-  };
-};

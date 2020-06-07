@@ -51,7 +51,7 @@ def json01():
 # ----------------- generate response  -----------------
 
        response02 = app.response_class(
-       response='{"data01": "flask: ok"}',
+       response='{"data01": "flask: ok"}'.encode('utf-8'),
        mimetype='application/json',
        )
 

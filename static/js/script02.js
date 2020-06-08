@@ -109,13 +109,141 @@ function appendData(xhr,eID,nameElement02) {
 
     if (showjsonchk.checked == true) {
       obj = JSON.parse(xhr);
-      newname1 = nameElement02.value;
-      var div = document.createElement('div');
-
-      div.innerHTML = obj[`${newname1}`];
       document.getElementById('IncomingJson').value = `${xhr}`;
-      mainContainer.appendChild(div);
-    } else {
+
+      if (objcounter == 1) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01');
+        console.log(newname1);
+
+        var div = document.createElement('div');
+        div.innerHTML = obj[`${newname1}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+
+      if (objcounter == 2) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+
+      if (objcounter == 3) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+        var newname3 = document.getElementById('dataId03').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+
+      if (objcounter == 4) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+        var newname3 = document.getElementById('dataId03').value;
+        var newname4 = document.getElementById('dataId04').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+
+      if (objcounter == 5) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+        var newname3 = document.getElementById('dataId03').value;
+        var newname4 = document.getElementById('dataId04').value;
+        var newname5 = document.getElementById('dataId05').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+
+      if (objcounter == 6) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+        var newname3 = document.getElementById('dataId03').value;
+        var newname4 = document.getElementById('dataId04').value;
+        var newname5 = document.getElementById('dataId05').value;
+        var newname6 = document.getElementById('dataId06').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+      if (objcounter == 7) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+        var newname3 = document.getElementById('dataId03').value;
+        var newname4 = document.getElementById('dataId04').value;
+        var newname5 = document.getElementById('dataId05').value;
+        var newname6 = document.getElementById('dataId06').value;
+        var newname7 = document.getElementById('dataId07').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+
+      if (objcounter == 8) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+        var newname3 = document.getElementById('dataId03').value;
+        var newname4 = document.getElementById('dataId04').value;
+        var newname5 = document.getElementById('dataId05').value;
+        var newname6 = document.getElementById('dataId06').value;
+        var newname7 = document.getElementById('dataId07').value;
+        var newname8 = document.getElementById('dataId08').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
+
+      if (objcounter == 9) {
+        console.log(objcounter);
+
+        var newname1 = document.getElementById('dataId01').value;
+        var newname2 = document.getElementById('dataId02').value;
+        var newname3 = document.getElementById('dataId03').value;
+        var newname4 = document.getElementById('dataId04').value;
+        var newname5 = document.getElementById('dataId05').value;
+        var newname6 = document.getElementById('dataId06').value;
+        var newname7 = document.getElementById('dataId07').value;
+        var newname8 = document.getElementById('dataId08').value;
+        var newname9 = document.getElementById('dataId09').value;
+
+        var div = document.createElement('div');
+
+        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`] + "<hr>";  //
+        mainContainer.appendChild(div);
+      }
 
     }
 
@@ -413,6 +541,26 @@ const handleFormSubmit = event => {
   };
 };
 
+
+var objcounter = 1;
+var objmax = 9;
+
+function loadobjects01() {
+
+  var node01 = document.createElement('div');
+  node01.innerHTML = `
+          <input id="dataId0`+(objcounter+1)+`" class='jsonvalue' type="text" value=''>
+          `;
+
+  if (objcounter == objmax)  {
+    console.log("objmax reached");
+	} else {
+ 	  document.getElementById("advrend01").appendChild(node01);
+ 	  objcounter++;
+  }
+
+}
+
 var counter = 0;
 var maximum = 9;
 
@@ -497,7 +645,8 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = `
-      select object to render (currently cannot render object inside an object)
+      select object to render
+      <button id="button" class="resetbutton" onclick="loadobjects01()">nested-json +</button>
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 
@@ -506,6 +655,7 @@ function jsonbst01() {
 
   } if (chbox02.checked == false) {
     chbox02.checked = false
+    objcounter = 1;
     document.getElementById('jsonbstyle01').innerHTML = `
     data
     <input id="dataId01" class='jsonvalue' type="text" value='data01'>

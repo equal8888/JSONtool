@@ -271,6 +271,7 @@ if (objcounter >= 2) {
 
   document.getElementById('advrend01').innerHTML = `
     select object to render
+    <button id="button" class="resetbutton" onclick="removeobjects01()">nested-object -</button>
     <button id="button" class="resetbutton" onclick="loadobjects01()">nested-object +</button>
     <input id="dataId01" class='jsonvalue' type="text" value='data01'>
   `
@@ -505,6 +506,22 @@ function loadobjects01() {
 
 }
 
+
+function removeobjects01(elementId) {
+
+  if (objcounter > 1) {
+    var ename01 = "dataId0" + `${objcounter}`;
+    console.log (ename01);
+
+    var element = document.getElementById(`${ename01}`);
+    element.parentNode.removeChild(element);
+    objcounter--;
+  }
+
+
+
+}
+
 var counter = 0;
 var maximum = 9;
 
@@ -589,7 +606,9 @@ function jsonbst01() {
 
     document.getElementById('advrend01').innerHTML = `
       select object to render
+      <button id="button" class="resetbutton" onclick="removeobjects01()">nested-object -</button>
       <button id="button" class="resetbutton" onclick="loadobjects01()">nested-object +</button>
+
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 

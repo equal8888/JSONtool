@@ -593,7 +593,7 @@ function jsonbst01() {
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset + defaults</button> <button id="button" class="resetbutton" onclick="loadheaders01()">add hdr</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button>'
 
 
   } if (chbox02.checked == false) {
@@ -609,7 +609,7 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = ''
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">defaults</button> <button id="button" class="testvb" onclick="testv()">test value</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">defaults</button> <button id="button" class="testvb" onclick="testv()">sample value</button>'
 
   }
 

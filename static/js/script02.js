@@ -103,7 +103,6 @@ function appendData(xhr,eID,nameElement02) {
 
   for (var i = 0; i < 1; i++) {
 
-    if (showjsonchk.checked == true) {
       obj = JSON.parse(xhr);
       document.getElementById('IncomingJson').value = `${xhr}`;
 
@@ -222,7 +221,6 @@ function appendData(xhr,eID,nameElement02) {
         mainContainer.appendChild(div);
       }
 
-    }
 
   }
 };
@@ -242,7 +240,6 @@ function start01() {
 
 function BShow01() {
 
-if (showjsonchk.checked == true) {
 
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
@@ -337,10 +334,11 @@ if (showjsonchk.checked == true) {
   strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
 
-    BPreview01()
+  BPreview01()
+
 
   document.getElementById('methodEntry').value = strcv01;
-}
+
 };
 
 function BClear01(elementID) {
@@ -395,6 +393,10 @@ function reset() {
 
 // Apply
 function BPreview01() {
+
+  if (showjsonchk.checked == true) {
+
+
   document.getElementById('DisableB02').disabled = false;
 // HOST
   var jhost = document.getElementById('urlEntry').value;
@@ -518,7 +520,7 @@ if (document.getElementById("chbox02").checked == false){
 };
 
   loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`,`${he04}`,`${heval04}`,`${he05}`,`${heval05}`,`${he06}`,`${heval06}`,`${he07}`,`${heval07}`,`${he08}`,`${heval08}`,`${he09}`,`${heval09}`);
-
+  };
 };
 
 // show data on page
@@ -563,9 +565,8 @@ const handleFormSubmit = event => {
         document.getElementById('showJsonbase01').value = databjdata;
     }
 
-  if (showjsonchk.checked == true) {
     BPreview01()
-  };
+
 
 };
 

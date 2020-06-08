@@ -114,7 +114,7 @@ function appendData(xhr,eID,nameElement02) {
       if (objcounter == 1) {
         console.log(objcounter);
 
-        var newname1 = document.getElementById('dataId01');
+        var newname1 = document.getElementById('dataId01').value;
         console.log(newname1);
 
         var div = document.createElement('div');

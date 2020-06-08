@@ -613,7 +613,8 @@ function loadheaders01() {
   var dyncontent = document.createElement('div');
   dyncontent.innerHTML = `
 
-          <label for="HeaderEntry0`+(counter+1)+`" id="lbHeaderEntry0`+(counter+1)+`" >header `+(counter+1)+`</label>
+
+          <span id="labelheaders`+(counter+1)+`">header `+(counter+1)+`</span>
 
           <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue">
           <option value="novalue">---</option>
@@ -679,7 +680,7 @@ function removeheaders01(elementId) {
 
   if (counter > 2) {
 
-    var lhename01 = "lbHeaderEntry0" + `${counter}`;
+    var lhename01 = "labelheaders" + `${counter}`;
 
     var element = document.getElementById(`${lhename01}`);
     element.parentNode.removeChild(element);

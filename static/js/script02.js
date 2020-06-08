@@ -318,11 +318,9 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry01').value == 'novalue')  {
       console.log('header1: deactivated');
     } else {
-      var nhent01 = document.getElementById('HeaderEntry01');
-      var he01 = nhent01.value;
+      var he01 = document.getElementById('HeaderEntry01').value;
 
-      var nhaut01 = document.getElementById('authEntry01');
-      var heval01 = nhaut01.value;
+      var heval01 = document.getElementById('authEntry01').value;
     }
   }
 
@@ -331,11 +329,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry02').value == 'novalue')  {
       console.log('header2: deactivated');
     } else {
-      var nhent02 = document.getElementById('HeaderEntry02');
-      var he02 = nhent02.value;
-
-      var nhaut02 = document.getElementById('authEntry02');
-      var heval02 = nhaut02.value;
+      var he02 = document.getElementById('HeaderEntry02').value;
+      var heval02 = document.getElementById('authEntry02').value;
     }
   }
 
@@ -344,11 +339,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry03').value == 'novalue')  {
       console.log('header3: deactivated');
     } else {
-      var nhent03 = document.getElementById('HeaderEntry03');
-      var he03 = nhent03.value;
-
-      var nhaut03 = document.getElementById('authEntry03');
-      var heval03 = nhaut03.value;
+      var he03 = document.getElementById('HeaderEntry03').value;
+      var heval03 = document.getElementById('authEntry03').value;
     }
   }
 
@@ -357,11 +349,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry04').value == 'novalue')  {
       console.log('header4: deactivated');
     } else {
-      var nhent04 = document.getElementById('HeaderEntry04');
-      var he04 = nhent04.value;
-
-      var nhaut04 = document.getElementById('authEntry04');
-      var heval04 = nhaut04.value;
+      var he04 = document.getElementById('HeaderEntry04').value;
+      var heval04 = document.getElementById('authEntry04').value;
     }
   }
 
@@ -370,11 +359,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry05').value == 'novalue')  {
       console.log('header5: deactivated');
     } else {
-      var nhent05 = document.getElementById('HeaderEntry05');
-      var he05 = nhent05.value;
-
-      var nhaut05 = document.getElementById('authEntry05');
-      var heval05 = nhaut05.value;
+      var he05 = document.getElementById('HeaderEntry05').value;
+      var heval05 = document.getElementById('authEntry05').value;
     }
   }
 
@@ -383,11 +369,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry06').value == 'novalue')  {
       console.log('header6: deactivated');
     } else {
-      var nhent06 = document.getElementById('HeaderEntry06');
-      var he06 = nhent06.value;
-
-      var nhaut06 = document.getElementById('authEntry06');
-      var heval06 = nhaut06.value;
+      var he06 = document.getElementById('HeaderEntry06').value;
+      var heval06 = document.getElementById('authEntry06').value;
     }
   }
 
@@ -396,11 +379,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry07').value == 'novalue')  {
       console.log('header7: deactivated');
     } else {
-      var nhent07 = document.getElementById('HeaderEntry07');
-      var he07 = nhent07.value;
-
-      var nhaut07 = document.getElementById('authEntry07');
-      var heval07 = nhaut07.value;
+      var he07 = document.getElementById('HeaderEntry07').value;
+      var heval07 = document.getElementById('authEntry07').value;
     }
   }
 
@@ -409,11 +389,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry08').value == 'novalue')  {
       console.log('header8: deactivated');
     } else {
-      var nhent08 = document.getElementById('HeaderEntry08');
-      var he08 = nhent08.value;
-
-      var nhaut08 = document.getElementById('authEntry08');
-      var heval08 = nhaut08.value;
+      var he08 = document.getElementById('HeaderEntry08').value;
+      var heval08 = document.getElementById('authEntry08').value;
     }
   }
 
@@ -422,11 +399,8 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry09').value == 'novalue')  {
       console.log('header9: deactivated');
     } else {
-      var nhent09 = document.getElementById('HeaderEntry09');
-      var he09 = nhent09.value;
-
-      var nhaut09 = document.getElementById('authEntry09');
-      var heval09 = nhaut09.value;
+      var he09 = document.getElementById('HeaderEntry09').value;
+      var heval09 = document.getElementById('authEntry09').value;
     }
   }
 // handler for data

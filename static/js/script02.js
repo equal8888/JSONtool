@@ -271,7 +271,7 @@ if (objcounter >= 2) {
 
   document.getElementById('advrend01').innerHTML = `
     select object to render
-    <button id="button" class="resetbutton" onclick="loadobjects01()">nested-json +</button>
+    <button id="button" class="resetbutton" onclick="loadobjects01()">nested-object +</button>
     <input id="dataId01" class='jsonvalue' type="text" value='data01'>
   `
 }
@@ -589,11 +589,11 @@ function jsonbst01() {
 
     document.getElementById('advrend01').innerHTML = `
       select object to render
-      <button id="button" class="resetbutton" onclick="loadobjects01()">nested-json +</button>
+      <button id="button" class="resetbutton" onclick="loadobjects01()">nested-object +</button>
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset + def parameters</button> <button id="button" class="resetbutton" onclick="loadheaders01()">add hdr</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset + defaults</button> <button id="button" class="resetbutton" onclick="loadheaders01()">add hdr</button>'
 
 
   } if (chbox02.checked == false) {
@@ -609,7 +609,7 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = ''
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">def parameters</button> <button id="button" class="testvb" onclick="testv()">test value</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">defaults</button> <button id="button" class="testvb" onclick="testv()">test value</button>'
 
   }
 

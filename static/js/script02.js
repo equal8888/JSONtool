@@ -348,7 +348,6 @@ function BShow01() {
 function BClear01(elementID) {
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
-  document.getElementById('IncomingJson').value = '';
 };
 
 function testv() {
@@ -606,8 +605,6 @@ function removeobjects01(elementId) {
     objcounter--;
   }
 
-
-
 }
 
 var counter = 0;
@@ -619,7 +616,9 @@ function loadheaders01() {
 
   var dyncontent = document.createElement('div');
   dyncontent.innerHTML = `
-          header `+(counter+1)+`
+
+          <label for="HeaderEntry0`+(counter+1)+`" id="lbHeaderEntry0`+(counter+1)+`" >header `+(counter+1)+`</label>
+
           <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue">
           <option value="novalue">---</option>
           <option value="Accept">Accept</option>
@@ -667,7 +666,7 @@ function loadheaders01() {
           <option value="Warning">Warning</option>
           <option value="Width">Width</option>
           </select>
-          <br>
+
           <input id="authEntry0`+(counter+1)+`" class='jsonvalue' type='text' value=''>`;
 
   if (counter == maximum)  {
@@ -680,6 +679,32 @@ function loadheaders01() {
 
 }
 
+function removeheaders01(elementId) {
+
+  if (counter > 2) {
+
+    var lhename01 = "lbHeaderEntry0" + `${counter}`;
+
+    var element = document.getElementById(`${lhename01}`);
+    element.parentNode.removeChild(element);
+// ---
+
+
+    var hename01 = "HeaderEntry0" + `${counter}`;
+
+    var element = document.getElementById(`${hename01}`);
+    element.parentNode.removeChild(element);
+
+// ---
+    var hename02 = "authEntry0" + `${counter}`;
+
+    var element = document.getElementById(`${hename02}`);
+    element.parentNode.removeChild(element);
+
+    counter--;
+  }
+
+}
 
 function jsonbst01() {
   if (chbox02.checked == true) {
@@ -701,7 +726,7 @@ function jsonbst01() {
       <input id="dataId01" class='jsonvalue' type="text">
     `
 
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button>'
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button> '
 
 
   } if (chbox02.checked == false) {

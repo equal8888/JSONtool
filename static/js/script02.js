@@ -22,6 +22,7 @@ function reloadP() {
   document.getElementById('showJson01').readOnly = true;
   document.getElementById('showJsonbase01').readOnly = true;
   document.getElementById('IncomingJson').readOnly = true;
+  document.getElementById('cjsonformat').readOnly = true;
 
 
   window.addEventListener('DOMContentLoaded', (event) => {
@@ -245,10 +246,102 @@ function start01() {
 };
 
 function BShow01() {
+
+  if (objcounter == 1) {
+    cjsonformat01 = document.getElementById('dataId01').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"])";
+  }
+
+  if (objcounter == 2) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"])";
+  }
+
+  if (objcounter == 3) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"])";
+  }
+
+  if (objcounter == 4) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"])";
+  }
+
+  if (objcounter == 5) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"])";
+  }
+
+  if (objcounter == 6) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"])";
+  }
+
+  if (objcounter == 7) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"])";
+  }
+
+  if (objcounter == 8) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+    cjsonformat08 = document.getElementById('dataId08').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"])";
+  }
+
+  if (objcounter == 9) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+    cjsonformat08 = document.getElementById('dataId08').value
+    cjsonformat09 = document.getElementById('dataId09').value
+
+    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
+  }
+
   strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
 
   BPreview01()
+
   document.getElementById('methodEntry').value = strcv01;
 };
 
@@ -261,27 +354,23 @@ function BClear01(elementID) {
 function testv() {
   // Method
   document.getElementById('methodEntry').value = 'POST';
+  // DATA
+  document.getElementById('dataId01').value = 'data01';
   // VALUE
   document.getElementById('valueId01').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/Xb5E82BEidQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 };
 function reset() {
-
-if (objcounter >= 2) {
-  objcounter = 1;
-
-  document.getElementById('advrend01').innerHTML = `
-    select object to render
-    <button id="button" class="resetbutton" onclick="removeobjects01()">nested-object -</button>
-    <button id="button" class="resetbutton" onclick="loadobjects01()">nested-object +</button>
-    <input id="dataId01" class='jsonvalue' type="text" value='data01'>
-  `
-}
 
   // enable get button
   document.getElementById('DisableB01').disabled = false;
 
   document.getElementById('headerlist01').innerHTML = '';
   counter = 0
+
+  if (chbox02.checked == false) {
+    // DATA
+    document.getElementById('dataId01').value = 'data01';
+  }
 
   if (  counter <= 1 )  {
     loadheaders01()
@@ -299,8 +388,7 @@ if (objcounter >= 2) {
     document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
     // Method
     document.getElementById('methodEntry').value = 'GET';
-    // DATA
-    document.getElementById('dataId01').value = 'data01';
+
     // encoder data
     document.getElementById('showJson01').value = ' ';
     document.getElementById('showJsonbase01').value = ' ';
@@ -606,8 +694,8 @@ function jsonbst01() {
 
     document.getElementById('advrend01').innerHTML = `
       select object to render
-      <button id="button" class="resetbutton" onclick="removeobjects01()">nested-object -</button>
-      <button id="button" class="resetbutton" onclick="loadobjects01()">nested-object +</button>
+      <button id="button" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
+      <button id="button" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
 
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `

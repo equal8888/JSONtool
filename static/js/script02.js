@@ -301,17 +301,14 @@ function reset() {
 function BPreview01() {
   document.getElementById('DisableB02').disabled = false;
 // HOST
-  var name02 = document.getElementById('urlEntry');
-  var jhost = name02.value;
+  var jhost = document.getElementById('urlEntry').value;
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${jhost}`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 
 // URL
-  var nurl001 = document.getElementById('urlEntry');
-  var jhost = nurl001.value;
+  var jhost = document.getElementById('urlEntry').value;
 // METHOD
-  var nmet001 = document.getElementById('methodEntry');
-  var method = nmet001.value;
+  var method = document.getElementById('methodEntry').value;
 
   //Header 1
   if (counter >= 1)  {
@@ -408,11 +405,9 @@ function BPreview01() {
 if (document.getElementById("chbox02").checked == false){
   if (document.getElementById('methodEntry').value != 'GET')  {
     // DATA
-    var dname01 = document.getElementById('dataId01');
-    var vdataId01 = dname01.value;
+    var vdataId01 = document.getElementById('dataId01').value;
     // VALUE
-    var vname01 = document.getElementById('valueId01');
-    var vvalueId01 = vname01.value;
+    var vvalueId01 = document.getElementById('valueId01').value;
     // Combine DATA + VALUE to json
     var combine = { [`${vdataId01}`] : `${vvalueId01}` };
     var data22 = JSON.stringify(combine);
@@ -420,8 +415,7 @@ if (document.getElementById("chbox02").checked == false){
 } else {
   if (document.getElementById('methodEntry').value != 'GET')  {
       // DATA
-      var dname01 = document.getElementById('valueId02');
-      var vdataId01 = dname01.value;
+      var vdataId01 = document.getElementById('valueId02').value;
       // DATA to json
       var data22 = vdataId01;
   }
@@ -440,12 +434,10 @@ const handleFormSubmit = event => {
     if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
 
       // DATA
-        var dname011 = document.getElementById('dataId01');
-        var vdataId011 = dname011.value;
+        var vdataId011 = document.getElementById('dataId01').value;
 
       // VALUE
-        var vname011 = document.getElementById('valueId01');
-        var vvalueId011 = vname011.value;
+        var vvalueId011 = document.getElementById('valueId01').value;
 
       // Combine DATA + VALUE
         var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
@@ -477,14 +469,10 @@ const handleFormSubmit = event => {
         document.getElementById('showJsonbase01').value = databjdata;
     }
 
-
-
   if (checkboxStatus == 'CheckOn') {
     BPreview01()
   };
-  if(document.getElementById('DisableB01').disabled && document.getElementById('DisableB02').disabled){
-    document.getElementById('DisableB01').disabled = false;
-  };
+
 };
 
 

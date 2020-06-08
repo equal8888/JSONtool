@@ -693,10 +693,11 @@ function jsonbst01() {
     `;
 
     document.getElementById('advrend01').innerHTML = `
-      select object to render
+
       <button id="button" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
       <button id="button" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
-
+      <br>
+      select object to render
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
     `
 

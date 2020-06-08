@@ -568,7 +568,6 @@ function loadheaders01() {
 
 function jsonbst01() {
   if (chbox02.checked == true) {
-    chbox02.checked = true
 
     document.getElementById('jsonbstyle01').innerHTML = `
       <div class='inputbox'>
@@ -588,7 +587,6 @@ function jsonbst01() {
 
 
   } if (chbox02.checked == false) {
-    chbox02.checked = false
     objcounter = 1;
     document.getElementById('jsonbstyle01').innerHTML = `
     data

@@ -112,10 +112,7 @@ function appendData(xhr,eID,nameElement02) {
       document.getElementById('IncomingJson').value = `${xhr}`;
 
       if (objcounter == 1) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
-        console.log(newname1);
 
         var div = document.createElement('div');
         div.innerHTML = obj[`${newname1}`] + "<hr>";  //
@@ -123,8 +120,6 @@ function appendData(xhr,eID,nameElement02) {
       }
 
       if (objcounter == 2) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
 
@@ -135,8 +130,6 @@ function appendData(xhr,eID,nameElement02) {
       }
 
       if (objcounter == 3) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
         var newname3 = document.getElementById('dataId03').value;
@@ -148,8 +141,6 @@ function appendData(xhr,eID,nameElement02) {
       }
 
       if (objcounter == 4) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
         var newname3 = document.getElementById('dataId03').value;
@@ -162,8 +153,6 @@ function appendData(xhr,eID,nameElement02) {
       }
 
       if (objcounter == 5) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
         var newname3 = document.getElementById('dataId03').value;
@@ -177,8 +166,6 @@ function appendData(xhr,eID,nameElement02) {
       }
 
       if (objcounter == 6) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
         var newname3 = document.getElementById('dataId03').value;
@@ -192,8 +179,6 @@ function appendData(xhr,eID,nameElement02) {
         mainContainer.appendChild(div);
       }
       if (objcounter == 7) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
         var newname3 = document.getElementById('dataId03').value;
@@ -209,8 +194,6 @@ function appendData(xhr,eID,nameElement02) {
       }
 
       if (objcounter == 8) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
         var newname3 = document.getElementById('dataId03').value;
@@ -227,8 +210,6 @@ function appendData(xhr,eID,nameElement02) {
       }
 
       if (objcounter == 9) {
-        console.log(objcounter);
-
         var newname1 = document.getElementById('dataId01').value;
         var newname2 = document.getElementById('dataId02').value;
         var newname3 = document.getElementById('dataId03').value;
@@ -337,7 +318,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry01').value == 'novalue')  {
       console.log('header1: deactivated');
     } else {
-      console.log('header1: Active');
       var nhent01 = document.getElementById('HeaderEntry01');
       var he01 = nhent01.value;
 
@@ -351,7 +331,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry02').value == 'novalue')  {
       console.log('header2: deactivated');
     } else {
-      console.log('header2: Active');
       var nhent02 = document.getElementById('HeaderEntry02');
       var he02 = nhent02.value;
 
@@ -365,7 +344,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry03').value == 'novalue')  {
       console.log('header3: deactivated');
     } else {
-      console.log('header3: Active');
       var nhent03 = document.getElementById('HeaderEntry03');
       var he03 = nhent03.value;
 
@@ -379,7 +357,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry04').value == 'novalue')  {
       console.log('header4: deactivated');
     } else {
-      console.log('header4: Active');
       var nhent04 = document.getElementById('HeaderEntry04');
       var he04 = nhent04.value;
 
@@ -393,7 +370,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry05').value == 'novalue')  {
       console.log('header5: deactivated');
     } else {
-      console.log('header5: Active');
       var nhent05 = document.getElementById('HeaderEntry05');
       var he05 = nhent05.value;
 
@@ -407,7 +383,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry06').value == 'novalue')  {
       console.log('header6: deactivated');
     } else {
-      console.log('header6: Active');
       var nhent06 = document.getElementById('HeaderEntry06');
       var he06 = nhent06.value;
 
@@ -421,7 +396,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry07').value == 'novalue')  {
       console.log('header7: deactivated');
     } else {
-      console.log('header7: Active');
       var nhent07 = document.getElementById('HeaderEntry07');
       var he07 = nhent07.value;
 
@@ -435,7 +409,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry08').value == 'novalue')  {
       console.log('header8: deactivated');
     } else {
-      console.log('header8: Active');
       var nhent08 = document.getElementById('HeaderEntry08');
       var he08 = nhent08.value;
 
@@ -449,7 +422,6 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry09').value == 'novalue')  {
       console.log('header9: deactivated');
     } else {
-      console.log('header9: Active');
       var nhent09 = document.getElementById('HeaderEntry09');
       var he09 = nhent09.value;
 

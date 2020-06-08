@@ -4,9 +4,8 @@ function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
 
-  checkboxStatus = 'CheckOn';
   showjsonchk.checked = true;
-
+  chbox02.checked = false;
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('urlEntry').value = '';
@@ -29,10 +28,6 @@ function reloadP() {
     start01()
   });
 
-
-  if (chbox02.checked == true) {
-    chbox02.checked = false;
-  }
 
 }
 
@@ -247,6 +242,8 @@ function start01() {
 
 function BShow01() {
 
+if (showjsonchk.checked == true) {
+
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
 
@@ -340,9 +337,10 @@ function BShow01() {
   strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
 
-  BPreview01()
+    BPreview01()
 
   document.getElementById('methodEntry').value = strcv01;
+}
 };
 
 function BClear01(elementID) {
@@ -553,11 +551,9 @@ const handleFormSubmit = event => {
     // show on page
     if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
 
-      // DATA
-        var dname011 = document.getElementById('valueId02');
 
       // Json VALUE
-        var dataj01 = dname011.value;
+        var dataj01 = document.getElementById('valueId02');
 
       // base64 + VALUE
         var databjdata = btoa(dataj01);
@@ -567,7 +563,7 @@ const handleFormSubmit = event => {
         document.getElementById('showJsonbase01').value = databjdata;
     }
 
-  if (checkboxStatus == 'CheckOn') {
+  if (showjsonchk.checked == true) {
     BPreview01()
   };
 

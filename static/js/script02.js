@@ -266,6 +266,16 @@ function testv() {
 };
 function reset() {
 
+if (objcounter >= 2) {
+  objcounter = 1;
+
+  document.getElementById('advrend01').innerHTML = `
+    select object to render
+    <button id="button" class="resetbutton" onclick="loadobjects01()">nested-json +</button>
+    <input id="dataId01" class='jsonvalue' type="text" value='data01'>
+  `
+}
+
   // enable get button
   document.getElementById('DisableB01').disabled = false;
 

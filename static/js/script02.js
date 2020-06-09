@@ -5,6 +5,7 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
 
   chbox02.checked = false;
+  var jdatac = 0
 
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `<label>Status: <span style='color:gray; font-weight: bold;'>n/a</span><br>Host: <span style='color:gray; font-weight: bold;'>n/a</span></label>`;
@@ -18,11 +19,13 @@ function reloadP() {
   // VALUE
   document.getElementById('valueId01').value = '';
 
+
   window.addEventListener('DOMContentLoaded', (event) => {
     start01()
   });
 
 }
+var jdatac = 0
 
 function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,he04,heval04,he05,heval05,he06,heval06,he07,heval07,he08,heval08,he09,heval09) {
 
@@ -93,6 +96,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     for (var i = 0; i < 1; i++) {
 
+
         obj = JSON.parse(xhr);
         document.getElementById('IncomingJson').value = `${xhr}`;
 
@@ -100,8 +104,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname1 = document.getElementById('dataId01').value;
 
           var div = document.createElement('div');
-          div.innerHTML = obj[`${newname1}`] + "<hr>";
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+
+          div.innerHTML = obj[`${newname1}`];
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 2) {
@@ -109,6 +117,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname2 = document.getElementById('dataId02').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`] + "<hr>";
           mainContainer.appendChild(div);
@@ -120,6 +129,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname3 = document.getElementById('dataId03').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`] + "<hr>";  //
           mainContainer.appendChild(div);
@@ -132,6 +142,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname4 = document.getElementById('dataId04').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`] + "<hr>";  //
           mainContainer.appendChild(div);
@@ -145,6 +156,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname5 = document.getElementById('dataId05').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`] + "<hr>";  //
           mainContainer.appendChild(div);
@@ -159,6 +171,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname6 = document.getElementById('dataId06').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`] + "<hr>";  //
           mainContainer.appendChild(div);
@@ -174,6 +187,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname7 = document.getElementById('dataId07').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`] + "<hr>";  //
           mainContainer.appendChild(div);
@@ -190,6 +204,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname8 = document.getElementById('dataId08').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`] + "<hr>";  //
           mainContainer.appendChild(div);
@@ -207,6 +222,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname9 = document.getElementById('dataId09').value;
 
           var div = document.createElement('div');
+          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`] + "<hr>";  //
           mainContainer.appendChild(div);
@@ -335,6 +351,7 @@ function BShow01() {
 function BClear01(elementID) {
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
+  jdatac = 0
 };
 
 function testv() {

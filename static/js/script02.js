@@ -6,6 +6,7 @@ function reloadP() {
 
   checkboxStatus = 'CheckOn';
   showjsonchk.checked = true;
+  chbox02.checked = false;
 
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
@@ -28,11 +29,6 @@ function reloadP() {
   window.addEventListener('DOMContentLoaded', (event) => {
     start01()
   });
-
-
-  if (chbox02.checked == true) {
-    chbox02.checked = false;
-  }
 
 }
 
@@ -553,11 +549,8 @@ const handleFormSubmit = event => {
     // show on page
     if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
 
-      // DATA
-        var dname011 = document.getElementById('valueId02');
-
       // Json VALUE
-        var dataj01 = dname011.value;
+        var dataj01 = document.getElementById('valueId02');
 
       // base64 + VALUE
         var databjdata = btoa(dataj01);

@@ -230,7 +230,11 @@ function start01() {
 };
 
 function BShow01() {
-  if (objcounter == 1) {
+  if (objcounter == 1 && chbox02.checked == false) {
+    cjsonformat01 = document.getElementById('dataId01').value
+  }
+
+  if (objcounter == 1 && chbox02.checked == true) {
     cjsonformat01 = document.getElementById('dataId01').value
 
     document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"])";

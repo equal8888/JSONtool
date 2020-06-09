@@ -4,8 +4,9 @@ function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
 
+  checkboxStatus = 'CheckOn';
   showjsonchk.checked = true;
-  chbox02.checked = false;
+
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
   document.getElementById('urlEntry').value = '';
@@ -28,6 +29,10 @@ function reloadP() {
     start01()
   });
 
+
+  if (chbox02.checked == true) {
+    chbox02.checked = false;
+  }
 
 }
 
@@ -103,6 +108,7 @@ function appendData(xhr,eID,nameElement02) {
 
   for (var i = 0; i < 1; i++) {
 
+    if (showjsonchk.checked == true) {
       obj = JSON.parse(xhr);
       document.getElementById('IncomingJson').value = `${xhr}`;
 
@@ -221,6 +227,7 @@ function appendData(xhr,eID,nameElement02) {
         mainContainer.appendChild(div);
       }
 
+    }
 
   }
 };
@@ -239,7 +246,6 @@ function start01() {
 };
 
 function BShow01() {
-
 
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
@@ -336,9 +342,7 @@ function BShow01() {
 
   BPreview01()
 
-
   document.getElementById('methodEntry').value = strcv01;
-
 };
 
 function BClear01(elementID) {
@@ -393,10 +397,6 @@ function reset() {
 
 // Apply
 function BPreview01() {
-
-  if (showjsonchk.checked == true) {
-
-
   document.getElementById('DisableB02').disabled = false;
 // HOST
   var jhost = document.getElementById('urlEntry').value;
@@ -520,7 +520,7 @@ if (document.getElementById("chbox02").checked == false){
 };
 
   loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`,`${he04}`,`${heval04}`,`${he05}`,`${heval05}`,`${he06}`,`${heval06}`,`${he07}`,`${heval07}`,`${he08}`,`${heval08}`,`${he09}`,`${heval09}`);
-  };
+
 };
 
 // show data on page
@@ -553,9 +553,11 @@ const handleFormSubmit = event => {
     // show on page
     if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
 
+      // DATA
+        var dname011 = document.getElementById('valueId02');
 
       // Json VALUE
-        var dataj01 = document.getElementById('valueId02');
+        var dataj01 = dname011.value;
 
       // base64 + VALUE
         var databjdata = btoa(dataj01);
@@ -565,8 +567,9 @@ const handleFormSubmit = event => {
         document.getElementById('showJsonbase01').value = databjdata;
     }
 
+  if (checkboxStatus == 'CheckOn') {
     BPreview01()
-
+  };
 
 };
 
@@ -614,8 +617,7 @@ function loadheaders01() {
   var dyncontent = document.createElement('div');
   dyncontent.innerHTML = `
 
-
-          <span id="labelheaders`+(counter+1)+`">header `+(counter+1)+`</span>
+          <label for="HeaderEntry0`+(counter+1)+`" id="lbHeaderEntry0`+(counter+1)+`" >header `+(counter+1)+`</label>
 
           <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue">
           <option value="novalue">---</option>
@@ -681,7 +683,7 @@ function removeheaders01(elementId) {
 
   if (counter > 2) {
 
-    var lhename01 = "labelheaders" + `${counter}`;
+    var lhename01 = "lbHeaderEntry0" + `${counter}`;
 
     var element = document.getElementById(`${lhename01}`);
     element.parentNode.removeChild(element);

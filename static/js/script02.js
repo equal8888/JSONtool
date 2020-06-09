@@ -4,8 +4,6 @@ function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
 
-  checkboxStatus = 'CheckOn';
-  showjsonchk.checked = true;
   chbox02.checked = false;
 
   // HOST
@@ -100,7 +98,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
     }
 
     for (var i = 0; i < 1; i++) {
-      if (showjsonchk.checked == true) {
+
         obj = JSON.parse(xhr);
         document.getElementById('IncomingJson').value = `${xhr}`;
 
@@ -220,7 +218,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(div);
         }
       }
-    }
 
   };
 
@@ -543,9 +540,7 @@ const handleFormSubmit = event => {
       document.getElementById('showJsonbase01').value = databjdata;
     }
 
-    if (checkboxStatus == 'CheckOn') {
-      BPreview01()
-    }
+    BPreview01()
 
 };
 

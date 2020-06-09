@@ -679,7 +679,7 @@ function jsonbst01() {
       <button id="button" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
       <button id="button" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
       <br>
-      <label for="dataId01">select object to render</label>
+      <label for="dataId01">obj to render</label>
       <input id="dataId01" class='jsonvalue' type="text">`;
 
     document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button>';

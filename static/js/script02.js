@@ -106,7 +106,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>' + obj[`${newname1}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>' + obj[`${newname1}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -119,7 +119,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -133,7 +133,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -148,7 +148,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -164,7 +164,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -181,7 +181,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -199,7 +199,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -218,7 +218,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -238,7 +238,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var div = document.createElement('div');
           div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
+          div.innerHTML = '<button id=jdataId0'+(jdatac+1)+' class="testvb" onclick="rmjsond()">X</button><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -248,7 +248,16 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   };
 
   // Buttons
+function rmjsond(elementId) {
 
+  var jd001 = "jdataId0" + `${jdatac}`;
+  console.log (jd001);
+
+  var element = document.getElementById(event.srcElement.id);
+  element.parentNode.removeChild(element);
+  jdatac--;
+
+};
 
 function start01() {
   document.getElementById('headerlist01').innerHTML = '';

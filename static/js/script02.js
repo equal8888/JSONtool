@@ -7,7 +7,8 @@ function reloadP() {
   chbox02.checked = false;
 
   // HOST
-  document.getElementById('ShowMyHost').innerHTML = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: <span style='color:gray; font-weight: bold;'>n/a</span>`;
+  document.getElementById('ShowMyHost').innerHTML = `<label>Status: <span style='color:gray; font-weight: bold;'>n/a</span><br>Host: <span style='color:gray; font-weight: bold;'>n/a</span></label>`;
+
   document.getElementById('urlEntry').value = '';
   // Method
   document.getElementById('methodEntry').value = 'GET';
@@ -73,15 +74,15 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
   if(xhr.readyState == 4 && xhr.status == 200) {
     appendData((xhr.responseText),'jsondata');
-    var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
+    var pageurl = `<label>Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}</label>`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
   } else if (xhr.readyState == 4 && xhr.status != 200) {
-      var pageurl = `Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}`;
+      var pageurl = `<label>Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}</label>`;
       document.getElementById('ShowMyHost').innerHTML = pageurl;
     }
   };
   xhr.ontimeout = function (e) {
-    var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${host}`;
+    var pageurl = `<label>Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${host}</label>`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
   };
   xhr.send(params);
@@ -93,7 +94,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     if(xhr.readyState == 4 && xhr.status == 200) {
       appendData((xhr.responseText),'jsondata');
-      var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
+      var pageurl = `<label>Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}</label>`;
       document.getElementById('ShowMyHost').innerHTML = pageurl;
     }
 
@@ -386,7 +387,7 @@ function BPreview01() {
   document.getElementById('DisableB02').disabled = false;
 // HOST
   var jhost = document.getElementById('urlEntry').value;
-  var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${jhost}`;
+  var pageurl = `<label>Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${jhost}</label>`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 // URL
   var jhost = document.getElementById('urlEntry').value;

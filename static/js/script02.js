@@ -104,9 +104,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname1 = document.getElementById('dataId01').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`];
+          div.innerHTML = '<br><hr>' + obj[`${newname1}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -117,9 +117,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname2 = document.getElementById('dataId02').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`] + "<hr>";
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -131,9 +131,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname3 = document.getElementById('dataId03').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`] + "<hr>";  //
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -146,9 +146,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname4 = document.getElementById('dataId04').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`] + "<hr>";  //
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -162,9 +162,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname5 = document.getElementById('dataId05').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`] + "<hr>";  //
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -179,9 +179,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname6 = document.getElementById('dataId06').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`] + "<hr>";  //
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -197,9 +197,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname7 = document.getElementById('dataId07').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`] + "<hr>";  //
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -216,9 +216,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname8 = document.getElementById('dataId08').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`] + "<hr>";  //
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -236,9 +236,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname9 = document.getElementById('dataId09').value;
 
           var div = document.createElement('div');
-          div.setAttribute('id', 'dataId0'+(jdatac+1)+'');
+          div.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`] + "<hr>";  //
+          div.innerHTML = '<br><hr>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
           mainContainer.appendChild(div);
 
           jdatac++;
@@ -247,8 +247,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
   };
 
+  // Buttons
 
-// Buttons
 
 function start01() {
   document.getElementById('headerlist01').innerHTML = '';

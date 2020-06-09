@@ -250,9 +250,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   // Buttons
 function rmjsond(elementId) {
 
-  var jd001 = "jdataId0" + `${jdatac}`;
-  console.log (jd001);
-
   var element = document.getElementById(event.srcElement.id);
   element.parentNode.removeChild(element);
   jdatac--;

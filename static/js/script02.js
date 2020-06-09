@@ -669,7 +669,7 @@ function jsonbst01() {
 
     document.getElementById('jsonbstyle01').innerHTML = `
       <div class='inputbox'>
-      enter json
+      <label for="valueId02">enter json</label>
       <textarea id="valueId02" class='inputboxx01' type='text' ></textarea>
       <br>
       </div>`;
@@ -678,7 +678,7 @@ function jsonbst01() {
       <button id="button" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
       <button id="button" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
       <br>
-      select object to render
+      <label for="dataId01">select object to render</label>
       <input id="dataId01" class='jsonvalue' type="text">`;
 
     document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button>';
@@ -687,10 +687,10 @@ function jsonbst01() {
   } if (chbox02.checked == false) {
     objcounter = 1;
     document.getElementById('jsonbstyle01').innerHTML = `
-      data
+      <label for="dataId01">data</label>
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>
       <div class='inputbox'>
-      value
+      <label for="valueId01">value</label>
       <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
       <br>
       </div>`;

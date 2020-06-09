@@ -569,7 +569,7 @@ const handleFormSubmit = event => {
     // show on page
     if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
       // Json VALUE
-      var dataj01 = document.getElementById('valueId02');
+      var dataj01 = document.getElementById('valueId02').value;
       // base64 + VALUE
       var databjdata = btoa(dataj01);
       // show in page

@@ -706,8 +706,8 @@ function jsonbst01() {
       </div>`;
 
     document.getElementById('advrend01').innerHTML = `
-      <button id="button" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
-      <button id="button" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
+      <button id="rmnstobbtn01" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
+      <button id="addnstobbtn01" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
       <br>
       <label for="dataId01">obj to render</label>
       <input id="dataId01" class='jsonvalue' type="text">
@@ -717,7 +717,7 @@ function jsonbst01() {
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>
       <label for="cjsonformat">rendered obj</label>
       <input class='inputstyle02' id="cjsonformat" type='text' readonly></input>`;
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def02" class="testvb" onclick="reset()">reset & defaults</button> <button id="rmhdrsbtn01" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="resetbutton" onclick="loadheaders01()">header +</button>';
 
 
   } if (chbox02.checked == false) {
@@ -736,7 +736,7 @@ function jsonbst01() {
       <label for="IncomingJson">incoming Json</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
 
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">defaults</button> <button id="button" class="testvb" onclick="testv()">sample value</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def01" class="testvb" onclick="reset()">defaults</button> <button id="smp01" class="testvb" onclick="testv()">sample value</button>';
   }
 
 };

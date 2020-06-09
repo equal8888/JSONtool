@@ -74,167 +74,164 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   xhr.timeout = 5000;
 
   if(xhr.readyState == 4 && xhr.status == 200) {
-
     appendData((xhr.responseText),'jsondata');
     var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
-  }
-  else if (xhr.readyState == 4 && xhr.status != 200) {
-    var pageurl = `Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}`;
+  } else if (xhr.readyState == 4 && xhr.status != 200) {
+      var pageurl = `Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}`;
+      document.getElementById('ShowMyHost').innerHTML = pageurl;
+    }
+  };
+  xhr.ontimeout = function (e) {
+    var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${host}`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
-  }
-};
-xhr.ontimeout = function (e) {
-  var pageurl = `Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${host}`;
-  document.getElementById('ShowMyHost').innerHTML = pageurl;
-};
-xhr.send(params);
-};
-function appendData(xhr,eID,nameElement02) {
-  var mainContainer = document.getElementById(`${eID}`);
-  var nameElement02 = document.getElementById('dataId01');
+  };
+  xhr.send(params);
+  };
 
-  if(xhr.readyState == 4 && xhr.status == 200) {
+  function appendData(xhr,eID,nameElement02) {
+    var mainContainer = document.getElementById(`${eID}`);
+    var nameElement02 = document.getElementById('dataId01');
 
+    if(xhr.readyState == 4 && xhr.status == 200) {
       appendData((xhr.responseText),'jsondata');
       var pageurl = `Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}`;
       document.getElementById('ShowMyHost').innerHTML = pageurl;
-
-}
-
-  for (var i = 0; i < 1; i++) {
-
-    if (showjsonchk.checked == true) {
-      obj = JSON.parse(xhr);
-      document.getElementById('IncomingJson').value = `${xhr}`;
-
-      if (objcounter == 1) {
-        var newname1 = document.getElementById('dataId01').value;
-
-        var div = document.createElement('div');
-        div.innerHTML = obj[`${newname1}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
-      if (objcounter == 2) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
-      if (objcounter == 3) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-        var newname3 = document.getElementById('dataId03').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
-      if (objcounter == 4) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-        var newname3 = document.getElementById('dataId03').value;
-        var newname4 = document.getElementById('dataId04').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
-      if (objcounter == 5) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-        var newname3 = document.getElementById('dataId03').value;
-        var newname4 = document.getElementById('dataId04').value;
-        var newname5 = document.getElementById('dataId05').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
-      if (objcounter == 6) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-        var newname3 = document.getElementById('dataId03').value;
-        var newname4 = document.getElementById('dataId04').value;
-        var newname5 = document.getElementById('dataId05').value;
-        var newname6 = document.getElementById('dataId06').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-      if (objcounter == 7) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-        var newname3 = document.getElementById('dataId03').value;
-        var newname4 = document.getElementById('dataId04').value;
-        var newname5 = document.getElementById('dataId05').value;
-        var newname6 = document.getElementById('dataId06').value;
-        var newname7 = document.getElementById('dataId07').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
-      if (objcounter == 8) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-        var newname3 = document.getElementById('dataId03').value;
-        var newname4 = document.getElementById('dataId04').value;
-        var newname5 = document.getElementById('dataId05').value;
-        var newname6 = document.getElementById('dataId06').value;
-        var newname7 = document.getElementById('dataId07').value;
-        var newname8 = document.getElementById('dataId08').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
-      if (objcounter == 9) {
-        var newname1 = document.getElementById('dataId01').value;
-        var newname2 = document.getElementById('dataId02').value;
-        var newname3 = document.getElementById('dataId03').value;
-        var newname4 = document.getElementById('dataId04').value;
-        var newname5 = document.getElementById('dataId05').value;
-        var newname6 = document.getElementById('dataId06').value;
-        var newname7 = document.getElementById('dataId07').value;
-        var newname8 = document.getElementById('dataId08').value;
-        var newname9 = document.getElementById('dataId09').value;
-
-        var div = document.createElement('div');
-
-        div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`] + "<hr>";  //
-        mainContainer.appendChild(div);
-      }
-
     }
 
-  }
-};
+    for (var i = 0; i < 1; i++) {
+      if (showjsonchk.checked == true) {
+        obj = JSON.parse(xhr);
+        document.getElementById('IncomingJson').value = `${xhr}`;
+
+        if (objcounter == 1) {
+          var newname1 = document.getElementById('dataId01').value;
+
+          var div = document.createElement('div');
+          div.innerHTML = obj[`${newname1}`] + "<hr>";
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 2) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`] + "<hr>";
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 3) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+          var newname3 = document.getElementById('dataId03').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`] + "<hr>";  //
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 4) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+          var newname3 = document.getElementById('dataId03').value;
+          var newname4 = document.getElementById('dataId04').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`] + "<hr>";  //
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 5) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+          var newname3 = document.getElementById('dataId03').value;
+          var newname4 = document.getElementById('dataId04').value;
+          var newname5 = document.getElementById('dataId05').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`] + "<hr>";  //
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 6) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+          var newname3 = document.getElementById('dataId03').value;
+          var newname4 = document.getElementById('dataId04').value;
+          var newname5 = document.getElementById('dataId05').value;
+          var newname6 = document.getElementById('dataId06').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`] + "<hr>";  //
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 7) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+          var newname3 = document.getElementById('dataId03').value;
+          var newname4 = document.getElementById('dataId04').value;
+          var newname5 = document.getElementById('dataId05').value;
+          var newname6 = document.getElementById('dataId06').value;
+          var newname7 = document.getElementById('dataId07').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`] + "<hr>";  //
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 8) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+          var newname3 = document.getElementById('dataId03').value;
+          var newname4 = document.getElementById('dataId04').value;
+          var newname5 = document.getElementById('dataId05').value;
+          var newname6 = document.getElementById('dataId06').value;
+          var newname7 = document.getElementById('dataId07').value;
+          var newname8 = document.getElementById('dataId08').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`] + "<hr>";  //
+          mainContainer.appendChild(div);
+        }
+
+        if (objcounter == 9) {
+          var newname1 = document.getElementById('dataId01').value;
+          var newname2 = document.getElementById('dataId02').value;
+          var newname3 = document.getElementById('dataId03').value;
+          var newname4 = document.getElementById('dataId04').value;
+          var newname5 = document.getElementById('dataId05').value;
+          var newname6 = document.getElementById('dataId06').value;
+          var newname7 = document.getElementById('dataId07').value;
+          var newname8 = document.getElementById('dataId08').value;
+          var newname9 = document.getElementById('dataId09').value;
+
+          var div = document.createElement('div');
+
+          div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`] + "<hr>";  //
+          mainContainer.appendChild(div);
+        }
+      }
+    }
+
+  };
+
+
 // Buttons
 
 function start01() {
-
   document.getElementById('headerlist01').innerHTML = '';
   counter = 0
 
-  if (  counter <= 1 )  {
+  if (counter <= 1)  {
     loadheaders01()
     loadheaders01()
   }
@@ -242,7 +239,6 @@ function start01() {
 };
 
 function BShow01() {
-
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
 
@@ -354,16 +350,14 @@ function testv() {
   // VALUE
   document.getElementById('valueId01').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/Xb5E82BEidQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 };
-function reset() {
 
-  // enable get button
+function reset() {
   document.getElementById('DisableB01').disabled = false;
 
   document.getElementById('headerlist01').innerHTML = '';
   counter = 0
 
   if (chbox02.checked == false) {
-    // DATA
     document.getElementById('dataId01').value = 'data01';
   }
 
@@ -383,7 +377,6 @@ function reset() {
     document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
     // Method
     document.getElementById('methodEntry').value = 'GET';
-
     // encoder data
     document.getElementById('showJson01').value = ' ';
     document.getElementById('showJsonbase01').value = ' ';
@@ -398,7 +391,6 @@ function BPreview01() {
   var jhost = document.getElementById('urlEntry').value;
   var pageurl = `Status: <span style='color:gray; font-weight: bold;'>n/a</span> <br> Host: ${jhost}`;
   document.getElementById('ShowMyHost').innerHTML = pageurl;
-
 // URL
   var jhost = document.getElementById('urlEntry').value;
 // METHOD
@@ -494,26 +486,26 @@ function BPreview01() {
       var heval09 = document.getElementById('authEntry09').value;
     }
   }
-// handler for data
 
-if (document.getElementById("chbox02").checked == false){
-  if (document.getElementById('methodEntry').value != 'GET')  {
-    // DATA
-    var vdataId01 = document.getElementById('dataId01').value;
-    // VALUE
-    var vvalueId01 = document.getElementById('valueId01').value;
-    // Combine DATA + VALUE to json
-    var combine = { [`${vdataId01}`] : `${vvalueId01}` };
-    var data22 = JSON.stringify(combine);
-  }
-} else {
-  if (document.getElementById('methodEntry').value != 'GET')  {
+// handler for data
+  if (document.getElementById("chbox02").checked == false){
+    if (document.getElementById('methodEntry').value != 'GET')  {
+      // DATA
+      var vdataId01 = document.getElementById('dataId01').value;
+      // VALUE
+      var vvalueId01 = document.getElementById('valueId01').value;
+      // Combine DATA + VALUE to json
+      var combine = { [`${vdataId01}`] : `${vvalueId01}` };
+      var data22 = JSON.stringify(combine);
+    }
+  } else {
+    if (document.getElementById('methodEntry').value != 'GET')  {
       // DATA
       var vdataId01 = document.getElementById('valueId02').value;
       // DATA to json
       var data22 = vdataId01;
+    }
   }
-};
 
   loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`,`${he04}`,`${heval04}`,`${he05}`,`${heval05}`,`${he06}`,`${heval06}`,`${he07}`,`${heval07}`,`${he08}`,`${heval08}`,`${he09}`,`${heval09}`);
 
@@ -522,47 +514,38 @@ if (document.getElementById("chbox02").checked == false){
 // show data on page
 const handleFormSubmit = event => {
   event.preventDefault();
-
-
-    // show on page
+  // show on page
     if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
-
       // DATA
-        var vdataId011 = document.getElementById('dataId01').value;
-
+      var vdataId011 = document.getElementById('dataId01').value;
       // VALUE
-        var vvalueId011 = document.getElementById('valueId01').value;
-
+      var vvalueId011 = document.getElementById('valueId01').value;
       // Combine DATA + VALUE
-        var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
-
+      var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
       // Json VALUE
-        var dataj01 = JSON.stringify(combine1);
+      var dataj01 = JSON.stringify(combine1);
       // base64 + VALUE
-        var databjdata = btoa(dataj01);
+      var databjdata = btoa(dataj01);
 
       // show in page
-        document.getElementById('showJson01').value = dataj01;
-        document.getElementById('showJsonbase01').value = databjdata;
+      document.getElementById('showJson01').value = dataj01;
+      document.getElementById('showJsonbase01').value = databjdata;
     }
 
     // show on page
     if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
-
       // Json VALUE
-        var dataj01 = document.getElementById('valueId02');
-
+      var dataj01 = document.getElementById('valueId02');
       // base64 + VALUE
-        var databjdata = btoa(dataj01);
-
+      var databjdata = btoa(dataj01);
       // show in page
-        document.getElementById('showJson01').value = dataj01;
-        document.getElementById('showJsonbase01').value = databjdata;
+      document.getElementById('showJson01').value = dataj01;
+      document.getElementById('showJsonbase01').value = databjdata;
     }
 
-  if (checkboxStatus == 'CheckOn') {
-    BPreview01()
-  };
+    if (checkboxStatus == 'CheckOn') {
+      BPreview01()
+    }
 
 };
 
@@ -573,9 +556,7 @@ var objmax = 9;
 function loadobjects01() {
 
   var node01 = document.createElement('div');
-  node01.innerHTML = `
-          <input id="dataId0`+(objcounter+1)+`" class='jsonvalue' type="text" value=''>
-          `;
+  node01.innerHTML = `<input id="dataId0`+(objcounter+1)+`" class='jsonvalue' type="text" value=''>`;
 
   if (objcounter == objmax)  {
     console.log("objmax reached");
@@ -584,7 +565,7 @@ function loadobjects01() {
  	  objcounter++;
   }
 
-}
+};
 
 
 function removeobjects01(elementId) {
@@ -598,7 +579,7 @@ function removeobjects01(elementId) {
     objcounter--;
   }
 
-}
+};
 
 var counter = 0;
 var maximum = 9;
@@ -607,60 +588,57 @@ function loadheaders01() {
 
   var node = document.createElement("div");
 
-  var dyncontent = document.createElement('div');
+  var dyncontent = document.createElement("div");
   dyncontent.innerHTML = `
-
-          <label for="HeaderEntry0`+(counter+1)+`" id="lbHeaderEntry0`+(counter+1)+`" >header `+(counter+1)+`</label>
-
-          <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue">
-          <option value="novalue">---</option>
-          <option value="Accept">Accept</option>
-          <option value="Accept-Charset">Accept-Charset</option>
-          <option value="Accept-Encoding">Accept-Encoding</option>
-          <option value="Accept-Language">Accept-Language</option>
-          <option value="Access-Control-Request-Headers">Access-Control-Request-Headers</option>
-          <option value="Access-Control-Request-Method">Access-Control-Request-Method</option>
-          <option value="Authorization">Authorization</option>
-          <option value="Cache-Control">Cache-Control</option>
-          <option value="Connection">Connection</option>
-          <option value="Content-Language">Content-Language</option>
-          <option value="Content-Type">Content-Type</option>
-          <option value="Cookie">Cookie</option>
-          <option value="Date">Date</option>
-          <option value="DNT">DNT</option>
-          <option value="DPR">DPR</option>
-          <option value="Early-Data">Early-Data</option>
-          <option value="Expect">Expect</option>
-          <option value="Forwarded">Forwarded</option>
-          <option value="From">From</option>
-          <option value="Host">Host</option>
-          <option value="If-Match">If-Match</option>
-          <option value="If-Modified-Since">If-Modified-Since</option>
-          <option value="If-None-Match">If-None-Match</option>
-          <option value="If-Range">If-Range</option>
-          <option value="If-Unmodified-Since">If-Unmodified-Since</option>
-          <option value="Keep-Alive">Keep-Alive</option>
-          <option value="Max-Forwards">Max-Forwards</option>
-          <option value="Origin">Origin</option>
-          <option value="Pragma">Pragma</option>
-          <option value="Proxy-Authorization">Proxy-Authorization</option>
-          <option value="Range">Range</option>
-          <option value="Referer">Referer</option>
-          <option value="Save-Data">Save-Data</option>
-          <option value="TE">TE</option>
-          <option value="Trailer">Trailer</option>
-          <option value="Transfer-Encoding">Transfer-Encoding</option>
-          <option value="Upgrade">Upgrade</option>
-          <option value="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests</option>
-          <option value="User-Agent">User-Agent</option>
-          <option value="Vary">Vary</option>
-          <option value="Via">OPTIONS</option>
-          <option value="Viewport-Width">Viewport-Width</option>
-          <option value="Warning">Warning</option>
-          <option value="Width">Width</option>
-          </select>
-
-          <input id="authEntry0`+(counter+1)+`" class='jsonvalue' type='text' value=''>`;
+    <label for="HeaderEntry0`+(counter+1)+`" id="lbHeaderEntry0`+(counter+1)+`" >header `+(counter+1)+`</label>
+    <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue">
+    <option value="novalue">---</option>
+    <option value="Accept">Accept</option>
+    <option value="Accept-Charset">Accept-Charset</option>
+    <option value="Accept-Encoding">Accept-Encoding</option>
+    <option value="Accept-Language">Accept-Language</option>
+    <option value="Access-Control-Request-Headers">Access-Control-Request-Headers</option>
+    <option value="Access-Control-Request-Method">Access-Control-Request-Method</option>
+    <option value="Authorization">Authorization</option>
+    <option value="Cache-Control">Cache-Control</option>
+    <option value="Connection">Connection</option>
+    <option value="Content-Language">Content-Language</option>
+    <option value="Content-Type">Content-Type</option>
+    <option value="Cookie">Cookie</option>
+    <option value="Date">Date</option>
+    <option value="DNT">DNT</option>
+    <option value="DPR">DPR</option>
+    <option value="Early-Data">Early-Data</option>
+    <option value="Expect">Expect</option>
+    <option value="Forwarded">Forwarded</option>
+    <option value="From">From</option>
+    <option value="Host">Host</option>
+    <option value="If-Match">If-Match</option>
+    <option value="If-Modified-Since">If-Modified-Since</option>
+    <option value="If-None-Match">If-None-Match</option>
+    <option value="If-Range">If-Range</option>
+    <option value="If-Unmodified-Since">If-Unmodified-Since</option>
+    <option value="Keep-Alive">Keep-Alive</option>
+    <option value="Max-Forwards">Max-Forwards</option>
+    <option value="Origin">Origin</option>
+    <option value="Pragma">Pragma</option>
+    <option value="Proxy-Authorization">Proxy-Authorization</option>
+    <option value="Range">Range</option>
+    <option value="Referer">Referer</option>
+    <option value="Save-Data">Save-Data</option>
+    <option value="TE">TE</option>
+    <option value="Trailer">Trailer</option>
+    <option value="Transfer-Encoding">Transfer-Encoding</option>
+    <option value="Upgrade">Upgrade</option>
+    <option value="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests</option>
+    <option value="User-Agent">User-Agent</option>
+    <option value="Vary">Vary</option>
+    <option value="Via">OPTIONS</option>
+    <option value="Viewport-Width">Viewport-Width</option>
+    <option value="Warning">Warning</option>
+    <option value="Width">Width</option>
+    </select>
+    <input id="authEntry0`+(counter+1)+`" class='jsonvalue' type='text' value=''>`;
 
   if (counter == maximum)  {
     console.log("maximum reached");
@@ -670,73 +648,60 @@ function loadheaders01() {
  	  counter++;
   }
 
-}
+};
 
 function removeheaders01(elementId) {
 
   if (counter > 2) {
-
     var lhename01 = "lbHeaderEntry0" + `${counter}`;
-
     var element = document.getElementById(`${lhename01}`);
     element.parentNode.removeChild(element);
 // ---
-
-
     var hename01 = "HeaderEntry0" + `${counter}`;
-
     var element = document.getElementById(`${hename01}`);
     element.parentNode.removeChild(element);
-
 // ---
     var hename02 = "authEntry0" + `${counter}`;
-
     var element = document.getElementById(`${hename02}`);
     element.parentNode.removeChild(element);
-
     counter--;
   }
 
-}
+};
 
 function jsonbst01() {
   if (chbox02.checked == true) {
 
     document.getElementById('jsonbstyle01').innerHTML = `
       <div class='inputbox'>
-        enter json
-        <textarea id="valueId02" class='inputboxx01' type='text' ></textarea>
-        <br>
-      </div>
-    `;
+      enter json
+      <textarea id="valueId02" class='inputboxx01' type='text' ></textarea>
+      <br>
+      </div>`;
 
     document.getElementById('advrend01').innerHTML = `
-
       <button id="button" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
       <button id="button" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
       <br>
       select object to render
-      <input id="dataId01" class='jsonvalue' type="text">
-    `
+      <input id="dataId01" class='jsonvalue' type="text">`;
 
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button> '
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button>';
 
 
   } if (chbox02.checked == false) {
     objcounter = 1;
     document.getElementById('jsonbstyle01').innerHTML = `
-    data
-    <input id="dataId01" class='jsonvalue' type="text" value='data01'>
+      data
+      <input id="dataId01" class='jsonvalue' type="text" value='data01'>
       <div class='inputbox'>
-        value
-        <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
-        <br>
-      </div>
-    `;
+      value
+      <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
+      <br>
+      </div>`;
 
-    document.getElementById('advrend01').innerHTML = ''
-    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">defaults</button> <button id="button" class="testvb" onclick="testv()">sample value</button>'
-
+    document.getElementById('advrend01').innerHTML = '';
+    document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">defaults</button> <button id="button" class="testvb" onclick="testv()">sample value</button>';
   }
 
 };

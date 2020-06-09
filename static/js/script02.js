@@ -121,6 +121,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`] + "<hr>";
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 3) {
@@ -133,6 +135,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`] + "<hr>";  //
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 4) {
@@ -146,6 +150,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`] + "<hr>";  //
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 5) {
@@ -160,6 +166,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`] + "<hr>";  //
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 6) {
@@ -175,6 +183,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`] + "<hr>";  //
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 7) {
@@ -191,6 +201,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`] + "<hr>";  //
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 8) {
@@ -208,6 +220,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`] + "<hr>";  //
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
 
         if (objcounter == 9) {
@@ -226,6 +240,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           div.innerHTML = obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`] + "<hr>";  //
           mainContainer.appendChild(div);
+
+          jdatac++;
         }
       }
 

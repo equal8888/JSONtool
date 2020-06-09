@@ -104,6 +104,10 @@ float: right;
 .inputstyle {
   width:100%;
 }
+.inputstyle02 {
+  width:100%;
+  background-color: #AAAAAA;
+}
 .resetbutton {
   float: right;
 }
@@ -134,12 +138,21 @@ float: right;
   max-width:100%;
   min-width:100%;
   min-height: 50px;
+  background-color: #AAAAAA;
+}
+.result02 {
+  width:100%;
+  max-width:100%;
+  min-width:100%;
+  min-height: 50px;
+  background-color: #808080;
 }
 .incomingjson {
   width:100%;
   max-width:100%;
   min-width:100%;
   min-height: 20px;
+
 }
 .results2 {
   margin: auto;

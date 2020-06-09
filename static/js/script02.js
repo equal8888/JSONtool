@@ -18,13 +18,6 @@ function reloadP() {
   // VALUE
   document.getElementById('valueId01').value = '';
 
-  // encoder data IncomingJson
-  document.getElementById('showJson01').readOnly = true;
-  document.getElementById('showJsonbase01').readOnly = true;
-  document.getElementById('IncomingJson').readOnly = true;
-  document.getElementById('cjsonformat').readOnly = true;
-
-
   window.addEventListener('DOMContentLoaded', (event) => {
     start01()
   });
@@ -680,8 +673,12 @@ function jsonbst01() {
       <button id="button" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
       <br>
       <label for="dataId01">obj to render</label>
-      <input id="dataId01" class='jsonvalue' type="text">`;
+      <input id="dataId01" class='jsonvalue' type="text">
 
+      <label for="IncomingJson">incoming Json</label>
+      <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>
+      <label for="cjsonformat">rendered obj</label>
+      <input class='inputstyle02' id="cjsonformat" type='text' readonly></input>`;
     document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">reset & defaults</button> <button id="button" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="button" class="resetbutton" onclick="loadheaders01()">header +</button>';
 
 
@@ -696,7 +693,11 @@ function jsonbst01() {
       <br>
       </div>`;
 
-    document.getElementById('advrend01').innerHTML = '';
+    document.getElementById('advrend01').innerHTML = `
+      <br>
+      <label for="IncomingJson">incoming Json</label>
+      <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
+
     document.getElementById('advrend02').innerHTML = '<button id="button" class="testvb" onclick="reset()">defaults</button> <button id="button" class="testvb" onclick="testv()">sample value</button>';
   }
 

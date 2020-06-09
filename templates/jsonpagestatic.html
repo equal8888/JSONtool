@@ -63,11 +63,11 @@
     <p><b>Encoder</b></p>
     <p><b>Json</b></p>
     <div class='results'>
-      <textarea id="showJson01" class='result01' type='text' ></textarea>
+      <textarea id="showJson01" class='result01' type='text' readonly></textarea>
     </div>
     <p><b>Json+Base64</b></p>
     <div class='results'>
-      <textarea id="showJsonbase01" class='result01' type='text' ></textarea>
+      <textarea id="showJsonbase01" class='result01' type='text' readonly></textarea>
     </div>
   </div>
 </div>
@@ -79,12 +79,11 @@
       <button id='DisableB02' onclick='BClear01()'>Clear</button>
     </div>
     <div id="advrend01">
+      <br>
+      <label for="IncomingJson">incoming Json</label>
+      <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>
     </div>
   </div>
-  <label for="IncomingJson">incoming Json</label>
-  <textarea id="IncomingJson" class='result01' type='text'></textarea>
-  <label for="cjsonformat">rendered obj</label>
-  <input type='text' class='inputstyle02' id="cjsonformat" ></input>
   <p></p>
   <div class='results2'>
     <div id='jsondata'>

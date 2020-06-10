@@ -26,6 +26,7 @@ function reloadP() {
 
 }
 var jdatac = 0
+var vcjsonformat ='null'
 
 function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,he04,heval04,he05,heval05,he06,heval06,he07,heval07,he08,heval08,he09,heval09) {
 
@@ -96,18 +97,18 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     for (var i = 0; i < 1; i++) {
 
+        htmldata01 = '<br><hr><label class="forcsshover">'+(vcjsonformat)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>';
 
         obj = JSON.parse(xhr);
         document.getElementById('IncomingJson').value = `${xhr}`;
 
         if (objcounter == 1) {
           var newname1 = document.getElementById('dataId01').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>' + obj[`${newname1}`];
+          a.innerHTML = htmldata01 + obj[`${newname1}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -117,13 +118,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         if (objcounter == 2) {
           var newname1 = document.getElementById('dataId01').value;
           var newname2 = document.getElementById('dataId02').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -134,13 +134,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname1 = document.getElementById('dataId01').value;
           var newname2 = document.getElementById('dataId02').value;
           var newname3 = document.getElementById('dataId03').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -152,13 +151,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname2 = document.getElementById('dataId02').value;
           var newname3 = document.getElementById('dataId03').value;
           var newname4 = document.getElementById('dataId04').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -171,13 +169,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname3 = document.getElementById('dataId03').value;
           var newname4 = document.getElementById('dataId04').value;
           var newname5 = document.getElementById('dataId05').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -191,13 +188,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname4 = document.getElementById('dataId04').value;
           var newname5 = document.getElementById('dataId05').value;
           var newname6 = document.getElementById('dataId06').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -212,13 +208,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname5 = document.getElementById('dataId05').value;
           var newname6 = document.getElementById('dataId06').value;
           var newname7 = document.getElementById('dataId07').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -234,13 +229,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname6 = document.getElementById('dataId06').value;
           var newname7 = document.getElementById('dataId07').value;
           var newname8 = document.getElementById('dataId08').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -256,13 +250,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname7 = document.getElementById('dataId07').value;
           var newname8 = document.getElementById('dataId08').value;
           var newname9 = document.getElementById('dataId09').value;
-          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -293,19 +286,21 @@ function start01() {
 function BShow01() {
   if (objcounter == 1 && chbox02.checked == false) {
     cjsonformat01 = document.getElementById('dataId01').value
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
+
   }
 
   if (objcounter == 1 && chbox02.checked == true) {
     cjsonformat01 = document.getElementById('dataId01').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
   }
 
   if (objcounter == 2) {
     cjsonformat01 = document.getElementById('dataId01').value
     cjsonformat02 = document.getElementById('dataId02').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"])";
   }
 
   if (objcounter == 3) {
@@ -313,7 +308,7 @@ function BShow01() {
     cjsonformat02 = document.getElementById('dataId02').value
     cjsonformat03 = document.getElementById('dataId03').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"])";
   }
 
   if (objcounter == 4) {
@@ -322,7 +317,7 @@ function BShow01() {
     cjsonformat03 = document.getElementById('dataId03').value
     cjsonformat04 = document.getElementById('dataId04').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"])";
   }
 
   if (objcounter == 5) {
@@ -332,7 +327,7 @@ function BShow01() {
     cjsonformat04 = document.getElementById('dataId04').value
     cjsonformat05 = document.getElementById('dataId05').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"])";
   }
 
   if (objcounter == 6) {
@@ -343,7 +338,7 @@ function BShow01() {
     cjsonformat05 = document.getElementById('dataId05').value
     cjsonformat06 = document.getElementById('dataId06').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"])";
   }
 
   if (objcounter == 7) {
@@ -355,7 +350,7 @@ function BShow01() {
     cjsonformat06 = document.getElementById('dataId06').value
     cjsonformat07 = document.getElementById('dataId07').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"])";
   }
 
   if (objcounter == 8) {
@@ -368,7 +363,7 @@ function BShow01() {
     cjsonformat07 = document.getElementById('dataId07').value
     cjsonformat08 = document.getElementById('dataId08').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"])";
   }
 
   if (objcounter == 9) {
@@ -382,7 +377,7 @@ function BShow01() {
     cjsonformat08 = document.getElementById('dataId08').value
     cjsonformat09 = document.getElementById('dataId09').value
 
-    document.getElementById('cjsonformat').value = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
   }
 
   strcv01 = document.getElementById('methodEntry').value
@@ -572,6 +567,11 @@ function BPreview01() {
 const handleFormSubmit = event => {
   event.preventDefault();
   // show on page
+    if (objcounter == 1 && chbox02.checked == false) {
+      cjsonformat01 = document.getElementById('dataId01').value
+      vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
+    }
+
     if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
       // DATA
       var vdataId011 = document.getElementById('dataId01').value;
@@ -750,7 +750,7 @@ function jsonbst01() {
     objcounter = 1;
     document.getElementById('jsonbstyle01').innerHTML = `
       <label for="dataId01">data</label>
-      <input id="dataId01" class='jsonvalue' type="text" value='data01'>
+      <input id="dataId01" class='jsonvalue' type="text" >
       <div class='inputbox'>
       <label for="valueId01">value</label>
       <textarea id="valueId01" class='inputbox01' type='text' ></textarea>

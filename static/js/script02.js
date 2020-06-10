@@ -97,7 +97,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     for (var i = 0; i < 1; i++) {
 
-        htmldata01 = '<br><hr><label class="forcsshover">'+(vcjsonformat)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>';
+        htmldata01 = '<br><hr><label class="forcsshover">'+(vcjsonformat)+'</label><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>';
 
         obj = JSON.parse(xhr);
         document.getElementById('IncomingJson').value = `${xhr}`;
@@ -267,8 +267,14 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   // Buttons
 function rmjsond(elementId) {
 
-  var element = document.getElementById(event.target.id);
-  element.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode);
+  if ( vcjsonformat ='null') {
+    var element = document.getElementById(event.target.id);
+    element.parentNode.parentNode.removeChild(element.parentNode);
+  } else {
+    var element = document.getElementById(event.target.id);
+    element.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode);
+  }
+
 
 };
 

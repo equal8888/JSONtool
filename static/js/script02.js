@@ -727,6 +727,9 @@ function removeheaders01(elementId) {
 function jsonbst01() {
   if (chbox02.checked == true) {
 
+    document.getElementById('advbtn01').innerHTML = '<span class="chbstyletxt01" for="chbox02">Advanced ON</span>';
+
+
     document.getElementById('jsonbstyle01').innerHTML = `
       <div class='inputbox'>
       <label for="valueId02">enter json</label>
@@ -748,6 +751,9 @@ function jsonbst01() {
 
   } if (chbox02.checked == false) {
     objcounter = 1;
+    document.getElementById('advbtn01').innerHTML = '<span class="chbstyletxt01" for="chbox02">Advanced <span style="color:red; font-weight: bold;">OFF</span></span>';
+
+
     document.getElementById('jsonbstyle01').innerHTML = `
       <label for="dataId01">data</label>
       <input id="dataId01" class='jsonvalue' type="text" >

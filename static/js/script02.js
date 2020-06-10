@@ -270,10 +270,6 @@ function rmjsond(elementId) {
   element.parentNode.parentNode.removeChild(element.parentNode);
   jdatac--;
 
-  console.log ('jsondata ='+`${jdatac}`)
-  console.log ('header ='+`${counter}`)
-  console.log ('objcounter ='+`${objcounter}`)
-
 };
 
 function start01() {

@@ -744,6 +744,7 @@ function jsonbst01() {
 
   } if (chbox02.checked == false) {
     objcounter = 1;
+    jdatac = 0;
     document.getElementById('jsonbstyle01').innerHTML = `
       <label for="dataId01">data</label>
       <input id="dataId01" class='jsonvalue' type="text" value='data01'>

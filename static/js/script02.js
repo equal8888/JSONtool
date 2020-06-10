@@ -102,12 +102,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
         if (objcounter == 1) {
           var newname1 = document.getElementById('dataId01').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
-          a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>' + obj[`${newname1}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>' + obj[`${newname1}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -117,12 +117,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         if (objcounter == 2) {
           var newname1 = document.getElementById('dataId01').value;
           var newname2 = document.getElementById('dataId02').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -133,12 +134,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname1 = document.getElementById('dataId01').value;
           var newname2 = document.getElementById('dataId02').value;
           var newname3 = document.getElementById('dataId03').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -150,12 +152,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname2 = document.getElementById('dataId02').value;
           var newname3 = document.getElementById('dataId03').value;
           var newname4 = document.getElementById('dataId04').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -168,12 +171,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname3 = document.getElementById('dataId03').value;
           var newname4 = document.getElementById('dataId04').value;
           var newname5 = document.getElementById('dataId05').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -187,12 +191,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname4 = document.getElementById('dataId04').value;
           var newname5 = document.getElementById('dataId05').value;
           var newname6 = document.getElementById('dataId06').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -207,12 +212,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname5 = document.getElementById('dataId05').value;
           var newname6 = document.getElementById('dataId06').value;
           var newname7 = document.getElementById('dataId07').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -228,12 +234,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname6 = document.getElementById('dataId06').value;
           var newname7 = document.getElementById('dataId07').value;
           var newname8 = document.getElementById('dataId08').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -249,12 +256,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname7 = document.getElementById('dataId07').value;
           var newname8 = document.getElementById('dataId08').value;
           var newname9 = document.getElementById('dataId09').value;
+          var cjsonobj = document.getElementById('cjsonformat').value;
 
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
+          a.innerHTML = '<br><hr><label class="forcsshover">'+(cjsonobj)+'<button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button></label><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -267,7 +275,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 function rmjsond(elementId) {
 
   var element = document.getElementById(event.target.id);
-  element.parentNode.parentNode.removeChild(element.parentNode);
+  element.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode);
 
 };
 
@@ -735,11 +743,8 @@ function jsonbst01() {
       <div id='addnobj01'>
       </div>
       <label for="IncomingJson">incoming Json</label>
-      <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>
-      <label for="cjsonformat">rendered obj</label>
-      <input class='inputstyle02' id="cjsonformat" type='text' readonly></input>`;
+      <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
     document.getElementById('advrend02').innerHTML = '<button id="def02" class="testvb" onclick="reset()">reset & defaults</button> <button id="rmhdrsbtn01" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="resetbutton" onclick="loadheaders01()">header +</button>';
-
 
   } if (chbox02.checked == false) {
     objcounter = 1;

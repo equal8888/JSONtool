@@ -121,7 +121,8 @@ float: right;
   float: right;
 }
 .forcsshover:hover {
-background-color: green;
+  border-style: solid;
+  background-color: green;
 }
 .testvb01 {
   float: right;

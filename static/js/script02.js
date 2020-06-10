@@ -268,7 +268,6 @@ function rmjsond(elementId) {
 
   var element = document.getElementById(event.target.id);
   element.parentNode.parentNode.removeChild(element.parentNode);
-  jdatac--;
 
 };
 

@@ -398,9 +398,18 @@ function testv() {
   // Method
   document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('dataId01').value = 'data01';
-  // VALUE
-  document.getElementById('valueId01').value = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/Xb5E82BEidQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  document.getElementById('valueId02').value = `{
+        "book": {
+            "name": "Harry Potter and the Goblet of Fire",
+            "author": "J. K. Rowling",
+            "year": 2000,
+            "characters": ["Harry Potter", "Hermione Granger", "Ron Weasley"],
+            "genre": "Fantasy Fiction",
+            "price": {
+                "paperback": "$11.80", "hardcover": "$30.32", "kindle": "$10.12"
+            }
+        }
+    }`;
 };
 
 function reset() {
@@ -737,6 +746,10 @@ function jsonbst01() {
       <br>
       </div>`;
 
+      document.getElementById('smplbtn01').innerHTML = `<button id="smp01" class="testvb" onclick="testv()">sample value</button>`;
+
+
+
     document.getElementById('advrend01').innerHTML = `
       <button id="rmnstobbtn01" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
       <button id="addnstobbtn01" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
@@ -752,6 +765,7 @@ function jsonbst01() {
   } if (chbox02.checked == false) {
     objcounter = 1;
     document.getElementById('advbtn01').innerHTML = '<span class="chbstyletxt01" for="chbox02">Advanced <span style="color:red; font-weight: bold;">OFF</span></span>';
+    document.getElementById('smplbtn01').innerHTML = '';
 
 
     document.getElementById('jsonbstyle01').innerHTML = `
@@ -768,7 +782,7 @@ function jsonbst01() {
       <label for="IncomingJson">incoming Json</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
 
-    document.getElementById('advrend02').innerHTML = '<button id="def01" class="testvb" onclick="reset()">defaults</button> <button id="smp01" class="testvb" onclick="testv()">sample value</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def01" class="testvb" onclick="reset()">defaults</button>';
   }
 
 };

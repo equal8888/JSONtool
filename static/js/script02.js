@@ -111,6 +111,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
         }
 
         if (objcounter == 2) {
@@ -125,6 +129,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
         }
 
         if (objcounter == 3) {
@@ -140,6 +148,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
         }
 
         if (objcounter == 4) {
@@ -156,6 +168,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
         }
 
         if (objcounter == 5) {
@@ -173,6 +189,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
         }
 
         if (objcounter == 6) {
@@ -191,6 +211,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
         }
 
         if (objcounter == 7) {
@@ -210,6 +234,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
         }
 
         if (objcounter == 8) {
@@ -228,6 +256,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
           a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
           mainContainer.appendChild(a);
+
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
 
           jdatac++;
         }
@@ -250,6 +282,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.innerHTML = '<br><hr><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>'+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
           mainContainer.appendChild(a);
 
+          console.log ('jsondata ='+`${jdatac}`)
+          console.log ('header ='+`${counter}`)
+          console.log ('objcounter ='+`${objcounter}`)
+
           jdatac++;
         }
       }
@@ -262,6 +298,10 @@ function rmjsond(elementId) {
   var element = document.getElementById(event.target.id);
   element.parentNode.parentNode.removeChild(element.parentNode);
   jdatac--;
+
+  console.log ('jsondata ='+`${jdatac}`)
+  console.log ('header ='+`${counter}`)
+  console.log ('objcounter ='+`${objcounter}`)
 
 };
 

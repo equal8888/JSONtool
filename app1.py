@@ -7,7 +7,7 @@ app = Flask(__name__)
 basic_auth = BasicAuth(app)
 
 # Main page
-@app.route('/')
+@app.route('/', methods=['GET'])
 def static1():
     return render_template('jsonpagestatic.html')
 

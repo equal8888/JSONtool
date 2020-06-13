@@ -97,7 +97,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     for (var i = 0; i < 1; i++) {
 
-        htmldata01 = '<br><hr><label class="forcsshover">'+(vcjsonformat)+'</label><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><br>';
+        htmldata01 = '<br><hr><label>'+(vcjsonformat)+'</label><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><hr><br>';
 
         obj = JSON.parse(xhr);
         document.getElementById('IncomingJson').value = `${xhr}`;
@@ -108,7 +108,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
-
 
           a.innerHTML = htmldata01 + obj[`${newname1}`];
           mainContainer.appendChild(a);

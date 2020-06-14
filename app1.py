@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 from flask_basicauth import BasicAuth
 import json
 
-app = Flask(__name__)
+app = Flask(__name__ ,static_url_path='/static')
 basic_auth = BasicAuth(app)
 
 # Main page

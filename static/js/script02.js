@@ -59,15 +59,84 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
   xhr.open(`${method}`, `${host}`, true);
 
-  xhr.setRequestHeader(`${he01}`, `${heval01}`);
-  xhr.setRequestHeader(`${he02}`, `${heval02}`);
-  xhr.setRequestHeader(`${he03}`, `${heval03}`);
-  xhr.setRequestHeader(`${he04}`, `${heval04}`);
-  xhr.setRequestHeader(`${he05}`, `${heval05}`);
-  xhr.setRequestHeader(`${he06}`, `${heval06}`);
-  xhr.setRequestHeader(`${he07}`, `${heval07}`);
-  xhr.setRequestHeader(`${he08}`, `${heval08}`);
-  xhr.setRequestHeader(`${he09}`, `${heval09}`);
+  if (counter == 1)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+  }
+
+  if (counter == 2)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+  }
+
+  if (counter == 3)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+  }
+
+  if (counter == 4)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+    xhr.setRequestHeader(`${he04}`, `${heval04}`);
+  }
+
+  if (counter == 5)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+    xhr.setRequestHeader(`${he04}`, `${heval04}`);
+    xhr.setRequestHeader(`${he05}`, `${heval05}`);
+  }
+
+
+  if (counter == 6)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+    xhr.setRequestHeader(`${he04}`, `${heval04}`);
+    xhr.setRequestHeader(`${he05}`, `${heval05}`);
+    xhr.setRequestHeader(`${he06}`, `${heval06}`);
+  }
+
+
+  if (counter == 7)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+    xhr.setRequestHeader(`${he04}`, `${heval04}`);
+    xhr.setRequestHeader(`${he05}`, `${heval05}`);
+    xhr.setRequestHeader(`${he06}`, `${heval06}`);
+    xhr.setRequestHeader(`${he07}`, `${heval07}`);
+  }
+
+
+  if (counter == 8)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+    xhr.setRequestHeader(`${he04}`, `${heval04}`);
+    xhr.setRequestHeader(`${he05}`, `${heval05}`);
+    xhr.setRequestHeader(`${he06}`, `${heval06}`);
+    xhr.setRequestHeader(`${he07}`, `${heval07}`);
+    xhr.setRequestHeader(`${he08}`, `${heval08}`);
+  }
+
+
+  if (counter == 9)  {
+    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+    xhr.setRequestHeader(`${he04}`, `${heval04}`);
+    xhr.setRequestHeader(`${he05}`, `${heval05}`);
+    xhr.setRequestHeader(`${he06}`, `${heval06}`);
+    xhr.setRequestHeader(`${he07}`, `${heval07}`);
+    xhr.setRequestHeader(`${he08}`, `${heval08}`);
+    xhr.setRequestHeader(`${he09}`, `${heval09}`);
+  }
+
+
+
 
   xhr.onreadystatechange = function() {
   xhr.timeout = 5000;
@@ -759,7 +828,7 @@ function loadobjects01() {
   } else {
     document.getElementById( "dataId0"+(objcounter) ).style.borderColor = "yellow";
   }
-  
+
 	}
 };
 
@@ -848,7 +917,7 @@ function loadheaders01() {
 
 function removeheaders01(elementId) {
 
-  if (counter > 2) {
+  if (counter > 1) {
     var lhename01 = "lbHeaderEntry0" + `${counter}`;
     var element = document.getElementById(`${lhename01}`);
     element.parentNode.removeChild(element);

@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 from flask_basicauth import BasicAuth
 import json
 
-app = Flask(__name__ ,static_url_path='/static')
+app = Flask(__name__ , static_url_path='/static')
 basic_auth = BasicAuth(app)
 
 # Main page
@@ -15,7 +15,7 @@ def static1():
 @basic_auth.required
 def json01():
     if request.method == 'GET' and "application/json" in request.headers["Content-Type"]:
-       filehandlerR = open('static/data.txt', 'r+')
+       filehandlerR = open('data.txt', 'r+')
 
        if filehandlerR.mode == 'r+':
            contents = filehandlerR.readlines()
@@ -38,7 +38,7 @@ def json01():
        jsonstr = json.dumps(req_data)                   #
 # -------------------------------------------------------
 
-       filehandlerW = open('static/data.txt', 'w+')
+       filehandlerW = open('data.txt', 'w+')
 
        if filehandlerW.mode == 'w+':
            filehandlerW.write(jsonstr)

@@ -108,30 +108,41 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         if (objcounter == 1) {
           var newname1 = document.getElementById('dataId01').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
+
           a.innerHTML = htmldata01 + obj[`${newname1}`];
+          document.getElementById('methodEntry').value = strcv01;
+
+
           mainContainer.appendChild(a);
 
           jdatac++;
-
+          }
         }
 
         if (objcounter == 2) {
           var newname1 = document.getElementById('dataId01').value;
           var newname2 = document.getElementById('dataId02').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`];
+          document.getElementById('methodEntry').value = strcv01;
+
+
           mainContainer.appendChild(a);
 
           jdatac++;
-
+          }
         }
 
         if (objcounter == 3) {
@@ -139,15 +150,18 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname2 = document.getElementById('dataId02').value;
           var newname3 = document.getElementById('dataId03').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`];
+          document.getElementById('methodEntry').value = strcv01;
+
           mainContainer.appendChild(a);
-
           jdatac++;
-
+          }
         }
 
         if (objcounter == 4) {
@@ -156,15 +170,20 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname3 = document.getElementById('dataId03').value;
           var newname4 = document.getElementById('dataId04').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
+          if (document.getElementById('methodEntry').value == 'GET') {
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
+          document.getElementById('methodEntry').value = strcv01;
+          }
           mainContainer.appendChild(a);
 
           jdatac++;
-
+          }
         }
 
         if (objcounter == 5) {
@@ -174,15 +193,20 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname4 = document.getElementById('dataId04').value;
           var newname5 = document.getElementById('dataId05').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
+          if (document.getElementById('methodEntry').value == 'GET') {
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
+          document.getElementById('methodEntry').value = strcv01;
+          }
           mainContainer.appendChild(a);
 
           jdatac++;
-
+          }
         }
 
         if (objcounter == 6) {
@@ -193,15 +217,19 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname5 = document.getElementById('dataId05').value;
           var newname6 = document.getElementById('dataId06').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
+          document.getElementById('methodEntry').value = strcv01;
+
           mainContainer.appendChild(a);
 
           jdatac++;
-
+          }
         }
 
         if (objcounter == 7) {
@@ -213,15 +241,19 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname6 = document.getElementById('dataId06').value;
           var newname7 = document.getElementById('dataId07').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
+          document.getElementById('methodEntry').value = strcv01;
+
           mainContainer.appendChild(a);
 
           jdatac++;
-
+          }
         }
 
         if (objcounter == 8) {
@@ -234,14 +266,19 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname7 = document.getElementById('dataId07').value;
           var newname8 = document.getElementById('dataId08').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
+          document.getElementById('methodEntry').value = strcv01;
+
           mainContainer.appendChild(a);
 
           jdatac++;
+          }
         }
 
         if (objcounter == 9) {
@@ -255,14 +292,19 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           var newname8 = document.getElementById('dataId08').value;
           var newname9 = document.getElementById('dataId09').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
+          document.getElementById('methodEntry').value = strcv01;
+
           mainContainer.appendChild(a);
 
           jdatac++;
+          }
         }
       }
 
@@ -294,6 +336,10 @@ function start01() {
 };
 
 function bshow01() {
+
+
+if (document.getElementById('methodEntry').value == 'GET') {
+
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
 
@@ -384,7 +430,9 @@ function bshow01() {
     vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
   }
 
-  BPreview01()
+};
+
+BPreview01()
 
 };
 
@@ -853,11 +901,14 @@ function jsonbst01() {
 
 var input01 = document.getElementById('actualdata01');
 var input02 = document.getElementById('advrend01');
-
+var strcv01 ='GET';
 
 input01.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
+
+    strcv01 = document.getElementById('methodEntry').value
+
     document.getElementById('apply01').click();
   }
 });
@@ -871,7 +922,6 @@ input02.addEventListener("keyup", function(event) {
 
     document.getElementById('apply01').click();
 
-    document.getElementById('methodEntry').value = strcv01;
 
   }
 });

@@ -294,13 +294,7 @@ function start01() {
 };
 
 function bshow01() {
-  if (objcounter == 1 && chbox02.checked == false) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
-
-  }
-
-  if (objcounter == 1 && chbox02.checked == true) {
+  if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
 
     vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
@@ -612,6 +606,12 @@ const handleFormSubmit = event => {
       // show in page
       document.getElementById('showJson01').value = dataj01;
       document.getElementById('showJsonbase01').value = databjdata;
+    }
+
+    if (objcounter == 1) {
+      cjsonformat01 = document.getElementById('dataId01').value
+
+      vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
     }
 
     BPreview01()

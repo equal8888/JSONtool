@@ -108,8 +108,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         if (objcounter == 1) {
           var newname1 = document.getElementById('dataId01').value;
 
-          if (document.getElementById('methodEntry').value == 'GET') {
-
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
@@ -122,7 +120,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           mainContainer.appendChild(a);
 
           jdatac++;
-          }
+
         }
 
         if (objcounter == 2) {

@@ -293,7 +293,7 @@ function start01() {
 
 };
 
-function BShow01() {
+function bshow01() {
   if (objcounter == 1 && chbox02.checked == false) {
     cjsonformat01 = document.getElementById('dataId01').value
     vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
@@ -398,7 +398,7 @@ function BShow01() {
   document.getElementById('methodEntry').value = strcv01;
 };
 
-function BClear01(elementID) {
+function bclear01(elementID) {
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
   jdatac = 0
@@ -585,11 +585,6 @@ function BPreview01() {
 // show data on page
 const handleFormSubmit = event => {
   event.preventDefault();
-  // show on page
-    if (objcounter == 1 && chbox02.checked == false) {
-      cjsonformat01 = document.getElementById('dataId01').value
-      vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
-    }
 
     if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
       // DATA

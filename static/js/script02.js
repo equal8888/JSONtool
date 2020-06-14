@@ -879,7 +879,7 @@ function jsonbst01() {
       <br>
       </div>`;
 
-      document.getElementById('smplbtn01').innerHTML = `<button id="smp01" class="testvb" onclick="testv()">sample value</button>`;
+      document.getElementById('smplbtn01').innerHTML = `<button id='apply01' onclick='bshow01()'>apply</button> <button id="smp01" class="testvb" onclick="testv()">sample value</button>`;
 
 
 
@@ -898,7 +898,7 @@ function jsonbst01() {
   } if (chbox02.checked == false) {
     objcounter = 1;
     document.getElementById('advbtn01').innerHTML = '<span class="chbstyletxt01" for="chbox02">Advanced <span style="color:red; font-weight: bold;">OFF</span></span>';
-    document.getElementById('smplbtn01').innerHTML = '';
+    document.getElementById('smplbtn01').innerHTML = `<button id='apply01' onclick='bshow01()'>apply</button>`;
 
 
     document.getElementById('jsonbstyle01').innerHTML = `

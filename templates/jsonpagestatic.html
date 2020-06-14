@@ -34,7 +34,7 @@ Your browser does not support the HTML canvas tag.</canvas>
           <button id="smp01" class="testvb" onclick="testv()">sample value</button>
         </div>
       </h1>
-      <form class='content__form contact-form'>
+      <form id='actualdata01'>
         <label for="urlEntry">url</label>
         <input id="urlEntry" class='inputstyle' type="text" value=''>
         <br>
@@ -62,10 +62,11 @@ Your browser does not support the HTML canvas tag.</canvas>
               <br>
             </div>
         </div>
-        <button id='apply' class='contact-form__button' type='submit'>Apply / Enter</button>
       </form>
-      <div id="smplbtn01">
-      </div>
+        <button id='apply01' onclick='bshow01()'>Apply</button>
+        <div id="smplbtn01">
+        </div>
+      <br>
     </section>
   </div>
   <div class='boxx'>
@@ -84,8 +85,8 @@ Your browser does not support the HTML canvas tag.</canvas>
   <div id='buttonGroup' class='cbuttonGroup'>
     <p><b>Responses and visual preview</b></p>
     <div class='Controls'>
-      <button id='DisableB01' onclick='BShow01()'>GET</button>
-      <button id='DisableB02' onclick='BClear01()'>Clear</button>
+      <button id='DisableB01' onclick='bshow01()'>GET</button>
+      <button id='DisableB02' onclick='bclear01()'>Clear</button>
     </div>
     <div id="advrend01">
       <br>

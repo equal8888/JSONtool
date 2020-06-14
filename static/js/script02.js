@@ -576,48 +576,6 @@ function BPreview01() {
 
 };
 
-// show data on page
-const handleFormSubmit = event => {
-  event.preventDefault();
-
-    if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
-      // DATA
-      var vdataId011 = document.getElementById('dataId01').value;
-      // VALUE
-      var vvalueId011 = document.getElementById('valueId01').value;
-      // Combine DATA + VALUE
-      var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
-      // Json VALUE
-      var dataj01 = JSON.stringify(combine1);
-      // base64 + VALUE
-      var databjdata = btoa(dataj01);
-
-      // show in page
-      document.getElementById('showJson01').value = dataj01;
-      document.getElementById('showJsonbase01').value = databjdata;
-    }
-
-    // show on page
-    if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
-      // Json VALUE
-      var dataj01 = document.getElementById('valueId02').value;
-      // base64 + VALUE
-      var databjdata = btoa(dataj01);
-      // show in page
-      document.getElementById('showJson01').value = dataj01;
-      document.getElementById('showJsonbase01').value = databjdata;
-    }
-
-    if (objcounter == 1) {
-      cjsonformat01 = document.getElementById('dataId01').value
-
-      vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
-    }
-
-    BPreview01()
-
-};
-
 
 var objcounter = 1;
 var objmax = 9;
@@ -792,6 +750,19 @@ function jsonbst01() {
 
 };
 
-// EventListener('submit'
-const form = document.getElementsByClassName('contact-form')[0];
-form.addEventListener('submit', handleFormSubmit);
+
+var input01 = document.getElementById('actualdata01');
+var input02 = document.getElementById('advrend01');
+
+
+// Setup our function to run on various events
+var someFunction = function (event) {
+  if (event.keyCode === 13) {
+  event.preventDefault();
+  document.getElementById('apply01').click();
+  }
+};
+
+// Add our event listeners
+input01.addEventListener('keyup', someFunction, false);
+input02.addEventListener('keyup', someFunction, false);

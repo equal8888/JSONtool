@@ -751,9 +751,7 @@ function loadobjects01() {
   var node01 = document.createElement('div');
   node01.innerHTML = `<input id="dataId0`+(objcounter+1)+`" class='jsonvalue' type="text" value=''>`;
 
-  if (objcounter == objmax)  {
-    console.log("objmax reached");
-	}
+  if (objcounter != objmax)  {
 
   if (document.getElementById( "dataId0"+(objcounter) ).value != '' ) {
  	  document.getElementById("addnobj01").appendChild(node01);
@@ -761,7 +759,8 @@ function loadobjects01() {
   } else {
     document.getElementById( "dataId0"+(objcounter) ).style.borderColor = "yellow";
   }
-
+  
+	}
 };
 
 
@@ -872,12 +871,14 @@ function jsonbst01() {
     document.getElementById('advbtn01').innerHTML = '<span class="chbstyletxt01" for="chbox02">Advanced ON</span>';
 
 
-    document.getElementById('jsonbstyle01').innerHTML = `
-      <div class='inputbox'>
-      <label for="valueId02">enter json</label>
-      <textarea id="valueId02" class='inputboxx01' type='text' ></textarea>
-      <br>
-      </div>`;
+    document.getElementById('jsonbstyle01').innerHTML = '';
+
+      document.getElementById('jsonbstyle02').innerHTML = `
+        <div class='inputbox'>
+        <label for="valueId02">enter json</label>
+        <textarea id="valueId02" class='inputboxx01' type='text' ></textarea>
+        <br>
+        </div>`;
 
       document.getElementById('smplbtn01').innerHTML = `<button id='apply01' onclick='bshow01()'>apply</button> <button id="smp01" class="testvb" onclick="testv()">sample value</button>`;
 
@@ -904,11 +905,14 @@ function jsonbst01() {
     document.getElementById('jsonbstyle01').innerHTML = `
       <label for="dataId01">data</label>
       <input id="dataId01" class='jsonvalue' type="text" >
-      <div class='inputbox'>
-      <label for="valueId01">value</label>
-      <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
-      <br>
-      </div>`;
+      <br>`;
+
+      document.getElementById('jsonbstyle02').innerHTML = `
+        <div class='inputbox'>
+        <label for="valueId01">value</label>
+        <textarea id="valueId01" class='inputbox01' type='text' ></textarea>
+        <br>
+        </div>`;
 
     document.getElementById('advrend01').innerHTML = `
       <br>

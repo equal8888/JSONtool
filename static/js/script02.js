@@ -108,19 +108,20 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         if (objcounter == 1) {
           var newname1 = document.getElementById('dataId01').value;
 
+          if (document.getElementById('methodEntry').value == 'GET') {
+
           var a = document.createElement('a');
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-
-          a.innerHTML = htmldata01 + obj[`${newname1}`];
+          a.innerHTML = htmldata01+obj[`${newname1}`];
           document.getElementById('methodEntry').value = strcv01;
 
 
           mainContainer.appendChild(a);
 
           jdatac++;
-
+          }
         }
 
         if (objcounter == 2) {
@@ -334,7 +335,95 @@ function start01() {
 };
 
 function bshow01() {
+  if (objcounter == 1) {
+    cjsonformat01 = document.getElementById('dataId01').value
 
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
+  }
+
+  if (objcounter == 2) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"])";
+  }
+
+  if (objcounter == 3) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"])";
+  }
+
+  if (objcounter == 4) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"])";
+  }
+
+  if (objcounter == 5) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"])";
+  }
+
+  if (objcounter == 6) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"])";
+  }
+
+  if (objcounter == 7) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"])";
+  }
+
+  if (objcounter == 8) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+    cjsonformat08 = document.getElementById('dataId08').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"])";
+  }
+
+  if (objcounter == 9) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+    cjsonformat08 = document.getElementById('dataId08').value
+    cjsonformat09 = document.getElementById('dataId09').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
+  }
 // Encoder simple page
   if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
     // DATA
@@ -364,99 +453,6 @@ function bshow01() {
     document.getElementById('showJsonbase01').value = databjdata;
   }
 
-if (document.getElementById('methodEntry').value == 'GET') {
-
-  if (objcounter == 1) {
-    cjsonformat01 = document.getElementById('dataId01').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
-  }
-
-  if (objcounter == 2) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"])";
-  }
-
-  if (objcounter == 3) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-    cjsonformat03 = document.getElementById('dataId03').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"])";
-  }
-
-  if (objcounter == 4) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-    cjsonformat03 = document.getElementById('dataId03').value
-    cjsonformat04 = document.getElementById('dataId04').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"])";
-  }
-
-  if (objcounter == 5) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-    cjsonformat03 = document.getElementById('dataId03').value
-    cjsonformat04 = document.getElementById('dataId04').value
-    cjsonformat05 = document.getElementById('dataId05').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"])";
-  }
-
-  if (objcounter == 6) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-    cjsonformat03 = document.getElementById('dataId03').value
-    cjsonformat04 = document.getElementById('dataId04').value
-    cjsonformat05 = document.getElementById('dataId05').value
-    cjsonformat06 = document.getElementById('dataId06').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"])";
-  }
-
-  if (objcounter == 7) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-    cjsonformat03 = document.getElementById('dataId03').value
-    cjsonformat04 = document.getElementById('dataId04').value
-    cjsonformat05 = document.getElementById('dataId05').value
-    cjsonformat06 = document.getElementById('dataId06').value
-    cjsonformat07 = document.getElementById('dataId07').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"])";
-  }
-
-  if (objcounter == 8) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-    cjsonformat03 = document.getElementById('dataId03').value
-    cjsonformat04 = document.getElementById('dataId04').value
-    cjsonformat05 = document.getElementById('dataId05').value
-    cjsonformat06 = document.getElementById('dataId06').value
-    cjsonformat07 = document.getElementById('dataId07').value
-    cjsonformat08 = document.getElementById('dataId08').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"])";
-  }
-
-  if (objcounter == 9) {
-    cjsonformat01 = document.getElementById('dataId01').value
-    cjsonformat02 = document.getElementById('dataId02').value
-    cjsonformat03 = document.getElementById('dataId03').value
-    cjsonformat04 = document.getElementById('dataId04').value
-    cjsonformat05 = document.getElementById('dataId05').value
-    cjsonformat06 = document.getElementById('dataId06').value
-    cjsonformat07 = document.getElementById('dataId07').value
-    cjsonformat08 = document.getElementById('dataId08').value
-    cjsonformat09 = document.getElementById('dataId09').value
-
-    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
-  }
-
-};
 
 BPreview01()
 
@@ -464,6 +460,7 @@ BPreview01()
 
 
 function bshow02() {
+
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
 
@@ -554,15 +551,10 @@ function bshow02() {
     vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
   }
 
-
   strcv01 = document.getElementById('methodEntry').value
   document.getElementById('methodEntry').value = 'GET';
 
-  BPreview01()
-
-  document.getElementById('methodEntry').value = strcv01;
-
-
+  document.getElementById('apply01').click();
 
 };
 
@@ -761,9 +753,13 @@ function loadobjects01() {
 
   if (objcounter == objmax)  {
     console.log("objmax reached");
-	} else {
+	}
+
+  if (document.getElementById( "dataId0"+(objcounter) ).value != '' ) {
  	  document.getElementById("addnobj01").appendChild(node01);
  	  objcounter++;
+  } else {
+    document.getElementById( "dataId0"+(objcounter) ).style.borderColor = "yellow";
   }
 
 };
@@ -932,7 +928,6 @@ var strcv01 ='GET';
 input01.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-
     strcv01 = document.getElementById('methodEntry').value
 
     document.getElementById('apply01').click();
@@ -942,7 +937,6 @@ input01.addEventListener("keyup", function(event) {
 input02.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-
     strcv01 = document.getElementById('methodEntry').value
     document.getElementById('methodEntry').value = 'GET';
 

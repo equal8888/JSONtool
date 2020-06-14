@@ -335,6 +335,34 @@ function start01() {
 
 function bshow01() {
 
+// Encoder simple page
+  if (chbox02.checked == false & document.getElementById('methodEntry').value != 'GET')  {
+    // DATA
+    var vdataId011 = document.getElementById('dataId01').value;
+    // VALUE
+    var vvalueId011 = document.getElementById('valueId01').value;
+    // Combine DATA + VALUE
+    var combine1 = { [`${vdataId011}`] : `${vvalueId011}` };
+    // Json VALUE
+    var dataj01 = JSON.stringify(combine1);
+    // base64 + VALUE
+    var databjdata = btoa(dataj01);
+
+    // show in page
+    document.getElementById('showJson01').value = dataj01;
+    document.getElementById('showJsonbase01').value = databjdata;
+  }
+
+// Encoder advanced page
+  if (chbox02.checked == true & document.getElementById('methodEntry').value != 'GET')  {
+    // Json VALUE
+    var dataj01 = document.getElementById('valueId02').value;
+    // base64 + VALUE
+    var databjdata = btoa(dataj01);
+    // show in page
+    document.getElementById('showJson01').value = dataj01;
+    document.getElementById('showJsonbase01').value = databjdata;
+  }
 
 if (document.getElementById('methodEntry').value == 'GET') {
 

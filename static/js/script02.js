@@ -388,6 +388,110 @@ function bshow01() {
 
 };
 
+
+function bshow02() {
+  if (objcounter == 1) {
+    cjsonformat01 = document.getElementById('dataId01').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"])";
+  }
+
+  if (objcounter == 2) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"])";
+  }
+
+  if (objcounter == 3) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"])";
+  }
+
+  if (objcounter == 4) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"])";
+  }
+
+  if (objcounter == 5) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"])";
+  }
+
+  if (objcounter == 6) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"])";
+  }
+
+  if (objcounter == 7) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"])";
+  }
+
+  if (objcounter == 8) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+    cjsonformat08 = document.getElementById('dataId08').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"])";
+  }
+
+  if (objcounter == 9) {
+    cjsonformat01 = document.getElementById('dataId01').value
+    cjsonformat02 = document.getElementById('dataId02').value
+    cjsonformat03 = document.getElementById('dataId03').value
+    cjsonformat04 = document.getElementById('dataId04').value
+    cjsonformat05 = document.getElementById('dataId05').value
+    cjsonformat06 = document.getElementById('dataId06').value
+    cjsonformat07 = document.getElementById('dataId07').value
+    cjsonformat08 = document.getElementById('dataId08').value
+    cjsonformat09 = document.getElementById('dataId09').value
+
+    vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
+  }
+
+
+  strcv01 = document.getElementById('methodEntry').value
+  document.getElementById('methodEntry').value = 'GET';
+
+  BPreview01()
+
+  document.getElementById('methodEntry').value = strcv01;
+
+
+
+};
+
 function bclear01(elementID) {
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';

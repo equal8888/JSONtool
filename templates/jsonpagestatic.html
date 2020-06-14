@@ -8,19 +8,24 @@
 <link rel= 'stylesheet' type= 'text/css' href= '/static/styles/style02.css'/>
 </head>
 <body>
-  <div class='navbar'>
+  <div id='navbar01' class='navbar'>
     <a href='/'>MainPage</a>
+    <form class='navright'>
+      <input type="checkbox" id="chbox03" onclick='startchkrunanimation()' value=''>
+      <label for="chbox03" class='navrightchboxtxt'>animation</label><br>
+    </form>
   </div>
 <div class='canvasbox'>
-  <h3 class='canvastxt'>Json Tool</h3>
-  <p class='canvastxt' id='ShowMyHost'>Loading...</p>
+  <h3 class='canvastxt01'>Json Tool</h3>
+  <p class='canvastxt02' id='ShowMyHost'>Loading...</p>
+  <canvas id='canvas01' width="100%" height="100" style="border:1px solid #000000;">
+Your browser does not support the HTML canvas tag.</canvas>
 </div>
 <div class='row'>
   <div class='side'>
     <div class='a'>
     <section class='content'>
-      <input type='checkbox' id='chbox02' class='chbstylebtn01' onclick='jsonbst01()'>
-      <div id="advbtn01">
+      <input type='checkbox' id='chbox02' class='chbstylebtn01' onclick='jsonbst01()'>      <div id="advbtn01">
         <span class="chbstyletxt01" for="chbox02">Advanced <span style='color:red; font-weight: bold;'>OFF</span></span>
       </div>
       <h1 class='content__heading'>Input
@@ -97,7 +102,7 @@
 </div>
 <div class='footer'>
 </div>
-<script src='/static/js/script02.js'/>
-</script>
+<script src='/static/js/script01.js'/></script>
+<script src='/static/js/script02.js'/></script>
 </body>
 </html>

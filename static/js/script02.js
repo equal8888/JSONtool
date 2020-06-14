@@ -5,6 +5,8 @@ function reloadP() {
   document.getElementById('DisableB02').disabled = true;
 
   chbox02.checked = false;
+  chbox03.checked = false;
+
   var jdatac = 0
 
   // HOST
@@ -22,6 +24,7 @@ function reloadP() {
 
   window.addEventListener('DOMContentLoaded', (event) => {
     start01()
+
   });
 
 }

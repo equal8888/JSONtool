@@ -384,12 +384,8 @@ function bshow01() {
     vcjsonformat = "(obj["+`${cjsonformat01}`+"]"+"["+`${cjsonformat02}`+"]"+"["+`${cjsonformat03}`+"]"+"["+`${cjsonformat04}`+"]"+"["+`${cjsonformat05}`+"]"+"["+`${cjsonformat06}`+"]"+"["+`${cjsonformat07}`+"]"+"["+`${cjsonformat08}`+"]"+"["+`${cjsonformat09}`+"])";
   }
 
-  strcv01 = document.getElementById('methodEntry').value
-  document.getElementById('methodEntry').value = 'GET';
-
   BPreview01()
 
-  document.getElementById('methodEntry').value = strcv01;
 };
 
 function bclear01(elementID) {
@@ -755,14 +751,23 @@ var input01 = document.getElementById('actualdata01');
 var input02 = document.getElementById('advrend01');
 
 
-// Setup our function to run on various events
-var someFunction = function (event) {
+input01.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
-  event.preventDefault();
-  document.getElementById('apply01').click();
+    event.preventDefault();
+    document.getElementById('apply01').click();
   }
-};
+});
 
-// Add our event listeners
-input01.addEventListener('keyup', someFunction, false);
-input02.addEventListener('keyup', someFunction, false);
+input02.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+
+    strcv01 = document.getElementById('methodEntry').value
+    document.getElementById('methodEntry').value = 'GET';
+
+    document.getElementById('apply01').click();
+
+    document.getElementById('methodEntry').value = strcv01;
+
+  }
+});

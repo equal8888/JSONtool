@@ -8,7 +8,6 @@ function reloadP() {
   chbox03.checked = false;
 
   var jdatac = 0
-
   // HOST
   document.getElementById('ShowMyHost').innerHTML = `<label>Status: <span style='color:gray; font-weight: bold;'>n/a</span><br>Host: <span style='color:gray; font-weight: bold;'>n/a</span></label>`;
 
@@ -145,9 +144,12 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
     appendData((xhr.responseText),'jsondata');
     var pageurl = `<label>Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}</label>`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
-  } else if (xhr.readyState == 4 && xhr.status != 200) {
+  } if (xhr.readyState == 4 && xhr.status != 200) {
       var pageurl = `<label>Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}</label>`;
       document.getElementById('ShowMyHost').innerHTML = pageurl;
+      obj = xhr.responseText;
+      document.getElementById('IncomingJson').value = obj;
+//      document.getElementById('jsondata').innerHTML = obj;
     }
   };
   xhr.ontimeout = function (e) {
@@ -630,6 +632,8 @@ function bshow02() {
 function bclear01(elementID) {
   document.getElementById('DisableB02').disabled = true;
   document.getElementById('jsondata').innerHTML = '';
+  document.getElementById('IncomingJson').value = '';
+
   jdatac = 0
 };
 
@@ -961,7 +965,7 @@ function jsonbst01() {
       <input id="dataId01" class='jsonvalue' type="text">
       <div id='addnobj01'>
       </div>
-      <label for="IncomingJson">incoming Json</label>
+      <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
     document.getElementById('advrend02').innerHTML = '<button id="def02" class="testvb" onclick="reset()">reset & defaults</button> <button id="rmhdrsbtn01" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="resetbutton" onclick="loadheaders01()">header +</button>';
 
@@ -985,7 +989,7 @@ function jsonbst01() {
 
     document.getElementById('advrend01').innerHTML = `
       <br>
-      <label for="IncomingJson">incoming Json</label>
+      <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
 
     document.getElementById('advrend02').innerHTML = '<button id="def01" class="testvb" onclick="reset()">defaults</button>';

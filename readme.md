@@ -4,7 +4,6 @@
 what you can do is to type stuff and see it as a auto formatted json && Json+Base64 file format. Also can be previewed/seen on live-action inside the website
 <br>
 <br>
-embed video -->
 <img src="https://drive.google.com/uc?id=1ONdUNkfjAy5nt-DvE1lpkavM8dmrYIWv" width="auto"/>
 <br>
 <br>
@@ -56,7 +55,7 @@ WantedBy=multi-user.target
 ```
 
 
-2 
+2 make it executable
 ```sh
 sudo chmod u+x /Path/To/File/app1.py
 ```

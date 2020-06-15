@@ -147,13 +147,11 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
   } else if (xhr.readyState == 4 && xhr.status != 200) {
       var pageurl = `<label>Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}</label>`;
       document.getElementById('ShowMyHost').innerHTML = pageurl;
-      obj = xhr.responseText;
-      document.getElementById('IncomingJson').value = obj;
+      document.getElementById('IncomingJson').value = xhr.responseText;
     }
   };
   xhr.ontimeout = function (e) {
-    var pageurl = `<label>Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${host}</label>`;
-    document.getElementById('ShowMyHost').innerHTML = pageurl;
+    document.getElementById('ShowMyHost').innerHTML = `<label>Status: <span style='color:red; font-weight: bold;'>timeout</span> <br> Host: ${host}</label>`;
   };
   xhr.send(params);
   };
@@ -164,8 +162,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     if(xhr.readyState == 4 && xhr.status == 200) {
       appendData((xhr.responseText),'jsondata');
-      var pageurl = `<label>Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}</label>`;
-      document.getElementById('ShowMyHost').innerHTML = pageurl;
+      document.getElementById('ShowMyHost').innerHTML =  `<label>Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}</label>`;
     }
 
     for (var i = 0; i < 1; i++) {

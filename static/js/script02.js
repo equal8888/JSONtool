@@ -149,7 +149,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
       document.getElementById('ShowMyHost').innerHTML = pageurl;
       obj = xhr.responseText;
       document.getElementById('IncomingJson').value = obj;
-//      document.getElementById('jsondata').innerHTML = obj;
     }
   };
   xhr.ontimeout = function (e) {

@@ -5,7 +5,7 @@ what you can do is to type stuff and see it as a auto formatted json && Json+Bas
 <br>
 <br>
 embed video -->
-<img src="https://drive.google.com/uc?id=1e-JAoyFi9HO9kokIfrLuCyOhjWQEU80e" width="auto"/>
+<img src="https://drive.google.com/uc?id=1ONdUNkfjAy5nt-DvE1lpkavM8dmrYIWv" width="auto"/>
 <br>
 <br>
 do not use in production
@@ -55,7 +55,13 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-2 enable the the new process
+
+2 
+```sh
+sudo chmod u+x /Path/To/File/app1.py
+```
+
+3 enable the the new process
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl enable flaskapp.service
@@ -63,3 +69,8 @@ sudo systemctl start flaskapp.service
 ```
 
 
+
+4 Reboot
+```sh
+sudo reboot
+```

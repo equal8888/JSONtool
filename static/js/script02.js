@@ -144,7 +144,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
     appendData((xhr.responseText),'jsondata');
     var pageurl = `<label>Status: <span style='color:green; font-weight: bold;'>ok</span> <br> Host: ${host}</label>`;
     document.getElementById('ShowMyHost').innerHTML = pageurl;
-  } if (xhr.readyState == 4 && xhr.status != 200) {
+  } else if (xhr.readyState == 4 && xhr.status != 200) {
       var pageurl = `<label>Status: <span style='color:red; font-weight: bold;'>${xhr.status}</span> <br> Host: ${host}</label>`;
       document.getElementById('ShowMyHost').innerHTML = pageurl;
       obj = xhr.responseText;

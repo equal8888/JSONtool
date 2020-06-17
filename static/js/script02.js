@@ -650,9 +650,9 @@ function testv() {
            "Ron Weasley"
   ],
         "year":2000,
-        "genre":"Fantasy Fiction",
-        "music video":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/xoFqyO7GwpE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
-  }
+        "genre":"Fantasy Fiction"
+  },
+  "music video":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/xoFqyO7GwpE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
   }`;
 };
 

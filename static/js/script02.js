@@ -167,7 +167,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     for (var i = 0; i < 1; i++) {
 
-        htmldata01 = '<br><hr><label>'+(vcjsonformat)+'</label><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><hr><br>';
+        htmldata01 = '<hr><label>'+(vcjsonformat)+'</label><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><hr><br>';
 
         obj = JSON.parse(xhr);
         document.getElementById('IncomingJson').value = `${xhr}`;
@@ -637,18 +637,23 @@ function testv() {
   // Method
   document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('valueId02').value = `{
-        "book": {
-            "name": "Harry Potter and the Goblet of Fire",
-            "author": "J. K. Rowling",
-            "year": 2000,
-            "characters": ["Harry Potter", "Hermione Granger", "Ron Weasley"],
-            "genre": "Fantasy Fiction",
-            "price": {
-                "paperback": "$11.80", "hardcover": "$30.32", "kindle": "$10.12"
-            }
-        }
-    }`;
+  document.getElementById('valueId02').value = `{   "book":{ "name":"Harry Potter and the Goblet of Fire",
+        "author":"J. K. Rowling",
+        "price":{
+           "hardcover":"$30.32",
+           "paperback":"$11.80",
+           "kindle":"$10.12"
+  },
+        "characters":[
+           "Harry Potter",
+           "Hermione Granger",
+           "Ron Weasley"
+  ],
+        "year":2000,
+        "genre":"Fantasy Fiction",
+        "random video":"<iframe width='100%' height='400' src='https://www.youtube.com/embed/Xb5E82BEidQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+  }
+  }`;
 };
 
 function reset() {

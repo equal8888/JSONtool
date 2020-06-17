@@ -637,7 +637,7 @@ function testv() {
   // Method
   document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('valueId02').value = `{   "book":{ "name":"Harry Potter and the Goblet of Fire",
+  document.getElementById('valueId02').value = `{ "book":{ "name":"Harry Potter and the Goblet of Fire",
         "author":"J. K. Rowling",
         "price":{
            "hardcover":"$30.32",
@@ -652,7 +652,9 @@ function testv() {
         "year":2000,
         "genre":"Fantasy Fiction"
   },
-  "music video":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/xoFqyO7GwpE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+  "videos":{ "music":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/xoFqyO7GwpE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+  "science":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/P1ww1IXRfTA' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+  }
   }`;
 };
 

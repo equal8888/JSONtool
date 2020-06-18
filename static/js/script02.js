@@ -1072,7 +1072,7 @@ function checkinput01(elementId) {
       if (vheader1 == 'Authorization' ) {
 
         document.getElementById("stuffhere01").innerHTML = `
-        <select class="inputstyle" id="aauthEntry01" value="novalue" onclick="checkauth01()">
+        <select class="inputstyle" id="aauthEntry01" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1175,7 +1175,7 @@ function checkinput02(elementId) {
       if (vheader2 == 'Authorization' ) {
 
         document.getElementById("stuffhere02").innerHTML = `
-        <select class="inputstyle" id="aauthEntry02" value="novalue" onclick="checkauth02()">
+        <select class="inputstyle" id="aauthEntry02" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1277,7 +1277,7 @@ function checkinput03(elementId) {
       if (vheader3 == 'Authorization' ) {
 
         document.getElementById("stuffhere03").innerHTML = `
-        <select class="inputstyle" id="aauthEntry03" value="novalue" onclick="checkauth03()">
+        <select class="inputstyle" id="aauthEntry03" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1379,7 +1379,7 @@ function checkinput04(elementId) {
       if (vheader4 == 'Authorization' ) {
 
         document.getElementById("stuffhere04").innerHTML = `
-        <select class="inputstyle" id="aauthEntry04" value="novalue" onclick="checkauth04()">
+        <select class="inputstyle" id="aauthEntry04" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1481,7 +1481,7 @@ function checkinput05(elementId) {
       if (vheader5 == 'Authorization' ) {
 
         document.getElementById("stuffhere05").innerHTML = `
-        <select class="inputstyle" id="aauthEntry05" value="novalue" onclick="checkauth05()">
+        <select class="inputstyle" id="aauthEntry05" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1584,7 +1584,7 @@ function checkinput06(elementId) {
       if (vheader6 == 'Authorization' ) {
 
         document.getElementById("stuffhere06").innerHTML = `
-        <select class="inputstyle" id="aauthEntry06" value="novalue" onclick="checkauth06()">
+        <select class="inputstyle" id="aauthEntry06" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1686,7 +1686,7 @@ function checkinput07(elementId) {
       if (vheader7 == 'Authorization' ) {
 
         document.getElementById("stuffhere07").innerHTML = `
-        <select class="inputstyle" id="aauthEntry07" value="novalue" onclick="checkauth07()">
+        <select class="inputstyle" id="aauthEntry07" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1788,7 +1788,7 @@ function checkinput08(elementId) {
       if (vheader8 == 'Authorization' ) {
 
         document.getElementById("stuffhere08").innerHTML = `
-        <select class="inputstyle" id="aauthEntry08" value="novalue" onclick="checkauth08()">
+        <select class="inputstyle" id="aauthEntry08" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1891,7 +1891,7 @@ function checkinput09(elementId) {
       if (vheader9 == 'Authorization' ) {
 
         document.getElementById("stuffhere09").innerHTML = `
-        <select class="inputstyle" id="aauthEntry09" value="novalue" onclick="checkauth09()">
+        <select class="inputstyle" id="aauthEntry09" value="novalue">
         <option value="Basic">Basic</option>
         <option value="Bearer">Bearer</option>
         <option value="Digest">Digest</option>
@@ -1910,76 +1910,6 @@ function checkinput09(elementId) {
 
 };
 
-var heval01 = '';
-var heval02 = '';
-var heval03 = '';
-var heval04 = '';
-var heval05 = '';
-var heval06 = '';
-var heval07 = '';
-var heval08 = '';
-var heval09 = '';
-
-function checkauth01() {
-
-  var heval01 = document.getElementById('aauthEntry01').value + ' [' + document.getElementById('authEntry01').value + ']';
-
-
-}
-
-function checkauth02() {
-
-  var heval02 = document.getElementById('aauthEntry02').value + ' [' + document.getElementById('authEntry02').value + ']';
-
-}
-
-function checkauth03() {
-
-  var heval03 = document.getElementById('aauthEntry03').value + ' [' + document.getElementById('authEntry03').value + ']';
-
-
-}
-
-function checkauth04() {
-
-  var heval04 = document.getElementById('aauthEntry04').value + ' [' + document.getElementById('authEntry04').value + ']';
-
-
-}
-
-function checkauth05() {
-
-  var heval05 = document.getElementById('aauthEntry05').value + ' [' + document.getElementById('authEntry05').value + ']';
-
-
-}
-
-function checkauth06() {
-
-  var heval06 = document.getElementById('aauthEntry06').value + ' [' + document.getElementById('authEntry06').value + ']';
-
-
-}
-
-function checkauth07() {
-
-  var heval07 = document.getElementById('aauthEntry07').value + ' [' + document.getElementById('authEntry07').value + ']';
-
-
-}
-
-function checkauth08() {
-
-  var heval08 = document.getElementById('aauthEntry08').value + ' [' + document.getElementById('authEntry08').value + ']';
-
-}
-
-function checkauth09() {
-
-  var heval09 = document.getElementById('aauthEntry09').value + ' [' + document.getElementById('authEntry09').value + ']';
-
-
-}
 
 function removeheaders01(elementId) {
 

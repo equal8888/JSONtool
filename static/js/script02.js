@@ -1940,6 +1940,8 @@ function checkauth09() {
 function removeheaders01(elementId) {
 
   if (counter > 1) {
+
+    // Header
     var lhename01 = "lbHeaderEntry0" + `${counter}`;
     var element = document.getElementById(`${lhename01}`);
     element.parentNode.removeChild(element);
@@ -1948,10 +1950,12 @@ function removeheaders01(elementId) {
     var element = document.getElementById(`${hename01}`);
     element.parentNode.removeChild(element);
 // ---
-    var hename02 = "authEntry0" + `${counter}`;
+    var hename02 = "stuffhere0" + `${counter}`;
     var element = document.getElementById(`${hename02}`);
     element.parentNode.removeChild(element);
+
     counter--;
+
   }
 
 };

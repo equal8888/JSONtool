@@ -1998,7 +1998,7 @@ function jsonbst01() {
 
 var input01 = document.getElementById('actualdata01');
 var input02 = document.getElementById('advrend01');
-var strcv01 ='';
+var strcv01 ='GET';
 
 input01.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {

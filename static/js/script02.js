@@ -676,12 +676,22 @@ function reset() {
   if (  counter == 2 )  {
     // Host
     document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
-    // HeaderEntry02
+    // HeaderEntry01
     document.getElementById('HeaderEntry01').value = 'Content-Type';
-    document.getElementById('HeaderEntry02').value = 'Authorization';
-    // Auth
+    document.getElementById('HeaderEntry01').click();
     document.getElementById('authEntry01').value = 'application/json';
-    document.getElementById('authEntry02').value = 'Basic [YWRtaW46YWRtaW4=]';
+    document.getElementById('authEntry01').click();
+    // HeaderEntry02
+    document.getElementById('HeaderEntry02').value = 'Authorization';
+    document.getElementById('HeaderEntry02').click();
+    document.getElementById('aauthEntry02').value = 'Basic';
+    document.getElementById('aauthEntry02').click();
+
+    var authtype02 = 'Basic';
+    document.getElementById('authEntry02').value = `${authtype02}`+ ' [ YWRtaW46YWRtaW4= ]';
+
+
+
     // Method
     document.getElementById('methodEntry').value = 'GET';
     // encoder data
@@ -690,6 +700,7 @@ function reset() {
   }
 
 };
+
 
 // Apply
 function BPreview01() {
@@ -863,7 +874,7 @@ function loadheaders01() {
   var dyncontent = document.createElement("div");
   dyncontent.innerHTML = `
     <label for="HeaderEntry0`+(counter+1)+`" id="lbHeaderEntry0`+(counter+1)+`" >header `+(counter+1)+`</label>
-    <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue">
+    <select class="inputstyle" id="HeaderEntry0`+(counter+1)+`" value="novalue" onclick="checkinput0`+(counter+1)+`()">
     <option value="novalue">---</option>
     <option value="Accept">Accept</option>
     <option value="Accept-Charset">Accept-Charset</option>
@@ -910,7 +921,8 @@ function loadheaders01() {
     <option value="Warning">Warning</option>
     <option value="Width">Width</option>
     </select>
-    <input id="authEntry0`+(counter+1)+`" class='jsonvalue' type='text' value=''>`;
+    <div id="stuffhere0`+(counter+1)+`"></div>
+    `;
 
   if (counter == maximum)  {
     console.log("maximum reached");
@@ -921,6 +933,1009 @@ function loadheaders01() {
   }
 
 };
+
+
+function checkinput01(elementId) {
+
+    var vheader1 = document.getElementById("HeaderEntry01").value
+
+    // Header1
+    if (vheader1 == 'novalue') {
+      document.getElementById("stuffhere01").innerHTML = '';
+    }
+
+    if (vheader1 == 'Accept' ) {
+
+      document.getElementById("stuffhere01").innerHTML = `
+      <select class="inputstyle" id="authEntry01" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader1 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere01").innerHTML = `
+      <select class="inputstyle" id="authEntry01" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader1 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere01").innerHTML = `
+      <select class="inputstyle" id="authEntry01" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader1 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere01").innerHTML = `
+      <select class="inputstyle" id="authEntry01" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader1 == 'Connection' ) {
+
+      document.getElementById("stuffhere01").innerHTML = `
+      <select class="inputstyle" id="authEntry01" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader1 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere01").innerHTML = `
+        <select class="inputstyle" id="authEntry01" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader1 == 'Authorization' ) {
+
+        document.getElementById("stuffhere01").innerHTML = `
+        <select class="inputstyle" id="aauthEntry01" value="novalue" onclick="checkauth01()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry01" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry01').click();
+
+      }
+
+      if (vheader1 != 'novalue' & vheader1 != 'Accept' & vheader1 != 'Accept-Charset' & vheader1 != 'Accept-Encoding'  & vheader1 != 'Cache-Control' & vheader1 != 'Connection' & vheader1 != 'Content-Type' & vheader1 != 'Authorization' ) {
+        document.getElementById("stuffhere01").innerHTML = '<input id="authEntry01" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+
+function checkinput02(elementId) {
+
+    var vheader2 = document.getElementById("HeaderEntry02").value
+
+    // Header2
+    if (vheader2 == 'novalue') {
+      document.getElementById("stuffhere02").innerHTML = '';
+    }
+
+    if (vheader2 == 'Accept' ) {
+
+      document.getElementById("stuffhere02").innerHTML = `
+      <select class="inputstyle" id="authEntry02" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader2 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere02").innerHTML = `
+      <select class="inputstyle" id="authEntry02" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader2 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere02").innerHTML = `
+      <select class="inputstyle" id="authEntry02" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader2 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere02").innerHTML = `
+      <select class="inputstyle" id="authEntry02" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader2 == 'Connection' ) {
+
+      document.getElementById("stuffhere02").innerHTML = `
+      <select class="inputstyle" id="authEntry02" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader2 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere02").innerHTML = `
+        <select class="inputstyle" id="authEntry02" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader2 == 'Authorization' ) {
+
+        document.getElementById("stuffhere02").innerHTML = `
+        <select class="inputstyle" id="aauthEntry02" value="novalue" onclick="checkauth02()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry02" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry02').click();
+
+      }
+
+      if (vheader2 != 'novalue' & vheader2 != 'Accept' & vheader2 != 'Accept-Charset' & vheader2 != 'Accept-Encoding'  & vheader2 != 'Cache-Control' & vheader2 != 'Connection' & vheader2 != 'Content-Type' & vheader2 != 'Authorization' ) {
+        document.getElementById("stuffhere02").innerHTML = '<input id="authEntry02" class="jsonvalue" type="text" value="">';
+      }
+
+
+};
+
+function checkinput03(elementId) {
+
+    var vheader3 = document.getElementById("HeaderEntry03").value
+
+    if (vheader3 == 'novalue') {
+      document.getElementById("stuffhere03").innerHTML = '';
+    }
+
+    if (vheader3 == 'Accept' ) {
+
+      document.getElementById("stuffhere03").innerHTML = `
+      <select class="inputstyle" id="authEntry03" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader3 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere03").innerHTML = `
+      <select class="inputstyle" id="authEntry03" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader3 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere03").innerHTML = `
+      <select class="inputstyle" id="authEntry03" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader3 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere03").innerHTML = `
+      <select class="inputstyle" id="authEntry03" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader3 == 'Connection' ) {
+
+      document.getElementById("stuffhere03").innerHTML = `
+      <select class="inputstyle" id="authEntry03" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader3 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere03").innerHTML = `
+        <select class="inputstyle" id="authEntry03" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader3 == 'Authorization' ) {
+
+        document.getElementById("stuffhere03").innerHTML = `
+        <select class="inputstyle" id="aauthEntry03" value="novalue" onclick="checkauth03()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry03" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry03').click();
+
+      }
+
+      if (vheader3 != 'novalue' & vheader3 != 'Accept' & vheader3 != 'Accept-Charset' & vheader3 != 'Accept-Encoding'  & vheader3 != 'Cache-Control' & vheader3 != 'Connection' & vheader3 != 'Content-Type' & vheader3 != 'Authorization' ) {
+        document.getElementById("stuffhere03").innerHTML = '<input id="authEntry03" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+function checkinput04(elementId) {
+
+    var vheader4 = document.getElementById("HeaderEntry04").value
+
+    // Header4
+    if (vheader4 == 'novalue') {
+      document.getElementById("stuffhere04").innerHTML = '';
+    }
+
+    if (vheader4 == 'Accept' ) {
+
+      document.getElementById("stuffhere04").innerHTML = `
+      <select class="inputstyle" id="authEntry04" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader4 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere04").innerHTML = `
+      <select class="inputstyle" id="authEntry04" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader4 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere04").innerHTML = `
+      <select class="inputstyle" id="authEntry04" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader4 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere04").innerHTML = `
+      <select class="inputstyle" id="authEntry04" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader4 == 'Connection' ) {
+
+      document.getElementById("stuffhere04").innerHTML = `
+      <select class="inputstyle" id="authEntry04" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader4 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere04").innerHTML = `
+        <select class="inputstyle" id="authEntry04" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader4 == 'Authorization' ) {
+
+        document.getElementById("stuffhere04").innerHTML = `
+        <select class="inputstyle" id="aauthEntry04" value="novalue" onclick="checkauth04()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry04" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry04').click();
+
+      }
+
+      if (vheader4 != 'novalue' & vheader4 != 'Accept' & vheader4 != 'Accept-Charset' & vheader4 != 'Accept-Encoding'  & vheader4 != 'Cache-Control' & vheader4 != 'Connection' & vheader4 != 'Content-Type' & vheader4 != 'Authorization' ) {
+        document.getElementById("stuffhere04").innerHTML = '<input id="authEntry04" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+function checkinput05(elementId) {
+
+    var vheader5 = document.getElementById("HeaderEntry05").value
+
+    // Header5
+    if (vheader5 == 'novalue') {
+      document.getElementById("stuffhere05").innerHTML = '';
+    }
+
+    if (vheader5 == 'Accept' ) {
+
+      document.getElementById("stuffhere05").innerHTML = `
+      <select class="inputstyle" id="authEntry05" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader5 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere05").innerHTML = `
+      <select class="inputstyle" id="authEntry05" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader5 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere05").innerHTML = `
+      <select class="inputstyle" id="authEntry05" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader5 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere05").innerHTML = `
+      <select class="inputstyle" id="authEntry05" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader5 == 'Connection' ) {
+
+      document.getElementById("stuffhere05").innerHTML = `
+      <select class="inputstyle" id="authEntry05" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader5 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere05").innerHTML = `
+        <select class="inputstyle" id="authEntry05" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader5 == 'Authorization' ) {
+
+        document.getElementById("stuffhere05").innerHTML = `
+        <select class="inputstyle" id="aauthEntry05" value="novalue" onclick="checkauth05()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry05" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry05').click();
+
+      }
+
+      if (vheader5 != 'novalue' & vheader5 != 'Accept' & vheader5 != 'Accept-Charset' & vheader5 != 'Accept-Encoding'  & vheader5 != 'Cache-Control' & vheader5 != 'Connection' & vheader5 != 'Content-Type' & vheader5 != 'Authorization' ) {
+        document.getElementById("stuffhere05").innerHTML = '<input id="authEntry05" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+
+function checkinput06(elementId) {
+
+    var vheader6 = document.getElementById("HeaderEntry06").value
+
+    // Header6
+    if (vheader6 == 'novalue') {
+      document.getElementById("stuffhere06").innerHTML = '';
+    }
+
+    if (vheader6 == 'Accept' ) {
+
+      document.getElementById("stuffhere06").innerHTML = `
+      <select class="inputstyle" id="authEntry06" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader6 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere06").innerHTML = `
+      <select class="inputstyle" id="authEntry06" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader6 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere06").innerHTML = `
+      <select class="inputstyle" id="authEntry06" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader6 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere06").innerHTML = `
+      <select class="inputstyle" id="authEntry06" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader6 == 'Connection' ) {
+
+      document.getElementById("stuffhere06").innerHTML = `
+      <select class="inputstyle" id="authEntry06" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader6 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere06").innerHTML = `
+        <select class="inputstyle" id="authEntry06" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader6 == 'Authorization' ) {
+
+        document.getElementById("stuffhere06").innerHTML = `
+        <select class="inputstyle" id="aauthEntry06" value="novalue" onclick="checkauth06()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry06" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry06').click();
+
+      }
+
+      if (vheader6 != 'novalue' & vheader6 != 'Accept' & vheader6 != 'Accept-Charset' & vheader6 != 'Accept-Encoding'  & vheader6 != 'Cache-Control' & vheader6 != 'Connection' & vheader6 != 'Content-Type' & vheader6 != 'Authorization' ) {
+        document.getElementById("stuffhere06").innerHTML = '<input id="authEntry06" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+function checkinput07(elementId) {
+
+    var vheader7 = document.getElementById("HeaderEntry07").value
+
+    // Header7
+    if (vheader7 == 'novalue') {
+      document.getElementById("stuffhere07").innerHTML = '';
+    }
+
+    if (vheader7 == 'Accept' ) {
+
+      document.getElementById("stuffhere07").innerHTML = `
+      <select class="inputstyle" id="authEntry07" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader7 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere07").innerHTML = `
+      <select class="inputstyle" id="authEntry07" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader7 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere07").innerHTML = `
+      <select class="inputstyle" id="authEntry07" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader7 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere07").innerHTML = `
+      <select class="inputstyle" id="authEntry07" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader7 == 'Connection' ) {
+
+      document.getElementById("stuffhere07").innerHTML = `
+      <select class="inputstyle" id="authEntry07" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader7 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere07").innerHTML = `
+        <select class="inputstyle" id="authEntry07" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader7 == 'Authorization' ) {
+
+        document.getElementById("stuffhere07").innerHTML = `
+        <select class="inputstyle" id="aauthEntry07" value="novalue" onclick="checkauth07()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry07" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry07').click();
+
+      }
+
+      if (vheader7 != 'novalue' & vheader7 != 'Accept' & vheader7 != 'Accept-Charset' & vheader7 != 'Accept-Encoding'  & vheader7 != 'Cache-Control' & vheader7 != 'Connection' & vheader7 != 'Content-Type' & vheader7 != 'Authorization' ) {
+        document.getElementById("stuffhere07").innerHTML = '<input id="authEntry07" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+function checkinput08(elementId) {
+
+    var vheader8 = document.getElementById("HeaderEntry08").value
+
+    // Header8
+    if (vheader8 == 'novalue') {
+      document.getElementById("stuffhere08").innerHTML = '';
+    }
+
+    if (vheader8 == 'Accept' ) {
+
+      document.getElementById("stuffhere08").innerHTML = `
+      <select class="inputstyle" id="authEntry08" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader8 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere08").innerHTML = `
+      <select class="inputstyle" id="authEntry08" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader8 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere08").innerHTML = `
+      <select class="inputstyle" id="authEntry08" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader8 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere08").innerHTML = `
+      <select class="inputstyle" id="authEntry08" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader8 == 'Connection' ) {
+
+      document.getElementById("stuffhere08").innerHTML = `
+      <select class="inputstyle" id="authEntry08" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader8 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere08").innerHTML = `
+        <select class="inputstyle" id="authEntry08" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader8 == 'Authorization' ) {
+
+        document.getElementById("stuffhere08").innerHTML = `
+        <select class="inputstyle" id="aauthEntry08" value="novalue" onclick="checkauth08()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry08" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry08').click();
+
+      }
+
+      if (vheader8 != 'novalue' & vheader8 != 'Accept' & vheader8 != 'Accept-Charset' & vheader8 != 'Accept-Encoding'  & vheader8 != 'Cache-Control' & vheader8 != 'Connection' & vheader8 != 'Content-Type' & vheader8 != 'Authorization' ) {
+        document.getElementById("stuffhere08").innerHTML = '<input id="authEntry08" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+
+function checkinput09(elementId) {
+
+    var vheader9 = document.getElementById("HeaderEntry09").value
+
+    // Header9
+    if (vheader9 == 'novalue') {
+      document.getElementById("stuffhere09").innerHTML = '';
+    }
+
+    if (vheader9 == 'Accept' ) {
+
+      document.getElementById("stuffhere09").innerHTML = `
+      <select class="inputstyle" id="authEntry09" value="novalue">
+      <option value="application/json">application/json</option>
+      <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+      <option value="application/xhtml+xml">application/xhtml+xml</option>
+      <option value="application/xml">application/xml</option>
+      <option value="multipart/form-data">multipart/form-data</option>
+      <option value="text/html">text/html</option>
+      <option value="text/plain">text/plain</option>
+      <option value="text/xml">text/xml</option>
+      </select>
+      `;
+    }
+
+    if (vheader9 == 'Accept-Charset' ) {
+
+      document.getElementById("stuffhere09").innerHTML = `
+      <select class="inputstyle" id="authEntry09" value="novalue">
+      <option value="iso-8859-1">iso-8859-1</option>
+      <option value="utf-8">utf-8</option>
+      </select>
+      `;
+    }
+
+    if (vheader9 == 'Accept-Encoding' ) {
+
+      document.getElementById("stuffhere09").innerHTML = `
+      <select class="inputstyle" id="authEntry09" value="novalue">
+      <option value="deflate">deflate</option>
+      <option value="gzip">gzip</option>
+      </select>
+      `;
+    }
+
+    if (vheader9 == 'Cache-Control' ) {
+
+      document.getElementById("stuffhere09").innerHTML = `
+      <select class="inputstyle" id="authEntry09" value="novalue">
+      <option value="no-cache">no-cache</option>
+      </select>
+      `;
+    }
+
+    if (vheader9 == 'Connection' ) {
+
+      document.getElementById("stuffhere09").innerHTML = `
+      <select class="inputstyle" id="authEntry09" value="novalue">
+      <option value="close">close</option>
+      <option value="keep-alive">keep-alive</option>
+      </select>
+      `;
+    }
+
+      if (vheader9 == 'Content-Type' ) {
+
+        document.getElementById("stuffhere09").innerHTML = `
+        <select class="inputstyle" id="authEntry09" value="novalue">
+        <option value="application/json">application/json</option>
+        <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+        <option value="application/xhtml+xml">application/xhtml+xml</option>
+        <option value="application/xml">application/xml</option>
+        <option value="multipart/form-data">multipart/form-data</option>
+        <option value="text/html">text/html</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/xml">text/xml</option>
+        </select>
+        `;
+      }
+
+      if (vheader9 == 'Authorization' ) {
+
+        document.getElementById("stuffhere09").innerHTML = `
+        <select class="inputstyle" id="aauthEntry09" value="novalue" onclick="checkauth09()">
+        <option value="Basic">Basic</option>
+        <option value="Bearer">Bearer</option>
+        <option value="Digest">Digest</option>
+        </select>
+
+        <input id="authEntry09" class='jsonvalue' type='text' value='[  ]'>
+        `;
+
+        document.getElementById('aauthEntry09').click();
+
+      }
+
+      if (vheader9 != 'novalue' & vheader9 != 'Accept' & vheader9 != 'Accept-Charset' & vheader9 != 'Accept-Encoding'  & vheader9 != 'Cache-Control' & vheader9 != 'Connection' & vheader9 != 'Content-Type' & vheader9 != 'Authorization' ) {
+        document.getElementById("stuffhere09").innerHTML = '<input id="authEntry09" class="jsonvalue" type="text" value="">';
+      }
+
+};
+
+function checkauth01() {
+
+  var authtype01 = document.getElementById('aauthEntry01').value
+  console.log ('1 TargetId= ', authtype01);
+
+  document.getElementById('authEntry01').value = `${authtype01}`+ ' [  ]';
+
+}
+
+function checkauth02() {
+
+  var authtype02 = document.getElementById('aauthEntry02').value
+  console.log ('2 TargetId= ', authtype02);
+
+  document.getElementById('authEntry02').value = `${authtype02}`+ ' [  ]';
+
+}
+
+function checkauth03() {
+
+  var authtype03 = document.getElementById('aauthEntry03').value
+  console.log ('TargetId= ', authtype03);
+
+  document.getElementById('authEntry03').value = `${authtype03}`+ ' [  ]';
+
+}
+
+function checkauth04() {
+
+  var authtype04 = document.getElementById('aauthEntry04').value
+  console.log ('TargetId= ', authtype04);
+
+  document.getElementById('authEntry04').value = `${authtype04}`+ ' [  ]';
+
+}
+
+function checkauth05() {
+
+  var authtype05 = document.getElementById('aauthEntry05').value
+  console.log ('TargetId= ', authtype05);
+
+  document.getElementById('authEntry05').value = `${authtype05}`+ ' [  ]';
+
+}
+
+function checkauth06() {
+
+  var authtype06 = document.getElementById('aauthEntry06').value
+  console.log ('TargetId= ', authtype06);
+
+  document.getElementById('authEntry06').value = `${authtype06}`+ ' [  ]';
+
+}
+
+function checkauth07() {
+
+  var authtype07 = document.getElementById('aauthEntry07').value
+  console.log ('TargetId= ', authtype07);
+
+  document.getElementById('authEntry07').value = `${authtype07}`+ ' [  ]';
+
+}
+
+function checkauth08() {
+
+  var authtype08 = document.getElementById('aauthEntry08').value
+  console.log ('TargetId= ', authtype08);
+
+  document.getElementById('authEntry08').value = `${authtype08}`+ ' [  ]';
+
+}
+
+function checkauth09() {
+
+  var authtype09 = document.getElementById('aauthEntry09').value
+  console.log ('TargetId= ', authtype09);
+
+  document.getElementById('authEntry09').value = `${authtype09}`+ ' [  ]';
+
+}
 
 function removeheaders01(elementId) {
 
@@ -940,6 +1955,7 @@ function removeheaders01(elementId) {
   }
 
 };
+
 
 function jsonbst01() {
   if (chbox02.checked == true) {
@@ -1001,9 +2017,10 @@ function jsonbst01() {
 };
 
 
+
 var input01 = document.getElementById('actualdata01');
 var input02 = document.getElementById('advrend01');
-var strcv01 ='GET';
+var strcv01 ='';
 
 input01.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {

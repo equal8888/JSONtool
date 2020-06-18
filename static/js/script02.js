@@ -688,7 +688,7 @@ function reset() {
     document.getElementById('aauthEntry02').click();
 
     var authtype02 = 'Basic';
-    document.getElementById('authEntry02').value = `${authtype02}`+ ' [ YWRtaW46YWRtaW4= ]';
+    document.getElementById('authEntry02').value = 'YWRtaW46YWRtaW4=';
 
 
 
@@ -712,6 +712,7 @@ function BPreview01() {
 // URL
   var jhost = document.getElementById('urlEntry').value;
 // METHOD
+
   var method = document.getElementById('methodEntry').value;
 
   //Header 1
@@ -721,7 +722,12 @@ function BPreview01() {
     } else {
       var he01 = document.getElementById('HeaderEntry01').value;
 
-      var heval01 = document.getElementById('authEntry01').value;
+      if (he01 == 'Authorization') {
+        var heval01 = document.getElementById('aauthEntry01').value + ' [' + document.getElementById('authEntry01').value + ']';
+      } else {
+        var heval01 = document.getElementById('authEntry01').value;
+      }
+
     }
   }
 
@@ -731,7 +737,13 @@ function BPreview01() {
       console.log('header2: deactivated');
     } else {
       var he02 = document.getElementById('HeaderEntry02').value;
-      var heval02 = document.getElementById('authEntry02').value;
+
+      if (he02 == 'Authorization') {
+        var heval02 = document.getElementById('aauthEntry02').value + ' [' + document.getElementById('authEntry02').value + ']';
+      } else {
+        var heval02 = document.getElementById('authEntry02').value;
+      }
+
     }
   }
 
@@ -741,7 +753,13 @@ function BPreview01() {
       console.log('header3: deactivated');
     } else {
       var he03 = document.getElementById('HeaderEntry03').value;
-      var heval03 = document.getElementById('authEntry03').value;
+
+      if (he03 == 'Authorization') {
+        var heval03 = document.getElementById('aauthEntry03').value + ' [' + document.getElementById('authEntry03').value + ']';
+      } else {
+        var heval03 = document.getElementById('authEntry03').value;
+      }
+
     }
   }
 
@@ -751,7 +769,13 @@ function BPreview01() {
       console.log('header4: deactivated');
     } else {
       var he04 = document.getElementById('HeaderEntry04').value;
-      var heval04 = document.getElementById('authEntry04').value;
+
+      if (he04 == 'Authorization') {
+        var heval04 = document.getElementById('aauthEntry04').value + ' [' + document.getElementById('authEntry04').value + ']';
+      } else {
+        var heval04 = document.getElementById('authEntry04').value;
+      }
+
     }
   }
 
@@ -761,7 +785,13 @@ function BPreview01() {
       console.log('header5: deactivated');
     } else {
       var he05 = document.getElementById('HeaderEntry05').value;
-      var heval05 = document.getElementById('authEntry05').value;
+
+      if (he05 == 'Authorization') {
+        var heval05 = document.getElementById('aauthEntry05').value + ' [' + document.getElementById('authEntry05').value + ']';
+      } else {
+        var heval05 = document.getElementById('authEntry05').value;
+      }
+
     }
   }
 
@@ -771,7 +801,13 @@ function BPreview01() {
       console.log('header6: deactivated');
     } else {
       var he06 = document.getElementById('HeaderEntry06').value;
-      var heval06 = document.getElementById('authEntry06').value;
+
+      if (he06 == 'Authorization') {
+        var heval06 = document.getElementById('aauthEntry06').value + ' [' + document.getElementById('authEntry06').value + ']';
+      } else {
+        var heval06 = document.getElementById('authEntry06').value;
+      }
+
     }
   }
 
@@ -781,7 +817,13 @@ function BPreview01() {
       console.log('header7: deactivated');
     } else {
       var he07 = document.getElementById('HeaderEntry07').value;
-      var heval07 = document.getElementById('authEntry07').value;
+
+      if (he07 == 'Authorization') {
+        var heval07 = document.getElementById('aauthEntry07').value + ' [' + document.getElementById('authEntry07').value + ']';
+      } else {
+        var heval07 = document.getElementById('authEntry07').value;
+      }
+
     }
   }
 
@@ -791,7 +833,13 @@ function BPreview01() {
       console.log('header8: deactivated');
     } else {
       var he08 = document.getElementById('HeaderEntry08').value;
-      var heval08 = document.getElementById('authEntry08').value;
+
+      if (he08 == 'Authorization') {
+        var heval08 = document.getElementById('aauthEntry08').value + ' [' + document.getElementById('authEntry08').value + ']';
+      } else {
+        var heval08 = document.getElementById('authEntry08').value;
+      }
+
     }
   }
 
@@ -801,7 +849,13 @@ function BPreview01() {
       console.log('header9: deactivated');
     } else {
       var he09 = document.getElementById('HeaderEntry09').value;
-      var heval09 = document.getElementById('authEntry09').value;
+
+      if (he09 == 'Authorization') {
+        var heval02 = document.getElementById('aauthEntry09').value + ' [' + document.getElementById('authEntry09').value + ']';
+      } else {
+        var heval09 = document.getElementById('authEntry09').value;
+      }
+
     }
   }
 
@@ -1024,7 +1078,7 @@ function checkinput01(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry01" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry01" class='jsonvalue' type='text'>
         `;
 
         document.getElementById('aauthEntry01').click();
@@ -1127,7 +1181,7 @@ function checkinput02(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry02" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry02" class='jsonvalue' type='text'>
         `;
 
         document.getElementById('aauthEntry02').click();
@@ -1229,7 +1283,7 @@ function checkinput03(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry03" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry03" class='jsonvalue' type='text' value=''>
         `;
 
         document.getElementById('aauthEntry03').click();
@@ -1331,7 +1385,7 @@ function checkinput04(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry04" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry04" class='jsonvalue' type='text' value=''>
         `;
 
         document.getElementById('aauthEntry04').click();
@@ -1433,7 +1487,7 @@ function checkinput05(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry05" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry05" class='jsonvalue' type='text' value=''>
         `;
 
         document.getElementById('aauthEntry05').click();
@@ -1536,7 +1590,7 @@ function checkinput06(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry06" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry06" class='jsonvalue' type='text' value=''>
         `;
 
         document.getElementById('aauthEntry06').click();
@@ -1638,7 +1692,7 @@ function checkinput07(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry07" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry07" class='jsonvalue' type='text' value=''>
         `;
 
         document.getElementById('aauthEntry07').click();
@@ -1740,7 +1794,7 @@ function checkinput08(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry08" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry08" class='jsonvalue' type='text' value=''>
         `;
 
         document.getElementById('aauthEntry08').click();
@@ -1843,7 +1897,7 @@ function checkinput09(elementId) {
         <option value="Digest">Digest</option>
         </select>
 
-        <input id="authEntry09" class='jsonvalue' type='text' value='[  ]'>
+        <input id="authEntry09" class='jsonvalue' type='text' value=''>
         `;
 
         document.getElementById('aauthEntry09').click();
@@ -1856,84 +1910,74 @@ function checkinput09(elementId) {
 
 };
 
+var heval01 = '';
+var heval02 = '';
+var heval03 = '';
+var heval04 = '';
+var heval05 = '';
+var heval06 = '';
+var heval07 = '';
+var heval08 = '';
+var heval09 = '';
+
 function checkauth01() {
 
-  var authtype01 = document.getElementById('aauthEntry01').value
-  console.log ('1 TargetId= ', authtype01);
+  var heval01 = document.getElementById('aauthEntry01').value + ' [' + document.getElementById('authEntry01').value + ']';
 
-  document.getElementById('authEntry01').value = `${authtype01}`+ ' [  ]';
 
 }
 
 function checkauth02() {
 
-  var authtype02 = document.getElementById('aauthEntry02').value
-  console.log ('2 TargetId= ', authtype02);
-
-  document.getElementById('authEntry02').value = `${authtype02}`+ ' [  ]';
+  var heval02 = document.getElementById('aauthEntry02').value + ' [' + document.getElementById('authEntry02').value + ']';
 
 }
 
 function checkauth03() {
 
-  var authtype03 = document.getElementById('aauthEntry03').value
-  console.log ('TargetId= ', authtype03);
+  var heval03 = document.getElementById('aauthEntry03').value + ' [' + document.getElementById('authEntry03').value + ']';
 
-  document.getElementById('authEntry03').value = `${authtype03}`+ ' [  ]';
 
 }
 
 function checkauth04() {
 
-  var authtype04 = document.getElementById('aauthEntry04').value
-  console.log ('TargetId= ', authtype04);
+  var heval04 = document.getElementById('aauthEntry04').value + ' [' + document.getElementById('authEntry04').value + ']';
 
-  document.getElementById('authEntry04').value = `${authtype04}`+ ' [  ]';
 
 }
 
 function checkauth05() {
 
-  var authtype05 = document.getElementById('aauthEntry05').value
-  console.log ('TargetId= ', authtype05);
+  var heval05 = document.getElementById('aauthEntry05').value + ' [' + document.getElementById('authEntry05').value + ']';
 
-  document.getElementById('authEntry05').value = `${authtype05}`+ ' [  ]';
 
 }
 
 function checkauth06() {
 
-  var authtype06 = document.getElementById('aauthEntry06').value
-  console.log ('TargetId= ', authtype06);
+  var heval06 = document.getElementById('aauthEntry06').value + ' [' + document.getElementById('authEntry06').value + ']';
 
-  document.getElementById('authEntry06').value = `${authtype06}`+ ' [  ]';
 
 }
 
 function checkauth07() {
 
-  var authtype07 = document.getElementById('aauthEntry07').value
-  console.log ('TargetId= ', authtype07);
+  var heval07 = document.getElementById('aauthEntry07').value + ' [' + document.getElementById('authEntry07').value + ']';
 
-  document.getElementById('authEntry07').value = `${authtype07}`+ ' [  ]';
 
 }
 
 function checkauth08() {
 
-  var authtype08 = document.getElementById('aauthEntry08').value
-  console.log ('TargetId= ', authtype08);
-
-  document.getElementById('authEntry08').value = `${authtype08}`+ ' [  ]';
+  var heval08 = document.getElementById('aauthEntry08').value + ' [' + document.getElementById('authEntry08').value + ']';
 
 }
 
 function checkauth09() {
 
-  var authtype09 = document.getElementById('aauthEntry09').value
-  console.log ('TargetId= ', authtype09);
+  var heval09 = document.getElementById('aauthEntry09').value + ' [' + document.getElementById('authEntry09').value + ']';
 
-  document.getElementById('authEntry09').value = `${authtype09}`+ ' [  ]';
 
 }
 

@@ -4,7 +4,7 @@ function reloadP() {
   document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
 
-  chbox02.checked = false;
+  chbox02.checked = true;
   chbox03.checked = false;
 
   var jdatac = 0
@@ -14,11 +14,6 @@ function reloadP() {
   document.getElementById('urlEntry').value = '';
   // Method
   document.getElementById('methodEntry').value = 'GET';
-  // DATA
-  document.getElementById('dataId01').value = '';
-
-  // VALUE
-  document.getElementById('valueId01').value = '';
 
 
   window.addEventListener('DOMContentLoaded', (event) => {
@@ -394,8 +389,7 @@ function start01() {
   document.getElementById('headerlist01').innerHTML = '';
   counter = 0
 
-  if (counter <= 1)  {
-    loadheaders01()
+  if (counter < 1)  {
     loadheaders01()
   }
 
@@ -1991,7 +1985,6 @@ function jsonbst01() {
   }
 
 };
-
 
 
 var input01 = document.getElementById('actualdata01');

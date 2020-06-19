@@ -897,8 +897,6 @@ function loadobjects01() {
   if (document.getElementById( "dataId0"+(objcounter) ).value != '' ) {
  	  document.getElementById("addnobj01").appendChild(node01);
  	  objcounter++;
-  } else {
-    document.getElementById( "dataId0"+(objcounter) ).style.borderColor = "yellow";
   }
 
 	}
@@ -2006,6 +2004,7 @@ input01.addEventListener("keyup", function(event) {
     strcv01 = document.getElementById('methodEntry').value
 
     document.getElementById('apply01').click();
+
   }
 });
 
@@ -2016,7 +2015,5 @@ input02.addEventListener("keyup", function(event) {
     document.getElementById('methodEntry').value = 'GET';
 
     document.getElementById('apply01').click();
-
-
   }
 });

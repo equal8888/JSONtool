@@ -1911,7 +1911,7 @@ function checkinput09(elementId) {
 
 function removeheaders01(elementId) {
 
-  if (counter > 1) {
+  if (counter > 2) {
 
     // Header
     var lhename01 = "lbHeaderEntry0" + `${counter}`;

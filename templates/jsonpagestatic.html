@@ -24,7 +24,8 @@
   <div class="side">
     <div class="a">
     <section class="content">
-      <input type="checkbox" id="chbox02" class="chbstylebtn01" onclick="jsonbst01()">      <div id="advbtn01">
+      <input type="checkbox" id="chbox02" class="chbstylebtn01" onclick="jsonbst01()">
+      <div id="advbtn01">
         <span class="chbstyletxt01" for="chbox02">Advanced <span style="color:red; font-weight: bold;">OFF</span></span>
       </div>
       <h1 class="content__heading">Input
@@ -33,9 +34,9 @@
           <button id="smp01" class="testvb" onclick="testv()">sample value</button>
         </div>
       </h1>
-        <form id="actualdata01">
-        <label for="urlEntry">url</label>
-        <input id="urlEntry" class="inputstyle" type="text" value="">
+        <div id="actualdata01">
+        <label for="urlEntry">host</label>
+        <input id="urlEntry" class="inputstyle" type="text">
         <br>
         <div id="headerlist01">
         </div>
@@ -56,7 +57,7 @@
           <label for="dataId01">data</label>
           <input id="dataId01" class="jsonvalue" type="text" value="data01">
         </div>
-        </form>
+      </div>
         <div id="jsonbstyle02" class="jbs">
             <div class="inputbox">
               <label for="valueId01">value</label>

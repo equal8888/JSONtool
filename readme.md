@@ -15,7 +15,7 @@ Install flask and its BasicAuth module
 
 ```sh
 pip install Flask
-pip install Flask-BasicAuth
+pip install -U flask-cors
 ```
 ### run it
 

@@ -12,7 +12,6 @@ def static1():
     return render_template('jsonpagestatic.html')
 
 @app.route('/json01', methods=['GET','POST'])
-@basic_auth.required
 def json01():
     if request.method == 'GET' and "Basic [YWRtaW46YWRtaW4=]" in request.headers["Authorization"] and "application/json" in request.headers["Content-Type"]:
 

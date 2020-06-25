@@ -3,7 +3,7 @@
 what you can do is to type stuff and see it as a auto formatted json && Json+Base64 file format. Also can be previewed/seen on live-action inside the website
 <br>
 <br>
-<img src="https://drive.google.com/uc?id=https://drive.google.com/file/d/1FGX_fxGTIWIf3lnlMd4TKh4LMXk1UkdY" width="auto"/>
+<img src="https://drive.google.com/uc?id=1FGX_fxGTIWIf3lnlMd4TKh4LMXk1UkdY" width="auto"/>
 <br>
 <br>
 do not use in production

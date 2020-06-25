@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 from flask import Flask, request, render_template
-from flask_basicauth import BasicAuth
+from flask_cors import CORS
 import json
 
 app = Flask(__name__)
-basic_auth = BasicAuth(app)
+CORS(app)
 
 # Main page
 @app.route('/', methods=['GET'])
@@ -14,7 +14,7 @@ def static1():
 @app.route('/json01', methods=['GET','POST'])
 @basic_auth.required
 def json01():
-    if request.method == 'GET' and "application/json" in request.headers["Content-Type"]:
+    if request.method == 'GET' and "Basic [YWRtaW46YWRtaW4=]" in request.headers["Authorization"] and "application/json" in request.headers["Content-Type"]:
 
        filehandlerR = open('/data.txt', 'r+')
 
@@ -31,7 +31,7 @@ def json01():
 
        return response01
 
-    if request.method == "POST" and "application/json" in request.headers["Content-Type"]:
+    if request.method == 'POST' and "Basic [YWRtaW46YWRtaW4=]" in request.headers["Authorization"] and "application/json" in request.headers["Content-Type"]:
 
 # ----------------- not sure about this -----------------
        req_data = request.get_json()                    #
@@ -53,6 +53,4 @@ def json01():
        return response02
 
 if __name__ == '__main__':
-    app.config['BASIC_AUTH_USERNAME'] = 'admin'
-    app.config['BASIC_AUTH_PASSWORD'] = 'admin'
     app.run(debug=True, port=8888, host='0.0.0.0')

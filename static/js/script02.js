@@ -646,7 +646,7 @@ function testv() {
         "year":2000,
         "genre":"Fantasy Fiction"
   },
-  "videos":{ "music":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/XIL3u3Lurp8' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+  "videos":{ "music":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/rSI5V02kMmY' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
   "science":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/ecIWPzGEbFc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
   }
   }`;

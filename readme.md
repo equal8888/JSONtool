@@ -1,6 +1,6 @@
 # Rest-Client... I guess 🤔
 <br>
-this website based tool is making the life easier by removing the task of installing plugins, and because of nested json objects can be sometimes difficult to read.
+this web based tool is making the life easier by removing the task of installing plugins, and because of nested json objects can be sometimes difficult to read.
 <br>
 <br>
 <img src="https://drive.google.com/uc?id=1FGX_fxGTIWIf3lnlMd4TKh4LMXk1UkdY" width="auto"/>

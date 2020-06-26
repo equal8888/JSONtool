@@ -1,6 +1,5 @@
-# TEXT TO JSON tool... I guess 🤔
+# Rest-Client... I guess 🤔
 
-what you can do is to type json and see it as a auto formatted Json+Base64 file format. Also can be previewed/seen on live-action inside the website
 <br>
 <br>
 <img src="https://drive.google.com/uc?id=1FGX_fxGTIWIf3lnlMd4TKh4LMXk1UkdY" width="auto"/>

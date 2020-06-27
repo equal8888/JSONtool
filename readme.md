@@ -7,8 +7,6 @@ do not use in production
 
 ### Installation
 
-Install flask and its BasicAuth module
-
 ```sh
 pip install Flask
 pip install -U flask-cors

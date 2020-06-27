@@ -9,5 +9,3 @@ this web based tool(rest-client) is making life easier by removing the task of i
 ### Installation
 
 place the files on "/var/www/html" folder
-
-enable cors from apache if needed

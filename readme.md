@@ -1,5 +1,5 @@
 # Rest-Client... I guess 🤔
-this web based tool(rest-client) is making life easier by removing the task of installing plugins, and because of nested json objects can be sometimes difficult to read.
+this web based tool(rest-client) is making life easier by removing the task of installing plugins, and because of nested json objects can be sometimes difficult to read. json objects can be rendered on page
 
 | Supports | up to |
 | ------ | ------ |

@@ -8,8 +8,7 @@ this web based tool(rest-client) is making life easier by removing the task of i
 
 do not use in production
 
-<img src="https://drive.google.com/uc?id=1FGX_fxGTIWIf3lnlMd4TKh4LMXk1UkdY" width="auto"/>
-
+<img src="https://drive.google.com/uc?id=1KBR4wOBChADjfiJQtJ8OHQaH5Qai6dMF" width="auto"/>
 
 
 ### Installation

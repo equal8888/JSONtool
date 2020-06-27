@@ -1,4 +1,4 @@
-# Rest-Client... I guess 🤔
+# Rest-Client
 this web based tool(rest-client) is making life easier by removing the task of installing plugins, and because of nested json objects can be sometimes difficult to read, objects can be rendered on page.
 
 do not use in production

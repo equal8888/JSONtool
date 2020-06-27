@@ -658,40 +658,14 @@ function reset() {
   document.getElementById('headerlist01').innerHTML = '';
   counter = 0
 
-  if (chbox02.checked == false) {
-    document.getElementById('dataId01').value = 'data01';
-  }
-
-  if (  counter <= 1 )  {
-    loadheaders01()
+  if (  counter == 0 )  {
     loadheaders01()
   }
-
-  if (  counter == 2 )  {
-    // Host
-    document.getElementById('urlEntry').value = `http://${location.hostname}:8888/json01`;
-    // HeaderEntry01
-    document.getElementById('HeaderEntry01').value = 'Content-Type';
-    document.getElementById('HeaderEntry01').click();
-    document.getElementById('authEntry01').value = 'application/json';
-    document.getElementById('authEntry01').click();
-    // HeaderEntry02
-    document.getElementById('HeaderEntry02').value = 'Authorization';
-    document.getElementById('HeaderEntry02').click();
-    document.getElementById('aauthEntry02').value = 'Basic';
-    document.getElementById('aauthEntry02').click();
-
-    var authtype02 = 'Basic';
-    document.getElementById('authEntry02').value = 'YWRtaW46YWRtaW4=';
-
-
-
-    // Method
-    document.getElementById('methodEntry').value = 'GET';
-    // encoder data
-    document.getElementById('showJson01').value = ' ';
-    document.getElementById('showJsonbase01').value = ' ';
-  }
+  // Method
+  document.getElementById('methodEntry').value = 'GET';
+  // encoder data
+  document.getElementById('showJson01').value = ' ';
+  document.getElementById('showJsonbase01').value = ' ';
 
 };
 
@@ -1956,7 +1930,7 @@ function jsonbst01() {
       </div>
       <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
-    document.getElementById('advrend02').innerHTML = '<button id="def02" class="testvb" onclick="reset()">reset & defaults</button> <button id="rmhdrsbtn01" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="resetbutton" onclick="loadheaders01()">header +</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def02" class="testvb" onclick="reset()">reset</button> <button id="rmhdrsbtn01" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="resetbutton" onclick="loadheaders01()">header +</button>';
 
   } if (chbox02.checked == false) {
     objcounter = 1;

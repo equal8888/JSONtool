@@ -635,7 +635,8 @@ function testv() {
   // Method
   document.getElementById('methodEntry').value = 'POST';
   // DATA
-  document.getElementById('valueId02').value = `{ "book":{ "name":"Harry Potter and the Goblet of Fire",
+  document.getElementById('valueId02').value = `{ "book":{
+        "name":"Harry Potter and the Goblet of Fire",
         "author":"J. K. Rowling",
         "price":{
            "hardcover":"$30.32",
@@ -650,8 +651,15 @@ function testv() {
         "year":2000,
         "genre":"Fantasy Fiction"
   },
-  "videos":{ "music":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/hcO-uCFFMnQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-  "science":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/ecIWPzGEbFc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+  "videos":{
+    "music01":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/Y5pdgyOzJtE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+    "music02":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/6FPbGSD6Nlc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+    "music03":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/ScivV_9T3Yg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+    "music04":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/71xGwxakYVk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+    "music05":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/hcO-uCFFMnQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+    "music06":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/xoFqyO7GwpE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+
+    "science":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/ecIWPzGEbFc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
   }
   }`;
 };

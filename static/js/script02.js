@@ -177,7 +177,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('class', 'forcsshover');
 
           if (newname1 != "") {
-            a.innerHTML = htmldata01+obj[newname1];
+            a.innerHTML = htmldata01;
           }
 
           document.getElementById('methodEntry').value = strcv01;
@@ -188,8 +188,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         }
 
         if (objcounter == 2) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -197,9 +195,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          if (newname1 != "" & newname2 != "") {
-            a.innerHTML = htmldata01+obj[newname1][newname2];
-          }
+
+          a.innerHTML = htmldata01;
 
           document.getElementById('methodEntry').value = strcv01;
 
@@ -209,9 +206,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         }
 
         if (objcounter == 3) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
-          var newname3 = document.getElementById('dataId03').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -219,7 +213,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[newname1][newname2][newname3];
+          a.innerHTML = htmldata01;
 
           document.getElementById('methodEntry').value = strcv01;
 
@@ -229,10 +223,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         }
 
         if (objcounter == 4) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
-          var newname3 = document.getElementById('dataId03').value;
-          var newname4 = document.getElementById('dataId04').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -240,7 +230,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4];
+          a.innerHTML = htmldata01;
+
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -249,11 +240,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         }
 
         if (objcounter == 5) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
-          var newname3 = document.getElementById('dataId03').value;
-          var newname4 = document.getElementById('dataId04').value;
-          var newname5 = document.getElementById('dataId05').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -261,22 +247,16 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5];
+          a.innerHTML = htmldata01;
+
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
-
           jdatac++;
           }
         }
 
         if (objcounter == 6) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
-          var newname3 = document.getElementById('dataId03').value;
-          var newname4 = document.getElementById('dataId04').value;
-          var newname5 = document.getElementById('dataId05').value;
-          var newname6 = document.getElementById('dataId06').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -284,7 +264,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6];
+          a.innerHTML = htmldata01;
+
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -293,13 +274,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         }
 
         if (objcounter == 7) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
-          var newname3 = document.getElementById('dataId03').value;
-          var newname4 = document.getElementById('dataId04').value;
-          var newname5 = document.getElementById('dataId05').value;
-          var newname6 = document.getElementById('dataId06').value;
-          var newname7 = document.getElementById('dataId07').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -307,7 +281,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6][newname7];
+          a.innerHTML = htmldata01;
+
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -316,14 +291,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         }
 
         if (objcounter == 8) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
-          var newname3 = document.getElementById('dataId03').value;
-          var newname4 = document.getElementById('dataId04').value;
-          var newname5 = document.getElementById('dataId05').value;
-          var newname6 = document.getElementById('dataId06').value;
-          var newname7 = document.getElementById('dataId07').value;
-          var newname8 = document.getElementById('dataId08').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -331,7 +298,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6][newname7][newname8];
+          a.innerHTML = htmldata01;
+
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -340,15 +308,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
         }
 
         if (objcounter == 9) {
-          var newname1 = document.getElementById('dataId01').value;
-          var newname2 = document.getElementById('dataId02').value;
-          var newname3 = document.getElementById('dataId03').value;
-          var newname4 = document.getElementById('dataId04').value;
-          var newname5 = document.getElementById('dataId05').value;
-          var newname6 = document.getElementById('dataId06').value;
-          var newname7 = document.getElementById('dataId07').value;
-          var newname8 = document.getElementById('dataId08').value;
-          var newname9 = document.getElementById('dataId09').value;
 
           if (document.getElementById('methodEntry').value == 'GET') {
 
@@ -356,7 +315,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6][newname7][newname8][newname9];
+          a.innerHTML = htmldata01;
+
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);

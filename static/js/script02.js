@@ -657,7 +657,7 @@ function testv() {
     "music03":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/ScivV_9T3Yg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
     "music04":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/71xGwxakYVk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
     "music05":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/hcO-uCFFMnQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-    "music06":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/xoFqyO7GwpE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+    "music06":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/BFkHlZkXCdI' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 
     "science":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/ecIWPzGEbFc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
   }

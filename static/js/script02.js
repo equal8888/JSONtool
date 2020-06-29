@@ -1,7 +1,6 @@
 // set up stuff on page loadb
 window.onload = reloadP()
 function reloadP() {
-  document.getElementById('DisableB01').disabled = true;
   document.getElementById('DisableB02').disabled = true;
 
   chbox02.checked = true;
@@ -396,6 +395,9 @@ function start01() {
 };
 
 function bshow01() {
+
+  if (document.getElementById('urlEntry').value != "") {
+
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
 
@@ -514,13 +516,14 @@ function bshow01() {
     document.getElementById('showJsonbase01').value = databjdata;
   }
 
-
-BPreview01()
-
+  BPreview01()
+  }
 };
 
 
 function bshow02() {
+
+  if (document.getElementById('urlEntry').value != "") {
 
   if (objcounter == 1) {
     cjsonformat01 = document.getElementById('dataId01').value
@@ -616,6 +619,7 @@ function bshow02() {
   document.getElementById('methodEntry').value = 'GET';
 
   document.getElementById('apply01').click();
+  }
 
 };
 
@@ -653,7 +657,6 @@ function testv() {
 };
 
 function reset() {
-  document.getElementById('DisableB01').disabled = false;
 
   document.getElementById('headerlist01').innerHTML = '';
   counter = 0
@@ -705,6 +708,7 @@ function BPreview01() {
   document.getElementById('ShowMyHost').innerHTML = pageurl;
 // URL
   var jhost = document.getElementById('urlEntry').value;
+
 // METHOD
 
   var method = document.getElementById('methodEntry').value;

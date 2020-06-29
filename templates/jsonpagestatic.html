@@ -30,9 +30,9 @@
       </div>
       <h1 class="content__heading">Input
         <div id="advrend02">
-          <button id="def02" class="testvb" onclick="reset()">reset & defaults</button>
-          <button id="rmhdrsbtn01" class="resetbutton" onclick="removeheaders01()">header -</button>
-          <button id="ldhdrsbtn01" class="resetbutton" onclick="loadheaders01()">header +</button>
+          <button id="ldhdrsbtn01" class="btninput" onclick="loadheaders01()">header +</button>
+          <button id="rmhdrsbtn01" class="btninput" onclick="removeheaders01()">header -</button>
+          <button id="def02" class="btninputright" onclick="reset()">reset & defaults</button>
         </div>
       </h1>
         <div id="actualdata01">
@@ -75,7 +75,7 @@
         </div>
 
         <div id="smplbtn01">
-          <button id='apply01' onclick='bshow01()'>apply</button> <button id="smp01" class="testvb" onclick="testv()">sample value</button>
+          <button id='apply01' class="btninput" onclick='bshow01()'>apply</button> <button id="smp01" class="btninputright" onclick="testv()">sample value</button>
         </div>
       <br>
     </section>
@@ -96,12 +96,12 @@
   <div id="buttonGroup" class="cbuttonGroup">
     <p><b>Responses and visual preview</b></p>
     <div class="Controls">
-      <button id="DisableB01" onclick="bshow02()">GET</button>
-      <button id="DisableB02" onclick="bclear01()">Clear</button>
+      <button id="DisableB01" class="btnsgetclear" onclick="bshow02()">GET</button>
+      <button id="DisableB02" class="btnsgetclear" onclick="bclear01()">Clear</button>
     </div>
     <div id="advrend01">
-      <button id="rmnstobbtn01" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
-      <button id="addnstobbtn01" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
+      <button id="rmnstobbtn01" class="nestedobj" onclick="removeobjects01()">nested-obj -</button>
+      <button id="addnstobbtn01" class="nestedobj" onclick="loadobjects01()">nested-obj +</button>
       <br>
       <label for="dataId01">obj to render</label>
       <input id="dataId01" class='jsonvalue' type="text">

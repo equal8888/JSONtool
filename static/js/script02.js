@@ -162,7 +162,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
 
     for (var i = 0; i < 1; i++) {
 
-        htmldata01 = '<hr><label>'+(vcjsonformat)+'</label><button id=jbdataId0'+(jdatac+1)+' class="jsonbtn01" onclick="rmjsond()">X</button><hr><br>';
+        htmldata01 = '<hr><label>'+(vcjsonformat)+'</label><button id=jbdataId0'+(jdatac+1)+' class="btnx" onclick="rmjsond()">X</button><hr><br>';
 
         obj = JSON.parse(xhr);
         document.getElementById('IncomingJson').value = `${xhr}`;
@@ -1942,13 +1942,13 @@ function jsonbst01() {
         <br>
         </div>`;
 
-      document.getElementById('smplbtn01').innerHTML = `<button id='apply01' onclick='bshow01()'>apply</button> <button id="smp01" class="testvb" onclick="testv()">sample value</button>`;
+      document.getElementById('smplbtn01').innerHTML = `<button id='apply01' class="btninput" onclick='bshow01()'>apply</button> <button id="smp01" class="btninput" onclick="testv()">sample value</button>`;
 
 
 
     document.getElementById('advrend01').innerHTML = `
-      <button id="rmnstobbtn01" class="resetbutton" onclick="removeobjects01()">nested-obj -</button>
-      <button id="addnstobbtn01" class="resetbutton" onclick="loadobjects01()">nested-obj +</button>
+      <button id="rmnstobbtn01" class="nestedobj" onclick="removeobjects01()">nested-obj -</button>
+      <button id="addnstobbtn01" class="nestedobj" onclick="loadobjects01()">nested-obj +</button>
       <br>
       <label for="dataId01">obj to render</label>
       <input id="dataId01" class='jsonvalue' type="text">
@@ -1956,12 +1956,12 @@ function jsonbst01() {
       </div>
       <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
-    document.getElementById('advrend02').innerHTML = '<button id="def02" class="testvb" onclick="reset()">reset & defaults</button> <button id="rmhdrsbtn01" class="resetbutton" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="resetbutton" onclick="loadheaders01()">header +</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def02" class="btninputright" onclick="reset()">reset & defaults</button> <button id="rmhdrsbtn01" class="btninput" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="btninput" onclick="loadheaders01()">header +</button>';
 
   } if (chbox02.checked == false) {
     objcounter = 1;
     document.getElementById('advbtn01').innerHTML = '<span class="chbstyletxt01" for="chbox02">Advanced <span style="color:red; font-weight: bold;">OFF</span></span>';
-    document.getElementById('smplbtn01').innerHTML = `<button id='apply01' onclick='bshow01()'>apply</button>`;
+    document.getElementById('smplbtn01').innerHTML = `<button id='apply01' class="btninput" onclick='bshow01()'>apply</button>`;
 
 
     document.getElementById('jsonbstyle01').innerHTML = `
@@ -1981,7 +1981,7 @@ function jsonbst01() {
       <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
 
-    document.getElementById('advrend02').innerHTML = '<button id="def01" class="testvb" onclick="reset()">defaults</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def01" class="btninputright" onclick="reset()">defaults</button>';
   }
 
 };

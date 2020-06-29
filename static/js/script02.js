@@ -176,8 +176,8 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          if (`${newname1}` != "") {
-          a.innerHTML = htmldata01+obj[`${newname1}`];
+          if (newname1 != "") {
+            a.innerHTML = htmldata01+obj[newname1];
           }
 
           document.getElementById('methodEntry').value = strcv01;
@@ -197,7 +197,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`];
+          if (newname1 != "" & newname2 != "") {
+            a.innerHTML = htmldata01+obj[newname1][newname2];
+          }
 
           document.getElementById('methodEntry').value = strcv01;
 
@@ -217,7 +219,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`];
+          a.innerHTML = htmldata01+obj[newname1][newname2][newname3];
 
           document.getElementById('methodEntry').value = strcv01;
 
@@ -238,7 +240,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
+          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4];
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -259,7 +261,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
+          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5];
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -282,7 +284,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`];
+          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6];
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -305,7 +307,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`];
+          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6][newname7];
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -329,7 +331,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`];
+          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6][newname7][newname8];
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -354,7 +356,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`][`${newname6}`][`${newname7}`][`${newname8}`][`${newname9}`];
+          a.innerHTML = htmldata01+obj[newname1][newname2][newname3][newname4][newname5][newname6][newname7][newname8][newname9];
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);

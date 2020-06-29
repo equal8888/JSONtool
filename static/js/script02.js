@@ -176,12 +176,13 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
+          if (`${newname1}` != "") {
           a.innerHTML = htmldata01+obj[`${newname1}`];
+          }
+
           document.getElementById('methodEntry').value = strcv01;
 
-
           mainContainer.appendChild(a);
-
           jdatac++;
           }
         }
@@ -197,11 +198,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`];
+
           document.getElementById('methodEntry').value = strcv01;
 
-
           mainContainer.appendChild(a);
-
           jdatac++;
           }
         }
@@ -218,6 +218,7 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('class', 'forcsshover');
 
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`];
+
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
@@ -237,12 +238,10 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          if (document.getElementById('methodEntry').value == 'GET') {
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`];
           document.getElementById('methodEntry').value = strcv01;
-          }
-          mainContainer.appendChild(a);
 
+          mainContainer.appendChild(a);
           jdatac++;
           }
         }
@@ -260,10 +259,9 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           a.setAttribute('id', 'jdataId0'+(jdatac+1)+'');
           a.setAttribute('class', 'forcsshover');
 
-          if (document.getElementById('methodEntry').value == 'GET') {
           a.innerHTML = htmldata01+obj[`${newname1}`][`${newname2}`][`${newname3}`][`${newname4}`][`${newname5}`];
           document.getElementById('methodEntry').value = strcv01;
-          }
+
           mainContainer.appendChild(a);
 
           jdatac++;
@@ -288,7 +286,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
-
           jdatac++;
           }
         }
@@ -312,7 +309,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
-
           jdatac++;
           }
         }
@@ -337,7 +333,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
-
           jdatac++;
           }
         }
@@ -363,7 +358,6 @@ function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,h
           document.getElementById('methodEntry').value = strcv01;
 
           mainContainer.appendChild(a);
-
           jdatac++;
           }
         }
@@ -1942,7 +1936,7 @@ function jsonbst01() {
         <br>
         </div>`;
 
-      document.getElementById('smplbtn01').innerHTML = `<button id='apply01' class="btninput" onclick='bshow01()'>apply</button> <button id="smp01" class="btninput" onclick="testv()">sample value</button>`;
+      document.getElementById('smplbtn01').innerHTML = `<button id='apply01' class="btninput" onclick='bshow01()'>apply</button> <button id="smp01" class="btninputright" onclick="testv()">sample value</button>`;
 
 
 

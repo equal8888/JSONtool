@@ -11,8 +11,6 @@ function startchkrunanimation() {
 
   if (chbox03.checked == false) {
     animcounter = 2;
-    clearInterval(render01);
-    var render01 = ''
   }
 
   if (chbox03.checked == true) {
@@ -42,7 +40,7 @@ function runanimation() {
 
   for (var i = 0; i < columns; i++) {
     drops[i] = 1;
-    if (animcounter == 2) {
+    if (animcounter === 2) {
       break;
     }
   }
@@ -52,6 +50,9 @@ function runanimation() {
     sfx.fillRect(0, 0, canvas.width, canvas.height);
 
     for (var i = 0; i < drops.length; i++) {
+      if (animcounter === 2) {
+        break;
+      }
 
       var text = letters[Math.floor(Math.random() * letters.length)];
       sfx.fillStyle = '#00FF41';
@@ -60,16 +61,16 @@ function runanimation() {
       if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
         drops[i] = 0;
       }
-      if (animcounter == 2) {
-        break;
-      }
+
 
     }
   }
 
   // Loop the animation
   if (animcounter == 1) {
-      var render01 = setInterval(render01, 90 );
+      var render01 = setInterval(render01, 90);
+  } else {
+    var render01 = clearInterval(render01);
   }
 
 

@@ -23,7 +23,7 @@ http://0.0.0.0:8888/
 ```
 
 ### OPTIONAL 
-set it as a self running service on system boot (Debian/2015-09-24-raspbian-jessie)
+set it as a self running service on system boot for Raspberry Pi 2 Model B (Debian/2015-09-24-raspbian-jessie)
 
 install to sd (replace "of=/dev/sdX" to proper location of sd)
 ```sh

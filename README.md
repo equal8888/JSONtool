@@ -11,6 +11,11 @@ do not use in production
 pip install Flask
 pip install -U flask-cors
 ```
+
+set file permissions
+```sh
+$ sudo chmod 755 filename
+```
 ### run it
 
 

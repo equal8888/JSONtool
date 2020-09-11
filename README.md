@@ -16,7 +16,9 @@ pip install -U flask-cors
 
 set file permissions
 ```sh
-$ sudo chmod 755 filename
+$ sudo chmod 755 app.py
+$ sudo chmod 755 -R static/
+$ sudo chmod 755 -R templates/
 ```
 ### run it
 

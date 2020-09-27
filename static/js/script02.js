@@ -636,7 +636,7 @@ function testv() {
   document.getElementById('methodEntry').value = 'POST';
   // DATA
   document.getElementById('valueId02').value = `{ "book":{
-        "name":"Harry Potter and the Goblet of Fire",
+        "name":"Harry Potter",
         "author":"J. K. Rowling",
         "price":{
            "hardcover":"$30.32",
@@ -652,9 +652,7 @@ function testv() {
         "genre":"Fantasy Fiction"
   },
   "videos":{
-    "music01":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/Y5pdgyOzJtE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-    "music02":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/ScivV_9T3Yg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-    "music03":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/hcO-uCFFMnQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+    "music01":"<iframe width='100%' height='400' src='http://www.youtube.com/embed/N18tsAz1UqY' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
   }
   }`;
 };

@@ -31,7 +31,7 @@ URL (Replace 0.0.0.0 with the local IP-adress or hostname)
 http://0.0.0.0:8888/
 ```
 
-json data is saved on host root "/" directory filename "data.txt"
+json data is saved on host "/" directory filename "data.txt"
 
 ### OPTIONAL 
 set it as a self running service on system boot for Raspberry Pi 2 Model B (Debian/2015-09-24-raspbian-jessie)

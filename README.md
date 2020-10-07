@@ -11,7 +11,6 @@ do not use in production
 
 ```sh
 pip install Flask
-pip install -U flask-cors
 ```
 
 set file permissions

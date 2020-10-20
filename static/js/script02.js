@@ -1952,6 +1952,9 @@ function jsonbst01() {
 
 
     document.getElementById('advrend01').innerHTML = `
+      <button id="DisableB01" class="btnsgetclear" onclick="bshow02()">GET</button>
+      <button id="DisableB02" class="btnsgetclear" onclick="bclear01()">Clear</button>
+
       <button id="rmnstobbtn01" class="nestedobj" onclick="removeobjects01()">nested-obj -</button>
       <button id="addnstobbtn01" class="nestedobj" onclick="loadobjects01()">nested-obj +</button>
       <br>
@@ -1961,7 +1964,7 @@ function jsonbst01() {
       </div>
       <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
-    document.getElementById('advrend02').innerHTML = '<button id="def02" class="btninputright" onclick="reset()">reset & defaults</button> <button id="rmhdrsbtn01" class="btninput" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="btninput" onclick="loadheaders01()">header +</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def02" class="btninputright" onclick="reset()">defaults</button> <button id="rmhdrsbtn01" class="btninput" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="btninput" onclick="loadheaders01()">header +</button>';
 
   } if (chbox02.checked == false) {
     objcounter = 1;
@@ -1982,6 +1985,8 @@ function jsonbst01() {
         </div>`;
 
     document.getElementById('advrend01').innerHTML = `
+      <button id="DisableB01" class="btnsgetclear" onclick="bshow02()">GET</button>
+      <button id="DisableB02" class="btnsgetclear" onclick="bclear01()">Clear</button>
       <br>
       <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;

@@ -652,7 +652,7 @@ function testv() {
         "genre":"Fantasy Fiction"
   },
   "videos":{
-    "music01":"<iframe width='100%' height='400' src='https://www.youtube.com/embed/jEw1y91FzYw?start=570' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+    "music01":"<iframe width='100%' height='400' src='https://www.youtube.com/embed/videoseries?list=PLV_6F8d23VzaDeCcCUatifgJMLH4KI63w&index=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
   }
   }`;
 };
@@ -1964,7 +1964,7 @@ function jsonbst01() {
       </div>
       <label for="IncomingJson">incoming data</label>
       <textarea id="IncomingJson" class='result01' type='text' readonly></textarea>`;
-    document.getElementById('advrend02').innerHTML = '<button id="def02" class="btninputright" onclick="reset()">defaults</button> <button id="rmhdrsbtn01" class="btninput" onclick="removeheaders01()">header -</button> <button id="ldhdrsbtn01" class="btninput" onclick="loadheaders01()">header +</button>';
+    document.getElementById('advrend02').innerHTML = '<button id="def02" class="btninputright" onclick="reset()">defaults</button> <button id="ldhdrsbtn01" class="btninput" onclick="loadheaders01()">header +</button> <button id="rmhdrsbtn01" class="btninput" onclick="removeheaders01()">header -</button>';
 
   } if (chbox02.checked == false) {
     objcounter = 1;

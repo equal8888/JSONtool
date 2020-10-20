@@ -652,7 +652,7 @@ function testv() {
         "genre":"Fantasy Fiction"
   },
   "videos":{
-    "music01":"<iframe width='100%' height='400' src='https://www.youtube.com/embed/videoseries?list=PLV_6F8d23VzaDeCcCUatifgJMLH4KI63w&index=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+    "music01":"<iframe width='100%' height='400' src='https://www.youtube.com/embed/mSLuJYtl89Y' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
   }
   }`;
 };

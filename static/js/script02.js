@@ -24,108 +24,108 @@ function reloadP() {
 var jdatac = 0
 var vcjsonformat ='null'
 
-function loadJSON(data22,method,pageurl,he01,heval01,he02,heval02,he03,heval03,he04,heval04,he05,heval05,he06,heval06,he07,heval07,he08,heval08,he09,heval09) {
+function loadJSON(data22,method,pageurl,variable01,variable001,variable02,variable002,variable03,variable003,variable04,variable004,variable05,variable005,variable06,variable006,variable07,variable007,variable08,variable008,variable09,variable009) {
 
   var xhr = new XMLHttpRequest();
 
   var params = `${data22}`;
   var method  = (`${method}`);
   var host  = (`${pageurl}`);
-  var he01 = `${he01}`;
-  var heval01 = (`${heval01}`);
-  var he02 = `${he02}`;
-  var heval02 = (`${heval02}`);
-  var he03 = `${he03}`;
-  var heval03 = (`${heval03}`);
-  var he04 = `${he04}`;
-  var heval04 = (`${heval04}`);
-  var he05 = `${he05}`;
-  var heval05 = (`${heval05}`);
-  var he06 = `${he06}`;
-  var heval06 = (`${heval06}`);
-  var he07 = `${he07}`;
-  var heval07 = (`${heval07}`);
-  var he08 = `${he08}`;
-  var heval08 = (`${heval08}`);
-  var he09 = `${he09}`;
-  var heval09 = (`${heval09}`);
+  var variable01 = `${variable01}`;
+  var variable001 = (`${variable001}`);
+  var variable02 = `${variable02}`;
+  var variable002 = (`${variable002}`);
+  var variable03 = `${variable03}`;
+  var variable003 = (`${variable003}`);
+  var variable04 = `${variable04}`;
+  var variable004 = (`${variable004}`);
+  var variable05 = `${variable05}`;
+  var variable005 = (`${variable005}`);
+  var variable06 = `${variable06}`;
+  var variable006 = (`${variable006}`);
+  var variable07 = `${variable07}`;
+  var variable007 = (`${variable007}`);
+  var variable08 = `${variable08}`;
+  var variable008 = (`${variable008}`);
+  var variable09 = `${variable09}`;
+  var variable009 = (`${variable009}`);
 
   xhr.open(`${method}`, `${host}`, true);
 
   if (counter == 1)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
   }
 
   if (counter == 2)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
   }
 
   if (counter == 3)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
-    xhr.setRequestHeader(`${he03}`, `${heval03}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
+    xhr.setRequestHeader(`${variable03}`, `${variable003}`);
   }
 
   if (counter == 4)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
-    xhr.setRequestHeader(`${he03}`, `${heval03}`);
-    xhr.setRequestHeader(`${he04}`, `${heval04}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
+    xhr.setRequestHeader(`${variable03}`, `${variable003}`);
+    xhr.setRequestHeader(`${variable04}`, `${variable004}`);
   }
 
   if (counter == 5)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
-    xhr.setRequestHeader(`${he03}`, `${heval03}`);
-    xhr.setRequestHeader(`${he04}`, `${heval04}`);
-    xhr.setRequestHeader(`${he05}`, `${heval05}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
+    xhr.setRequestHeader(`${variable03}`, `${variable003}`);
+    xhr.setRequestHeader(`${variable04}`, `${variable004}`);
+    xhr.setRequestHeader(`${variable05}`, `${variable005}`);
   }
 
 
   if (counter == 6)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
-    xhr.setRequestHeader(`${he03}`, `${heval03}`);
-    xhr.setRequestHeader(`${he04}`, `${heval04}`);
-    xhr.setRequestHeader(`${he05}`, `${heval05}`);
-    xhr.setRequestHeader(`${he06}`, `${heval06}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
+    xhr.setRequestHeader(`${variable03}`, `${variable003}`);
+    xhr.setRequestHeader(`${variable04}`, `${variable004}`);
+    xhr.setRequestHeader(`${variable05}`, `${variable005}`);
+    xhr.setRequestHeader(`${variable06}`, `${variable006}`);
   }
 
 
   if (counter == 7)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
-    xhr.setRequestHeader(`${he03}`, `${heval03}`);
-    xhr.setRequestHeader(`${he04}`, `${heval04}`);
-    xhr.setRequestHeader(`${he05}`, `${heval05}`);
-    xhr.setRequestHeader(`${he06}`, `${heval06}`);
-    xhr.setRequestHeader(`${he07}`, `${heval07}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
+    xhr.setRequestHeader(`${variable03}`, `${variable003}`);
+    xhr.setRequestHeader(`${variable04}`, `${variable004}`);
+    xhr.setRequestHeader(`${variable05}`, `${variable005}`);
+    xhr.setRequestHeader(`${variable06}`, `${variable006}`);
+    xhr.setRequestHeader(`${variable07}`, `${variable007}`);
   }
 
 
   if (counter == 8)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
-    xhr.setRequestHeader(`${he03}`, `${heval03}`);
-    xhr.setRequestHeader(`${he04}`, `${heval04}`);
-    xhr.setRequestHeader(`${he05}`, `${heval05}`);
-    xhr.setRequestHeader(`${he06}`, `${heval06}`);
-    xhr.setRequestHeader(`${he07}`, `${heval07}`);
-    xhr.setRequestHeader(`${he08}`, `${heval08}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
+    xhr.setRequestHeader(`${variable03}`, `${variable003}`);
+    xhr.setRequestHeader(`${variable04}`, `${variable004}`);
+    xhr.setRequestHeader(`${variable05}`, `${variable005}`);
+    xhr.setRequestHeader(`${variable06}`, `${variable006}`);
+    xhr.setRequestHeader(`${variable07}`, `${variable007}`);
+    xhr.setRequestHeader(`${variable08}`, `${variable008}`);
   }
 
 
   if (counter == 9)  {
-    xhr.setRequestHeader(`${he01}`, `${heval01}`);
-    xhr.setRequestHeader(`${he02}`, `${heval02}`);
-    xhr.setRequestHeader(`${he03}`, `${heval03}`);
-    xhr.setRequestHeader(`${he04}`, `${heval04}`);
-    xhr.setRequestHeader(`${he05}`, `${heval05}`);
-    xhr.setRequestHeader(`${he06}`, `${heval06}`);
-    xhr.setRequestHeader(`${he07}`, `${heval07}`);
-    xhr.setRequestHeader(`${he08}`, `${heval08}`);
-    xhr.setRequestHeader(`${he09}`, `${heval09}`);
+    xhr.setRequestHeader(`${variable01}`, `${variable001}`);
+    xhr.setRequestHeader(`${variable02}`, `${variable002}`);
+    xhr.setRequestHeader(`${variable03}`, `${variable003}`);
+    xhr.setRequestHeader(`${variable04}`, `${variable004}`);
+    xhr.setRequestHeader(`${variable05}`, `${variable005}`);
+    xhr.setRequestHeader(`${variable06}`, `${variable006}`);
+    xhr.setRequestHeader(`${variable07}`, `${variable007}`);
+    xhr.setRequestHeader(`${variable08}`, `${variable008}`);
+    xhr.setRequestHeader(`${variable09}`, `${variable009}`);
   }
 
 
@@ -719,12 +719,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry01').value == 'novalue')  {
       console.log('header1: deactivated');
     } else {
-      var he01 = document.getElementById('HeaderEntry01').value;
+      var variable01 = document.getElementById('HeaderEntry01').value;
 
-      if (he01 == 'Authorization') {
-        var heval01 = document.getElementById('aauthEntry01').value + ' [' + document.getElementById('authEntry01').value + ']';
+      if (variable01 == 'Authorization') {
+        var variable001 = document.getElementById('aauthEntry01').value + ' [' + document.getElementById('authEntry01').value + ']';
       } else {
-        var heval01 = document.getElementById('authEntry01').value;
+        var variable001 = document.getElementById('authEntry01').value;
       }
 
     }
@@ -735,12 +735,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry02').value == 'novalue')  {
       console.log('header2: deactivated');
     } else {
-      var he02 = document.getElementById('HeaderEntry02').value;
+      var variable02 = document.getElementById('HeaderEntry02').value;
 
-      if (he02 == 'Authorization') {
-        var heval02 = document.getElementById('aauthEntry02').value + ' [' + document.getElementById('authEntry02').value + ']';
+      if (variable02 == 'Authorization') {
+        var variable002 = document.getElementById('aauthEntry02').value + ' [' + document.getElementById('authEntry02').value + ']';
       } else {
-        var heval02 = document.getElementById('authEntry02').value;
+        var variable002 = document.getElementById('authEntry02').value;
       }
 
     }
@@ -751,12 +751,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry03').value == 'novalue')  {
       console.log('header3: deactivated');
     } else {
-      var he03 = document.getElementById('HeaderEntry03').value;
+      var variable03 = document.getElementById('HeaderEntry03').value;
 
-      if (he03 == 'Authorization') {
-        var heval03 = document.getElementById('aauthEntry03').value + ' [' + document.getElementById('authEntry03').value + ']';
+      if (variable03 == 'Authorization') {
+        var variable003 = document.getElementById('aauthEntry03').value + ' [' + document.getElementById('authEntry03').value + ']';
       } else {
-        var heval03 = document.getElementById('authEntry03').value;
+        var variable003 = document.getElementById('authEntry03').value;
       }
 
     }
@@ -767,12 +767,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry04').value == 'novalue')  {
       console.log('header4: deactivated');
     } else {
-      var he04 = document.getElementById('HeaderEntry04').value;
+      var variable04 = document.getElementById('HeaderEntry04').value;
 
-      if (he04 == 'Authorization') {
-        var heval04 = document.getElementById('aauthEntry04').value + ' [' + document.getElementById('authEntry04').value + ']';
+      if (variable04 == 'Authorization') {
+        var variable004 = document.getElementById('aauthEntry04').value + ' [' + document.getElementById('authEntry04').value + ']';
       } else {
-        var heval04 = document.getElementById('authEntry04').value;
+        var variable004 = document.getElementById('authEntry04').value;
       }
 
     }
@@ -783,12 +783,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry05').value == 'novalue')  {
       console.log('header5: deactivated');
     } else {
-      var he05 = document.getElementById('HeaderEntry05').value;
+      var variable05 = document.getElementById('HeaderEntry05').value;
 
-      if (he05 == 'Authorization') {
-        var heval05 = document.getElementById('aauthEntry05').value + ' [' + document.getElementById('authEntry05').value + ']';
+      if (variable05 == 'Authorization') {
+        var variable005 = document.getElementById('aauthEntry05').value + ' [' + document.getElementById('authEntry05').value + ']';
       } else {
-        var heval05 = document.getElementById('authEntry05').value;
+        var variable005 = document.getElementById('authEntry05').value;
       }
 
     }
@@ -799,12 +799,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry06').value == 'novalue')  {
       console.log('header6: deactivated');
     } else {
-      var he06 = document.getElementById('HeaderEntry06').value;
+      var variable06 = document.getElementById('HeaderEntry06').value;
 
-      if (he06 == 'Authorization') {
-        var heval06 = document.getElementById('aauthEntry06').value + ' [' + document.getElementById('authEntry06').value + ']';
+      if (variable06 == 'Authorization') {
+        var variable006 = document.getElementById('aauthEntry06').value + ' [' + document.getElementById('authEntry06').value + ']';
       } else {
-        var heval06 = document.getElementById('authEntry06').value;
+        var variable006 = document.getElementById('authEntry06').value;
       }
 
     }
@@ -815,12 +815,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry07').value == 'novalue')  {
       console.log('header7: deactivated');
     } else {
-      var he07 = document.getElementById('HeaderEntry07').value;
+      var variable07 = document.getElementById('HeaderEntry07').value;
 
-      if (he07 == 'Authorization') {
-        var heval07 = document.getElementById('aauthEntry07').value + ' [' + document.getElementById('authEntry07').value + ']';
+      if (variable07 == 'Authorization') {
+        var variable007 = document.getElementById('aauthEntry07').value + ' [' + document.getElementById('authEntry07').value + ']';
       } else {
-        var heval07 = document.getElementById('authEntry07').value;
+        var variable007 = document.getElementById('authEntry07').value;
       }
 
     }
@@ -831,12 +831,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry08').value == 'novalue')  {
       console.log('header8: deactivated');
     } else {
-      var he08 = document.getElementById('HeaderEntry08').value;
+      var variable08 = document.getElementById('HeaderEntry08').value;
 
-      if (he08 == 'Authorization') {
-        var heval08 = document.getElementById('aauthEntry08').value + ' [' + document.getElementById('authEntry08').value + ']';
+      if (variable08 == 'Authorization') {
+        var variable008 = document.getElementById('aauthEntry08').value + ' [' + document.getElementById('authEntry08').value + ']';
       } else {
-        var heval08 = document.getElementById('authEntry08').value;
+        var variable008 = document.getElementById('authEntry08').value;
       }
 
     }
@@ -847,12 +847,12 @@ function BPreview01() {
     if (document.getElementById('HeaderEntry09').value == 'novalue')  {
       console.log('header9: deactivated');
     } else {
-      var he09 = document.getElementById('HeaderEntry09').value;
+      var variable09 = document.getElementById('HeaderEntry09').value;
 
-      if (he09 == 'Authorization') {
-        var heval02 = document.getElementById('aauthEntry09').value + ' [' + document.getElementById('authEntry09').value + ']';
+      if (variable09 == 'Authorization') {
+        var variable002 = document.getElementById('aauthEntry09').value + ' [' + document.getElementById('authEntry09').value + ']';
       } else {
-        var heval09 = document.getElementById('authEntry09').value;
+        var variable009 = document.getElementById('authEntry09').value;
       }
 
     }
@@ -878,7 +878,7 @@ function BPreview01() {
     }
   }
 
-  loadJSON(`${data22}`,`${method}`,`${jhost}`,`${he01}`,`${heval01}`,`${he02}`,`${heval02}`,`${he03}`,`${heval03}`,`${he04}`,`${heval04}`,`${he05}`,`${heval05}`,`${he06}`,`${heval06}`,`${he07}`,`${heval07}`,`${he08}`,`${heval08}`,`${he09}`,`${heval09}`);
+  loadJSON(`${data22}`,`${method}`,`${jhost}`,`${variable01}`,`${variable001}`,`${variable02}`,`${variable002}`,`${variable03}`,`${variable003}`,`${variable04}`,`${variable004}`,`${variable05}`,`${variable005}`,`${variable06}`,`${variable006}`,`${variable07}`,`${variable007}`,`${variable08}`,`${variable008}`,`${variable09}`,`${variable009}`);
 
 };
 
